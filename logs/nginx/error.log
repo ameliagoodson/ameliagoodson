@@ -1,0 +1,1 @@
+2024/05/09 12:42:57 [error] 28470#0: *1 directory index of "/Users/amelia.goodson/Local Sites/ameliagoodson/app/web/app/" is forbidden, client: 127.0.0.1, server: , request: "GET / HTTP/1.0", host: "ameliagoodson.local"

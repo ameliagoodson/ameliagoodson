@@ -1,0 +1,56 @@
+[23-Apr-2024 17:21:03 UTC] PHP Parse error:  syntax error, unexpected end of file in /Users/amelia.goodson/Local Sites/ameliagoodson/app/public/wp-content/themes/twentytwentyfour/functions.php on line 214
+[23-Apr-2024 17:21:03 UTC] PHP Parse error:  syntax error, unexpected end of file in /Users/amelia.goodson/Local Sites/ameliagoodson/app/public/wp-content/themes/twentytwentyfour/functions.php on line 214
+[29-Apr-2024 15:32:49 UTC] WordPress database error Server shutdown in progress for query SELECT option_value FROM wp_options WHERE option_name = 'WPLANG' LIMIT 1 made by include('phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/php/boot-phar.php'), include('phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/wp-cli.php'), WP_CLI\bootstrap, WP_CLI\Bootstrap\LaunchRunner->process, WP_CLI\Runner->start, WP_CLI\Runner->do_early_invoke, WP_CLI\Runner->run_command_and_exit, WP_CLI\Runner->run_command, WP_CLI\Dispatcher\Subcommand->invoke, call_user_func, WP_CLI\Dispatcher\CommandFactory::WP_CLI\Dispatcher\{closure}, call_user_func, Eval_Command->__invoke, WP_CLI\Runner->load_wordpress, require('wp-settings.php'), load_default_textdomain, determine_locale, get_locale, get_option
+[29-Apr-2024 15:32:49 UTC] WordPress database error Server shutdown in progress for query SELECT option_value FROM wp_options WHERE option_name = 'WPLANG' LIMIT 1 made by include('phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/php/boot-phar.php'), include('phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/wp-cli.php'), WP_CLI\bootstrap, WP_CLI\Bootstrap\LaunchRunner->process, WP_CLI\Runner->start, WP_CLI\Runner->load_wordpress, require('wp-settings.php'), load_default_textdomain, determine_locale, get_locale, get_option
+[29-Apr-2024 15:32:49 UTC] WordPress database error Server shutdown in progress for query SELECT option_value FROM wp_options WHERE option_name = 'WPLANG' LIMIT 1 made by include('phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/php/boot-phar.php'), include('phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/wp-cli.php'), WP_CLI\bootstrap, WP_CLI\Bootstrap\LaunchRunner->process, WP_CLI\Runner->start, WP_CLI\Runner->load_wordpress, require('wp-settings.php'), load_default_textdomain, determine_locale, get_locale, get_option
+[07-May-2024 19:39:32 UTC] PHP Warning:  Undefined array key "editor_post_id" in /Users/amelia.goodson/Local Sites/ameliagoodson/app/public/wp-content/plugins/elementor/includes/managers/widgets.php on line 378
+[09-May-2024 16:37:19 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:19 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:19 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:19 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:20 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:20 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:20 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:20 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:20 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:20 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:20 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:20 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:20 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:20 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:20 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:20 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:20 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:20 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:20 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:20 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:21 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:21 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:21 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:21 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:21 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:21 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:21 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:21 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:21 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:21 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:21 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:21 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:21 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:21 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:21 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:21 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:21 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:21 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:21 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:21 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:43 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:43 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:44 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:44 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:44 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:44 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:44 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:44 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:44 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[09-May-2024 16:37:44 UTC] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
