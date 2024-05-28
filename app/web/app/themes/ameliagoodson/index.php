@@ -1,9 +1,21 @@
-<?php 
+<?php
+/**
+ * The main index template file.
+ *
+ * @package NC Theme
+ */
+
 get_header();
-
-
-
-echo "<h1>HELLO WORLD</h1>";
-
-get_footer();
 ?>
+
+<main id="site-content" role="main">
+	<div class="site-content-inner">
+
+	<h1>Hello world</h1>
+
+
+	</div><!-- .site-content-inner -->
+</main><!-- #site-content -->
+
+<?php
+get_footer();

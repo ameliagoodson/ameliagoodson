@@ -100,3 +100,8 @@
 [22-May-2024 09:29:48] NOTICE: exiting, bye-bye!
 [26-May-2024 18:22:21] NOTICE: fpm is running, pid 24312
 [26-May-2024 18:22:21] NOTICE: ready to handle connections
+[27-May-2024 21:46:41] NOTICE: Terminating ...
+[27-May-2024 21:46:41] NOTICE: Terminating ...
+[27-May-2024 21:46:41] NOTICE: exiting, bye-bye!
+[27-May-2024 21:46:43] NOTICE: fpm is running, pid 49908
+[27-May-2024 21:46:43] NOTICE: ready to handle connections

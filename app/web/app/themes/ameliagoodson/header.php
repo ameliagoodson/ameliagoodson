@@ -6,9 +6,6 @@
   <title><?php bloginfo( 'name' ) ?></title>
   <?php wp_head() ?>
 </head>
-<body >
-<header>
-  <nav>
-    <?php echo bloginfo( 'name' ) ?>
-  </nav>
-</header>
+<body <?php body_class() ?>>
+
+<?php get_template_part( 'parts/global/site-header' ) ?>

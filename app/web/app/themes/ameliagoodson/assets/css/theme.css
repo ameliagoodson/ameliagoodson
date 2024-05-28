@@ -2,6 +2,10 @@
 /* ------------------------------------------------------------------------------ /*
 /*  THEME STYLES
 /* ------------------------------------------------------------------------------ */
+h1 {
+  color: pink;
+}
+
 :root {
   /* Colors */
   --ag-background-color: #000000;
@@ -128,6 +132,88 @@ blockquote:after {
 /* ------------------------------------------------------------------------------ */
 html {
   font-size: 62.5%;
+}
+
+/* Fix for the admin bar */
+@media (max-width: 599px) {
+  html.scroll-locked {
+    margin: 0 !important;
+  }
+}
+html.has-aside {
+  background-image: repeating-linear-gradient(90deg, var(--ag-menu-modal-background-color), var(--ag-menu-modal-background-color) var(--ag-aside-width), var(--ag-background-color) var(--ag-aside-width), var(--ag-background-color) 100%);
+}
+
+/* Layout */
+html:not(.has-aside) {
+  --ag-aside-width: 0rem;
+}
+
+body {
+  background-color: var(--ag-background-color) !important;
+  border-left: var(--ag-aside-width) solid var(--ag-menu-modal-background-color);
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  color: var(--ag-primary-color);
+  font-family: var(--ag-body-font);
+  font-size: var(--ag-body-font-size);
+  font-weight: var(--ag-body-font-weight);
+  text-transform: var(--ag-body-text-transform);
+  letter-spacing: var(--ag-body-letter-spacing);
+  min-height: calc(100vh - var(--ag-admin-bar-height));
+  text-align: left;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+  letter-spacing: -0.01em;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-marquee-increment: 0vw;
+  text-decoration-thickness: 0.1rem;
+  text-underline-offset: 0.175em;
+  word-break: break-word;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+::-moz-selection {
+  background: var(--ag-primary-color);
+  color: var(--ag-background-color);
+}
+
+::selection {
+  background: var(--ag-primary-color);
+  color: var(--ag-background-color);
+}
+
+#site-content {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: calc(100vh - 31.8rem);
+}
+@media (min-width: 700px) {
+  #site-content {
+    min-height: calc(100vh - 39.4rem);
+  }
+}
+
+.site-content-inner {
+  width: 100%;
+}
+
+main {
+  display: block;
 }
 
 /* Clearing ---------------------------------- */
