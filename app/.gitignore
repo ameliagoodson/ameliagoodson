@@ -1,19 +1,26 @@
 # Application
-web/app/plugins/*
-!web/app/plugins/.gitkeep
-web/app/mu-plugins/*/
-web/app/themes/twentytwentyfour/
-web/app/upgrade
-web/app/uploads/*
-!web/app/uploads/.gitkeep
-web/app/cache/*
+web/app/*
+!web/app/languages
+!web/app/mu-plugins
+!web/app/plugins
+!web/app/themes
 
 # WordPress
 web/wp
 web/.htaccess
 
+# Files starting with . or ~
+.*
+~*
+
+# Dependencies
+**/node_modules
+
 # Logs
 *.log
+
+# Databases
+*.sql
 
 # Dotenv
 .env
@@ -23,5 +30,6 @@ web/.htaccess
 # Composer
 /vendor
 
-# WP-CLI
-wp-cli.local.yml
+# Local WP
+/sql
+/public
