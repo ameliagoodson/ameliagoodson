@@ -1,17 +1,13 @@
 /* ------------------------------------------------------------------------------ /*
 /*  PRINT STYLES
 /* ------------------------------------------------------------------------------ */
-h1 {
-  color: pink;
-}
-
 :root {
   /* Colors */
-  --ag-background-color: #000000;
-  --ag-light-background-color: #F3EFE9;
+  --ag-background-color: #ffffff;
+  --ag-light-background-color: #d5caba;
   --ag-primary-color: #ff00ee;
   --ag-secondary-color: #00eeff;
-  --ag-border-color: #D6D5D4;
+  --ag-border-color: #896949;
   --ag-accent-color: #62e42b;
   --ag-white-color: #FFFFFF;
   --ag-black-color: #000000;

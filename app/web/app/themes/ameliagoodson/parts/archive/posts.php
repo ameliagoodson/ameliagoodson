@@ -2,7 +2,6 @@
 /**
  * Displays the archive posts.
  *
- * @package NC Theme
  */
 
 // Use the custom query if it exists...

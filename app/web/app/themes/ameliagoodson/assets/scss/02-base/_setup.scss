@@ -11,24 +11,8 @@ html {
 	html.scroll-locked { margin: 0 !important; }
 }
 
-html.has-aside {
-	background-image: repeating-linear-gradient(
-		90deg,
-		var(--ag-menu-modal-background-color),
-		var(--ag-menu-modal-background-color) var(--ag-aside-width),
-		var(--ag-background-color) var(--ag-aside-width),
-		var(--ag-background-color) 100%
-	);
-}
-
-/* Layout */
-html:not(.has-aside) {
-	--ag-aside-width: 0rem;
-}
-
 body {
 	background-color: var(--ag-background-color) !important;
-	border-left: var(--ag-aside-width) solid var(--ag-menu-modal-background-color);
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;

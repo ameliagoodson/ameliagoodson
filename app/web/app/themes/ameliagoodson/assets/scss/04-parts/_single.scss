@@ -16,6 +16,10 @@ h1.entry-title,
 .entry-title.faux-heading {
 	margin: 0;
 }
+h1.entry-title a {
+  color: inherit;
+	text-decoration: none;
+}
 
 .intro-text {
 	font-size: 1.8rem;

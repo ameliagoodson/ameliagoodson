@@ -2,17 +2,13 @@
 /* ------------------------------------------------------------------------------ /*
 /*  THEME STYLES
 /* ------------------------------------------------------------------------------ */
-h1 {
-  color: pink;
-}
-
 :root {
   /* Colors */
-  --ag-background-color: #000000;
-  --ag-light-background-color: #F3EFE9;
+  --ag-background-color: #ffffff;
+  --ag-light-background-color: #d5caba;
   --ag-primary-color: #ff00ee;
   --ag-secondary-color: #00eeff;
-  --ag-border-color: #D6D5D4;
+  --ag-border-color: #896949;
   --ag-accent-color: #62e42b;
   --ag-white-color: #FFFFFF;
   --ag-black-color: #000000;
@@ -140,18 +136,8 @@ html {
     margin: 0 !important;
   }
 }
-html.has-aside {
-  background-image: repeating-linear-gradient(90deg, var(--ag-menu-modal-background-color), var(--ag-menu-modal-background-color) var(--ag-aside-width), var(--ag-background-color) var(--ag-aside-width), var(--ag-background-color) 100%);
-}
-
-/* Layout */
-html:not(.has-aside) {
-  --ag-aside-width: 0rem;
-}
-
 body {
   background-color: var(--ag-background-color) !important;
-  border-left: var(--ag-aside-width) solid var(--ag-menu-modal-background-color);
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -2636,6 +2622,7 @@ ul.social-icons li {
 /* Sticky Header ----------------------------- */
 #site-header.is-sticky {
   position: fixed;
+  left: 0;
   right: 0;
   top: var(--ag-admin-bar-height);
   z-index: 999;
@@ -2776,21 +2763,10 @@ ul.social-icons li {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  margin: 0;
 }
 
-.main-menu li:before,
-.main-menu > li:last-child:after {
-  background: currentColor;
-  content: "";
-  display: block;
-  height: 0.1rem;
-  opacity: 0.1;
-  width: 100%;
-}
-
-.main-menu > li:last-child {
-  border-bottom-width: 0.1rem;
+.main-menu li:not(:first-child) {
+  margin-left: 2rem;
 }
 
 .main-menu .ancestor-wrapper {
@@ -2808,6 +2784,7 @@ ul.social-icons li {
   outline: none;
   padding: 2rem 0;
   width: 100%;
+  text-decoration: none;
 }
 
 .main-menu a:hover,
@@ -2882,6 +2859,9 @@ a.sub-menu-toggle.active svg {
 .main-menu ul {
   margin: 0;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .main-menu .sub-menu {
@@ -2890,16 +2870,13 @@ a.sub-menu-toggle.active svg {
   padding-left: 3.2rem;
 }
 
-.main-menu ul li {
-  border-left-width: 1rem;
-}
-
 /* ------------------------------------------------------------------------------ /*
 /*  SEARCH
 /* ------------------------------------------------------------------------------ */
 .search-modal {
   display: none;
   opacity: 0;
+  padding-left: 0;
   position: fixed;
   bottom: 0;
   left: -9999rem;
@@ -3498,6 +3475,11 @@ a.sub-menu-toggle.active svg {
 h1.entry-title,
 .entry-title.faux-heading {
   margin: 0;
+}
+
+h1.entry-title a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .intro-text {

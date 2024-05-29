@@ -28,11 +28,11 @@ $fluid-max : $desktop-xl;
 // Colors  ------------------------------------- //
 
 $colors: (  
-	'background'       : #000000,
-	'light-background' : #F3EFE9,
+	'background'       : #ffffff,
+	'light-background' : #d5caba,
   'primary'          : #ff00ee,
 	'secondary'        : #00eeff,
-	'border'           : #D6D5D4,
+	'border'           : #896949,
 	'accent'           : #62e42b,
   'white'            : #FFFFFF,
   'black'            : #000000,
@@ -82,9 +82,6 @@ $h1-font-size-min: 32px;
 $h1-font-size-max: 48px;
 $h1-line-height-min: 1.2;
 $h1-line-height-max: 1.15;
-h1 {
-	color: pink;
-}
 
 // H2
 $h2-font-size-min: 28px;

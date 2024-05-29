@@ -105,7 +105,7 @@
 
 #site-header.is-sticky {
 	position: fixed;
-	// left: var(--ag-aside-width);
+	left: 0;
 	right: 0;
 	top: var(--ag-admin-bar-height);
 	z-index: 999;
