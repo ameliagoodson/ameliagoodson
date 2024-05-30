@@ -2,14 +2,18 @@
 /**
  * Displays the single post content.
  *
- * @package NC Theme
  */
 
 ?>
+<?php 
+$hero_layout = get_field('hero_layout');
+?>
 
-<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-
-  <?php get_template_part( 'parts/single/hero' ); ?>
+  <?php
+  if ($hero_layout) {
+      get_template_part( 'parts/single/hero-' . strtolower($hero_layout) );
+    } 
+  ?>
 
 	<div class="post-inner">
     <div class="section-inner mw-thin do-spot spot-fade-up a-del-200">

@@ -9,45 +9,48 @@ input[type="submit"],
 :root .woocommerce #respond input#submit,
 :root .woocommerce a.button,
 :root .woocommerce button.button,
-:root .woocommerce input.button {
-	-webkit-appearance: none;
-	-moz-appearance: none;
+:root .woocommerce input.button,
+#site-content .forminator-button.forminator-button-submit {
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
-	background: var(--ag-button-background-color);
-	border: var(--ag-button-border-width) solid var(--ag-button-border-color);
-	border-radius: var(--ag-button-border-radius);
-	color: var(--ag-button-text-color);
-	cursor: pointer;
-	display: inline-flex;
-	font-size: var(--ag-button-font-size);
-	font-weight: var(--ag-button-font-weight);
-	justify-content: center;
+  background: var(--ag-button-background-color);
+  border: var(--ag-button-border-width) solid var(--ag-button-border-color);
+  border-radius: var(--ag-button-border-radius);
+  color: var(--ag-button-text-color);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: var(--ag-button-font-size);
+  font-weight: var(--ag-button-font-weight);
+  justify-content: center;
   text-transform: var(--ag-button-text-transform);
-	letter-spacing: var(--ag-button-letter-spacing);
-	line-height: var(--ag-button-line-height);
-	margin: 0;
-	padding: var(--ag-button-padding-y) var(--ag-button-padding-x);
-	text-align: center;
-	text-decoration: none;
-	text-underline-offset: .25em;
-	text-decoration-thickness: .1rem;
+  letter-spacing: var(--ag-button-letter-spacing);
+  line-height: var(--ag-button-line-height);
+  margin: 0;
+  padding: var(--ag-button-padding-y) var(--ag-button-padding-x);
+  text-align: center;
+  text-decoration: none;
+  text-underline-offset: 0.25em;
+  text-decoration-thickness: 0.1rem;
   transition: var(--ag-trans-speed) var(--ag-trans-ease);
   transition-property: background, border, color;
+  border-radius: 1em;
+  width: fit-content;
 
-	&:hover,
-	&:focus {
+  &:hover,
+  &:focus {
     color: var(--ag-button-text-color-active);
     background: var(--ag-button-background-color-active);
     border-color: var(--ag-button-border-color-active);
-	}
+  }
 }
 
 .wp-block-button__link:visited {
-	color: var(--ag-button-text-color);
+  color: var(--ag-button-text-color);
 }
 
-.wp-block-button__link:active, 
-.wp-block-button__link:focus, 
+.wp-block-button__link:active,
+.wp-block-button__link:focus,
 .wp-block-button__link:hover {
   color: var(--ag-button-text-color-active);
 }
@@ -62,7 +65,7 @@ input[type="submit"],
 
 .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color),
 .wp-block-button__link.is-style-outline:not(.has-text-color) {
-	color: var(--ag-button-outline-color);
+  color: var(--ag-button-outline-color);
 
   &:active,
   &:hover,
@@ -76,28 +79,28 @@ input[type="submit"],
 /* Toggles ----------------------------------- */
 
 .toggle {
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	appearance: none;
-	color: inherit;
-	cursor: pointer;
-	font-family: inherit;
-	position: relative;
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	text-align: inherit;
-	user-select: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  position: relative;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  text-align: inherit;
+  user-select: none;
 }
 
 button.toggle {
-	background: none;
-	border-radius: 0;
-	padding: 0;
+  background: none;
+  border-radius: 0;
+  padding: 0;
 }
 
 .toggle svg * {
-	stroke: currentColor;
+  stroke: currentColor;
 }

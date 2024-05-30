@@ -9,8 +9,8 @@
   --ag-primary-color: #ff00ee;
   --ag-secondary-color: #00eeff;
   --ag-border-color: #896949;
-  --ag-accent-color: #62e42b;
-  --ag-white-color: #FFFFFF;
+  --ag-accent-color: #5500ff;
+  --ag-white-color: #ffffff;
   --ag-black-color: #000000;
   /* Alignments */
   --ag-inner-width-thin: 65.2rem;
@@ -59,7 +59,7 @@
   --ag-button-border-color: var(--ag-accent-color);
   --ag-button-border-width: 0.2rem;
   --ag-button-border-radius: 0;
-  --ag-button-font-size: 1.3rem;
+  --ag-button-font-size: 2rem;
   --ag-button-line-height: 1.2;
   --ag-button-font-weight: 700;
   --ag-button-padding-y: 1.5rem;
