@@ -41,6 +41,7 @@ $alignments: (
   "thin": 652px,
   "small": 760px,
   "medium": 1040px,
+  "large": 1300px,
   "max": 2052px,
 );
 
@@ -137,7 +138,8 @@ $button-outline-background-color-active: var(--ag-accent-color);
 
 // Site Header ---------------------------------- //
 
-$header-background-color: var(--ag-background-color);
+// $header-background-color: var(--ag-background-color);
+$header-background-color: transparent;
 $header-text-color: var(--ag-primary-color);
 
 $header-fixed-background-color: var(--ag-black-color);

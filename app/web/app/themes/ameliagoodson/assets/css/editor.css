@@ -16,6 +16,7 @@
   --ag-inner-width-thin: 65.2rem;
   --ag-inner-width-small: 76rem;
   --ag-inner-width-medium: 104rem;
+  --ag-inner-width-large: 130rem;
   --ag-inner-width-max: 205.2rem;
   /* Spacing */
   --ag-gutter: clamp(4.8rem, calc(11.8vw + 0.392rem), 19.2rem);
@@ -75,7 +76,7 @@
   --ag-button-outline-text-color-active: var(--ag-white-color);
   --ag-button-outline-background-color-active: var(--ag-accent-color);
   /* Site Header */
-  --ag-site-header-background-color: var(--ag-background-color);
+  --ag-site-header-background-color: transparent;
   --ag-site-header-text-color: var(--ag-primary-color);
   --ag-site-header-fixed-background-color: var(--ag-black-color);
   --ag-site-header-fixed-text-color: var(--ag-white-color);
@@ -313,6 +314,10 @@
 
 :root .mw-medium {
   max-width: var(--ag-inner-width-medium) !important;
+}
+
+:root .mw-large {
+  max-width: var(--ag-inner-width-large) !important;
 }
 
 :root .mw-max {

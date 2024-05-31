@@ -2,15 +2,7 @@
 /*  SINGLE POSTS
 /* ------------------------------------------------------------------------------ */
 
-/* Entry Header ------------------------------ */
-
-.entry-header hr {
-  margin: 0 0 1.8rem;
-
-  @media (min-width: $tablet) {
-    margin: 0 0 2.4rem;
-  }
-}
+/* Hero ------------------------------ */
 
 h1.entry-title,
 .entry-title.faux-heading {
@@ -20,21 +12,22 @@ h1.entry-title a {
   color: inherit;
   text-decoration: none;
 }
+.hero-content {
+  .hero-copy {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em;
 
-.hero-copy {
-  display: flex;
-  flex-direction: column;
-  row-gap: 2em;
-
-  .hero-title {
-    font-size: clamp(5.4rem, 5vw, 11.2rem);
-    line-height: normal;
-    font-weight: 700;
-  }
-  .hero-subtitle {
-    font-size: clamp(3.4rem, 2vw, 6rem);
-    p {
-      line-height: normal;
+    .hero-title {
+      font-size: clamp(5.4rem, 5vw, 11.2rem);
+      line-height: 1;
+      font-weight: 700;
+    }
+    .hero-subtitle {
+      font-size: clamp(3.4rem, 2vw, 6rem);
+      p {
+        line-height: normal;
+      }
     }
   }
 }
