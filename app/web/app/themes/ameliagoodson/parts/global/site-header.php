@@ -8,16 +8,10 @@
 <header id="site-header">
   <div class="header-inner-wrapper">
     <nav class="header-inner section-inner">
-      <div class="site-logo">
-        <img src="http://ameliagoodson.local/app/uploads/2024/05/vector.svg" alt="">
-        <!-- If it is the front page, which is also the blog homepage, don't output an h1 tag -->
-        <?php if (is_home() && is_front_page()) : ?>
-          <div class="entry-title h1"><a href="<?php echo home_url() ?>"><?php bloginfo('name') ?></a></div>
-        <?php else : ?>
-          <h1 class="entry-title h1"><a href="<?php echo home_url() ?>"><?php bloginfo('name') ?></h1></a>
-          <!-- If it is the home page, put the website title as an h1 -->
-        <?php endif; ?>
-      </div>
+      <h1 class="site-logo">
+        <a href="<?php echo esc_url(home_url()) ?>"><img src="http://ameliagoodson.local/app/uploads/2024/06/logo-brand-black-future.png"></a>
+        <span class="screen-reader-text">Amelia Goodson</span>
+      </h1>
       <?php wp_nav_menu(array(
         'theme_location' => 'primary',
         'menu_class' => 'main-menu',

@@ -379,7 +379,7 @@ body.no-anim *:after {
 }
 
 .path {
-  stroke: black; /* Ensure stroke color is black */
+  stroke: var(--ag-primary-color); /* Ensure stroke color is black */
   stroke-width: 3; /* Set stroke width */
   fill: none; /* Ensure no fill */
   stroke-dasharray: 1000;

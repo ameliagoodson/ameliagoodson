@@ -14,9 +14,6 @@ html {
 }
 
 body {
-  // background: url(https://img.freepik.com/free-vector/paper-style-smooth-background_23-2148974874.jpg?t=st=1717034505~exp=1717038105~hmac=2570219…&w=2000);
-  // background-repeat: no-repeat;
-  // background-size: cover;
   background-color: var(--ag-background-color) !important;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -43,7 +40,7 @@ body {
   -webkit-marquee-increment: 0vw;
   text-decoration-thickness: 0.1rem;
   text-underline-offset: 0.175em;
-  word-break: break-word;
+  // word-break: break-word;
 }
 
 *:focus:not(:focus-visible) {

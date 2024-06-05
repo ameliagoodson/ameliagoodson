@@ -46,7 +46,7 @@
 
 /* Sections ---------------------------------- */
 
-section {
+section:not(.hero) {
   padding: 5rem 0;
   width: 100%;
 

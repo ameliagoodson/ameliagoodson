@@ -27,12 +27,15 @@ $fluid-max: $desktop-xl;
 $colors: (
   "background": #ffffff,
   "light-background": #d5caba,
-  "primary": #ff00ee,
+  "primary": #ffffff,
   "secondary": #00eeff,
   "border": #896949,
-  "accent": #5500ff,
+  "accent": #fb2e00,
   "white": #ffffff,
   "black": #000000,
+  "orange": #fb2e00,
+  "pink": #ff00c7,
+  "dark-purple": #650d94,
 );
 
 // Alignments ---------------------------------- //
@@ -66,7 +69,7 @@ $body-letter-spacing: 0;
 $body-text-transform: none;
 
 // Headings
-$heading-font: "Montserrat", Helvetica, sans-serif;
+$heading-font: "Black Future", Helvetica, sans-serif;
 $heading-font-weight: 700;
 $heading-font-weight-bold: 700;
 $heading-letter-spacing: -0.02em;

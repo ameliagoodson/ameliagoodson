@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><?php bloginfo( 'name' ) ?></title>
-  <?php wp_head() ?>
-</head>
-<body <?php body_class() ?>>
+<html <?php language_attributes(); ?>>
 
-<?php get_template_part( 'parts/global/site-header' ) ?>
+<head>
+  <meta charset="<?php bloginfo('charset'); ?>">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><?php bloginfo('name'); ?></title>
+  <?php wp_head(); ?>
+</head>
+
+<body <?php body_class(); ?>>
+
+  <?php
+  $background_image = get_field('background_image'); // Assuming you set this field somewhere appropriate
+  ?>
+
+  <?php if ($background_image) : ?>
+    <div class="background-image" style="background-image: url(<?php echo esc_url($background_image['url']); ?>);">
+    <?php endif; ?>
+
+    <?php get_template_part('parts/global/site-header'); ?>

@@ -1,19 +1,11 @@
 <?php
 
 /**
- * Displays the single post content.
+ * Displays the default single post content.
  *
  */
 
-?>
-<?php
-$hero_layout = get_field('hero_layout');
-?>
 
-<?php
-if ($hero_layout) {
-  get_template_part('parts/single/hero-' . strtolower($hero_layout));
-}
 ?>
 
 <div class="post-inner">
