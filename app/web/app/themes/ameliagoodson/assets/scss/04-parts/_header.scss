@@ -7,11 +7,6 @@
   display: flex;
   position: relative;
   transition: none;
-  margin-bottom: 1em;
-
-  @media (min-width: $tablet) {
-    margin-bottom: 2rem;
-  }
 }
 
 .header-inner-wrapper {
@@ -177,6 +172,7 @@ body .background-image {
         font-size: clamp(5.4rem, 5vw, 11.2rem);
         line-height: 1;
         letter-spacing: 2px;
+        margin: 0;
       }
       .hero-subtitle {
         font-size: clamp(3.4rem, 2vw, 6rem);

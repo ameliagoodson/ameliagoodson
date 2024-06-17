@@ -17,6 +17,9 @@ function ag_add_features()
   // Add featured image
   add_theme_support('post-thumbnails');
 
+  // Add menus
+  add_theme_support('menus');
+
   // Add excerpts for pages
   add_post_type_support('page', 'excerpt');
 }

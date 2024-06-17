@@ -113,8 +113,8 @@ $h6-line-height-max: 1.3;
 
 // Buttons ---------------------------------- //
 
-$button-text-color: var(--ag-white-color);
-$button-background-color: var(--ag-accent-color);
+$button-text-color: var(--ag-accent-color);
+$button-background-color: var(--ag-white-color);
 $button-border-color: var(--ag-accent-color);
 $button-border-width: 2px;
 $button-border-radius: 0;
@@ -127,8 +127,8 @@ $button-text-transform: uppercase;
 $button-letter-spacing: 0.1em;
 
 $button-text-color-active: var(--ag-white-color);
-$button-background-color-active: var(--ag-primary-color);
-$button-border-color-active: var(--ag-primary-color);
+$button-background-color-active: var(--ag-accent-color);
+$button-border-color-active: var(--ag-white-color);
 
 // Button Style: Outline
 

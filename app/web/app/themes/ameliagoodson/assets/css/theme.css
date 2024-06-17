@@ -58,8 +58,8 @@
   --ag-h6-font-size: clamp(1.8rem, calc(0.2vw + 1.739rem), 2rem);
   --ag-h6-line-height: clamp(2.43rem, calc(0.1vw + 2.378rem), 2.6rem);
   /* Buttons */
-  --ag-button-text-color: var(--ag-white-color);
-  --ag-button-background-color: var(--ag-accent-color);
+  --ag-button-text-color: var(--ag-accent-color);
+  --ag-button-background-color: var(--ag-white-color);
   --ag-button-border-color: var(--ag-accent-color);
   --ag-button-border-width: 0.2rem;
   --ag-button-border-radius: 0;
@@ -71,8 +71,8 @@
   --ag-button-text-transform: uppercase;
   --ag-button-letter-spacing: 0.1em;
   --ag-button-text-color-active: var(--ag-white-color);
-  --ag-button-background-color-active: var(--ag-primary-color);
-  --ag-button-border-color-active: var(--ag-primary-color);
+  --ag-button-background-color-active: var(--ag-accent-color);
+  --ag-button-border-color-active: var(--ag-white-color);
   --ag-button-outline-border-width: 0.2rem;
   --ag-button-outline-color: var(--ag-accent-color);
   --ag-button-outline-color-active: var(--ag-accent-color);
@@ -855,6 +855,13 @@ section:not(.hero) {
             flex-direction: row;
   }
 }
+.hero-content.hero-half {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
 /* ------------------------------------------------------------------------------ /*
 /*  UTILITIES
 /* ------------------------------------------------------------------------------ */
@@ -2705,12 +2712,6 @@ ul.social-icons li {
   position: relative;
   -webkit-transition: none;
   transition: none;
-  margin-bottom: 1em;
-}
-@media (min-width: 700px) {
-  #site-header {
-    margin-bottom: 2rem;
-  }
 }
 
 .header-inner-wrapper {
@@ -2929,6 +2930,7 @@ body .background-image {
   font-size: clamp(5.4rem, 5vw, 11.2rem);
   line-height: 1;
   letter-spacing: 2px;
+  margin: 0;
 }
 .hero .hero-content .hero-copy .hero-subtitle {
   font-size: clamp(3.4rem, 2vw, 6rem);

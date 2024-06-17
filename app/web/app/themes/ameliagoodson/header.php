@@ -11,7 +11,7 @@
 <body <?php body_class(); ?>>
 
   <?php
-  $background_image = get_field('background_image'); // Assuming you set this field somewhere appropriate
+  $background_image = get_field('background_image');
   ?>
 
   <?php if ($background_image) : ?>

@@ -1,28 +1,30 @@
-<!-- hero.php -->
 <?php
-$layout_type = get_field('image_type');
+$hero_image = get_field('hero_image');
+$hero_layout = get_field('hero_layout');
 $text_alignment = get_field('text_alignment');
 $hero_width = get_field('hero_width');
 $hero_title = get_field('hero_title');
+$hero_subtitle = get_field('hero_subtitle');
+$hero_layout = get_field('hero_layout');
+
+set_query_var('hero_layout', $hero_layout);
+set_query_var('hero_image', $hero_image);
+set_query_var('text_alignment', $text_alignment);
+set_query_var('hero_width', $hero_width);
+set_query_var('hero_title', $hero_title);
+set_query_var('hero_subtitle', $hero_subtitle);
+set_query_var('hero_layout', $hero_layout);
 ?>
 
-<section class="hero">
-  <div class="section-inner mw-large i-a a-fade-up">
-    <div class="hero-content">
-      <div class="hero-copy <?php echo "align-" . $text_alignment ?>">
-        <?php if ($hero_title) : ?>
-          <div class="hero-title"><?php echo $hero_title; ?></div>
-        <?php endif; ?>
-        <?php if (has_excerpt()) : ?>
-          <div class="hero-subtitle contain-margins">
-            <?php the_excerpt(); ?>
-          </div><!-- .hero-subtitle -->
-        <?php endif; ?>
-        <a class="button" href="<?php echo esc_url(home_url('/work')); ?>">See work</a>
-      </div>
-
-
-    </div>
-  </div><!-- .section-inner -->
-</section><!-- .hero -->
+<section class="hero<?php
+                    if ($hero_layout == "Full image") : echo " hero-full";
+                    endif; ?>" style="background-image: url(<?php echo esc_url($hero_image['url']) ?>)">
+  <div class=" section-inner mw-<?php echo strtolower($hero_width) ?> i-a a-fade-up">
+    <?php if ($hero_layout == 'Full image' || $hero_layout == "No image") {
+      get_template_part('parts/single/hero-full');
+    } else {
+      get_template_part('parts/single/hero-half');
+    } ?>
+  </div>
+</section>
 </div>
