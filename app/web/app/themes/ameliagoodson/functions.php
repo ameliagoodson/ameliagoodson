@@ -26,13 +26,15 @@ function ag_add_features()
 add_action('after_setup_theme', 'ag_add_features');
 
 
-function ag_theme_setup()
+function ag_register_menus()
 {
   register_nav_menus(array(
     'primary' => __('Main menu', 'agtheme'),
     'footer' => __('Footer menu', 'agtheme'),
   ));
 };
+add_action('after_setup_theme', 'ag_register_menus');
+
 
 
 /* ------------------------------------------------------------------------------ /*
@@ -44,3 +46,6 @@ require get_template_directory() . '/inc/helpers.php';
 
 // Template functions
 require get_template_directory() . '/inc/template-functions.php';
+
+// Customizer class
+require get_template_directory() . '/inc/classes/class-ag-customizer.php';

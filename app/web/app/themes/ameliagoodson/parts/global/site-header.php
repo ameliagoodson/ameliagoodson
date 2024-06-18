@@ -5,7 +5,11 @@
  *
  */ ?>
 
-<header id="site-header">
+<?php
+$header_color = get_theme_mod('header_color');
+?>
+<header id="site-header" <?php if ($header_color) : ?> style="background-color: <?php echo $header_color;
+                                                                              endif; ?>">
   <div class="header-inner-wrapper">
     <nav class="header-inner section-inner">
       <h1 class="site-logo">
