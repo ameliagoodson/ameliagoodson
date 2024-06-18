@@ -11,6 +11,6 @@
       <a class="button" href="<?php echo esc_url(home_url('/work')); ?>">See work</a>
     </div>
     <div class="hero-image col-6">
-      <img src="<?php echo esc_url($hero_image['url']); ?>" alt="<?php echo esc_attr($hero_image['alt']); ?>">
+      <img src="<?php echo $hero_image ? esc_url($hero_image) : 'https://placehold.co/500' ?>">
     </div>
   </div>

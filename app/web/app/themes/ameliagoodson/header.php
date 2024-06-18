@@ -11,11 +11,11 @@
 <body <?php body_class(); ?>>
 
   <?php
-  $background_image = get_field('background_image');
+  $background_image = get_theme_mod('background_image');
   ?>
 
   <?php if ($background_image) : ?>
-    <div class="background-image" style="background-image: url(<?php echo esc_url($background_image['url']); ?>);">
+    <div class="background-image" style="background-image: url(<?php echo esc_url($background_image); ?>);">
     <?php endif; ?>
 
     <?php get_template_part('parts/global/site-header'); ?>
