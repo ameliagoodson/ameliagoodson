@@ -5,6 +5,7 @@
 
 .main-menu {
   font-size: 2.1rem;
+  display: flex;
 
   @media (min-width: $tablet) {
     font-size: 2.4rem;

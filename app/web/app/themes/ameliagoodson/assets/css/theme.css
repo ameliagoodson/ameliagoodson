@@ -2946,6 +2946,9 @@ body .background-image {
 /* Main Menu --------------------------------- */
 .main-menu {
   font-size: 2.1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 @media (min-width: 700px) {
   .main-menu {

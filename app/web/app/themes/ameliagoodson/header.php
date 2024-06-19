@@ -16,7 +16,7 @@
 
   ?>
 
-  <?php if ($background_image && $hero_layout == "Full image transparent header") : ?>
+  <?php if ($background_image && is_front_page() && $hero_layout == "Full image transparent header") : ?>
     <div class="background-image" style="background-image: url(<?php echo esc_url($background_image); ?>);">
     <?php endif; ?>
 
