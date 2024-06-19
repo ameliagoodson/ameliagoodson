@@ -33,3 +33,6 @@ web/.htaccess
 # Local WP
 /sql
 /public
+
+# OS-generated files
+.DS_Store
