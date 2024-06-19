@@ -20,6 +20,11 @@ function ag_add_features()
   // Add menus
   add_theme_support('menus');
 
+  // Add custom background color. This allows for positioning of background image in customizer
+  add_theme_support('custom-background', array(
+    'default-color'  => 'FFFFFF'
+  ));
+
   // Add excerpts for pages
   add_post_type_support('page', 'excerpt');
 }

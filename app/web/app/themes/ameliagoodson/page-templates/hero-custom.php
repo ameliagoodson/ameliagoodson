@@ -13,6 +13,6 @@
 
 <?php get_template_part('/parts/single/hero') ?>
 
-<?php get_template_part('content') ?>
+<?php get_template_part('/parts/single/content') ?>
 
 <?php get_footer(); ?>

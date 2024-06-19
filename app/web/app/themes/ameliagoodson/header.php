@@ -11,10 +11,12 @@
 <body <?php body_class(); ?>>
 
   <?php
-  $background_image = get_theme_mod('background_image');
+  $background_image = get_theme_mod('hero_bg_image_setting');
+  $hero_layout = get_theme_mod('hero_layout');
+
   ?>
 
-  <?php if ($background_image) : ?>
+  <?php if ($background_image && $hero_layout == "Full image transparent header") : ?>
     <div class="background-image" style="background-image: url(<?php echo esc_url($background_image); ?>);">
     <?php endif; ?>
 

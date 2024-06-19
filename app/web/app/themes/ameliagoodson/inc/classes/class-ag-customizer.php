@@ -13,6 +13,67 @@ class AG_Customizer
 			'priority' => 10,
 		));
 
+		// Hero layout ----------------------------------------- //
+
+		$wp_customize->add_section('hero_layout', array(
+			'title' => __('Hero layout', 'agtheme'),
+			'panel' => 'hero_settings',
+			'priority' => 10,
+		));
+
+		$wp_customize->add_setting('hero_layout', array(
+			'default' => 'Half image',
+			'sanitize_callback' => 'sanitize_text_field',
+			// Including a sanitize_callback ensures that the input is sanitized before saving, which enhances security and prevents unexpected behavior.
+		));
+
+		$wp_customize->add_control('hero_layout', array(
+			'label' => __('Hero layout', 'agtheme'),
+			'section' => 'hero_layout',
+			'type' => 'select',
+			'choices' => array(
+				'Half image' => 'Half image',
+				'Full image' => 'Full image',
+				'Full image transparent header' => 'Full image transparent header',
+				'No image' => 'No image',
+			),
+		));
+
+
+		// Add selection of hero background image
+		$wp_customize->add_setting('hero_bg_image_setting', array(
+			'default' => '',
+		));
+
+		$wp_customize->add_control(
+			new WP_Customize_Image_Control(
+				$wp_customize,
+				'hero_background_image_control',
+				array(
+					'label' => __('Hero background image', 'agtheme'),
+					'section' => 'hero_bg_image_section',
+					'settings' => 'hero_bg_image_setting'
+				)
+			)
+		);
+
+		//Position hero background image
+		// $wp_customize->add_setting('hero_bg_image_position', array(
+		// 	'default' => 'center center', // Set a default position
+		// ));
+		// $wp_customize->add_control(
+		// 	new WP_Customize_Background_Position_Control(
+		// 		$wp_customize,
+		// 		'hero_bg_image_position',
+		// 		array(
+		// 			'label' => __('Hero background image position', 'agtheme'),
+		// 			'section' => 'hero_bg_image_section',
+		// 			'settings' => 'hero_bg_image_position',
+		// 		)
+		// 	),
+		// );
+
+
 		// Hero title ----------------------------------------- //
 
 		$wp_customize->add_section('hero_title', array(
@@ -100,42 +161,33 @@ class AG_Customizer
 				'panel' => 'hero_settings',
 			)
 		);
+
 		$wp_customize->add_setting('hero_image', array(
 			'default' => '',
 		));
+
 		$wp_customize->add_control(
 			new WP_Customize_Image_Control(
 				$wp_customize,
-				'hero_image',
+				'hero_image_control',
 				array(
 					'label' => __('Hero image', 'agtheme'),
 					'section' => 'hero_image',
+					'settings' => 'hero_image',
 				)
 			)
 		);
 
-		// Background image
+		//Hero background image
+		//Add section for background image
 		$wp_customize->add_section(
-			'background_image',
+			'hero_bg_image_section',
 			array(
-				'title' => __('Background image', 'agtheme'),
+				'title' => __('Hero background image', 'agtheme'),
 				'panel' => 'hero_settings',
+				'priority' => 20,
 			)
 		);
-		$wp_customize->add_setting('background_image', array(
-			'default' => 'center center',
-		));
-		$wp_customize->add_control(
-			new WP_Customize_Image_Control(
-				$wp_customize,
-				'background_image',
-				array(
-					'label' => __('Background image', 'agtheme'),
-					'section' => 'background_image',
-				)
-			)
-		);
-
 
 
 		// ------------------------------------------------------------------------------ //
