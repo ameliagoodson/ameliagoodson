@@ -182,3 +182,39 @@
 [18-Jun-2024 18:04:03] NOTICE: ready to handle connections
 [18-Jun-2024 18:39:42] NOTICE: fpm is running, pid 39338
 [18-Jun-2024 18:39:42] NOTICE: ready to handle connections
+[19-Jun-2024 10:04:09] NOTICE: Terminating ...
+[19-Jun-2024 10:04:09] NOTICE: Terminating ...
+[19-Jun-2024 10:04:09] NOTICE: exiting, bye-bye!
+[19-Jun-2024 10:04:10] NOTICE: fpm is running, pid 54077
+[19-Jun-2024 10:04:10] NOTICE: ready to handle connections
+[19-Jun-2024 16:12:48] NOTICE: Terminating ...
+[19-Jun-2024 16:12:48] NOTICE: Terminating ...
+[19-Jun-2024 16:12:48] NOTICE: exiting, bye-bye!
+[19-Jun-2024 16:12:49] NOTICE: fpm is running, pid 64602
+[19-Jun-2024 16:12:49] NOTICE: ready to handle connections
+[19-Jun-2024 16:13:05] NOTICE: Terminating ...
+[19-Jun-2024 16:13:05] NOTICE: Terminating ...
+[19-Jun-2024 16:13:05] NOTICE: exiting, bye-bye!
+[19-Jun-2024 16:13:06] NOTICE: fpm is running, pid 64650
+[19-Jun-2024 16:13:06] NOTICE: ready to handle connections
+[19-Jun-2024 16:18:24] NOTICE: Terminating ...
+[19-Jun-2024 16:18:24] NOTICE: Terminating ...
+[19-Jun-2024 16:18:24] NOTICE: exiting, bye-bye!
+[19-Jun-2024 16:18:34] NOTICE: fpm is running, pid 64939
+[19-Jun-2024 16:18:34] NOTICE: ready to handle connections
+[19-Jun-2024 17:56:07] ERROR: Another FPM instance seems to already listen on /Users/amelia.goodson/Library/Application Support/Local/run/5jh_1puXn/php/php-fpm.socket
+[19-Jun-2024 17:56:07] ERROR: FPM initialization failed
+[19-Jun-2024 17:56:07] ERROR: Another FPM instance seems to already listen on /Users/amelia.goodson/Library/Application Support/Local/run/5jh_1puXn/php/php-fpm.socket
+[19-Jun-2024 17:56:07] ERROR: FPM initialization failed
+[19-Jun-2024 17:56:08] ERROR: Another FPM instance seems to already listen on /Users/amelia.goodson/Library/Application Support/Local/run/5jh_1puXn/php/php-fpm.socket
+[19-Jun-2024 17:56:08] ERROR: FPM initialization failed
+[19-Jun-2024 17:56:09] ERROR: Another FPM instance seems to already listen on /Users/amelia.goodson/Library/Application Support/Local/run/5jh_1puXn/php/php-fpm.socket
+[19-Jun-2024 17:56:09] ERROR: FPM initialization failed
+[19-Jun-2024 20:46:50] ERROR: Another FPM instance seems to already listen on /Users/amelia.goodson/Library/Application Support/Local/run/5jh_1puXn/php/php-fpm.socket
+[19-Jun-2024 20:46:50] ERROR: FPM initialization failed
+[19-Jun-2024 20:46:50] ERROR: Another FPM instance seems to already listen on /Users/amelia.goodson/Library/Application Support/Local/run/5jh_1puXn/php/php-fpm.socket
+[19-Jun-2024 20:46:50] ERROR: FPM initialization failed
+[19-Jun-2024 20:46:51] ERROR: Another FPM instance seems to already listen on /Users/amelia.goodson/Library/Application Support/Local/run/5jh_1puXn/php/php-fpm.socket
+[19-Jun-2024 20:46:51] ERROR: FPM initialization failed
+[19-Jun-2024 20:46:51] ERROR: Another FPM instance seems to already listen on /Users/amelia.goodson/Library/Application Support/Local/run/5jh_1puXn/php/php-fpm.socket
+[19-Jun-2024 20:46:51] ERROR: FPM initialization failed

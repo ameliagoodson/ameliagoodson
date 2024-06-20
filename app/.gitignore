@@ -36,3 +36,9 @@ web/.htaccess
 
 # OS-generated files
 .DS_Store
+
+# Debug logs
+.vscode
+
+
+

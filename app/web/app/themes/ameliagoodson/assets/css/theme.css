@@ -2899,7 +2899,6 @@ ul.social-icons li {
 }
 
 body .background-image {
-  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -2909,7 +2908,8 @@ body .background-image {
   padding-top: 2rem;
   padding-bottom: 5rem;
   width: 100%;
-  background-color: var(--ag-background-color);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 @media (min-width: 700px) {
   .hero {

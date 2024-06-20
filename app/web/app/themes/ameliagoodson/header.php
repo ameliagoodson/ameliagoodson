@@ -13,10 +13,8 @@
   <?php
   $background_image = get_theme_mod('hero_bg_image_setting');
   $hero_layout = get_theme_mod('hero_layout');
-
   ?>
-
-  <?php if ($background_image && is_front_page() && $hero_layout == "Full image transparent header") : ?>
+  <?php if ($background_image && is_front_page() && $hero_layout == "transparent header") : ?>
     <div class="background-image" style="background-image: url(<?php echo esc_url($background_image); ?>);">
     <?php endif; ?>
 

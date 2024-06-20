@@ -146,7 +146,6 @@
 
 // Hero
 body .background-image {
-  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -157,12 +156,14 @@ body .background-image {
   padding-top: 2rem;
   padding-bottom: 5rem;
   width: 100%;
-  background-color: var(--ag-background-color);
+  background-repeat: no-repeat;
+  background-size: cover;
 
   @media (min-width: $tablet) {
     padding-top: 4rem;
     padding-bottom: 10rem;
   }
+
   .hero-content {
     .hero-copy {
       display: flex;
