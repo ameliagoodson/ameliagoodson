@@ -36,6 +36,137 @@ function agtheme_get_fallback_image()
 
   return $fallback_image;
 }
+
+/**
+ * Returns the post archive column classes.
+ */
+function agtheme_get_archive_columns_classes()
+{
+
+  $classes = array();
+
+  // Get the array holding all of the columns options.
+  $archive_columns_options = AG_Customizer::get_archive_columns_options();
+
+  // Loop over the array, and class value of each one to the array.
+  foreach ($archive_columns_options as $setting_name => $setting_data) {
+
+    // Get the value of the setting, or the default if none is set.
+    $value = get_theme_mod($setting_name, $setting_data['default']);
+
+    // Convert the number in the setting (1/2/3/4) to the class names used in our twelve column grid.
+    switch ($setting_name) {
+      case 'agtheme_post_grid_columns_mobile':
+        $classes['mobile'] = 'cols-' . (12 / $value);
+        break;
+
+      case 'agtheme_post_grid_columns_tablet':
+        $classes['tablet'] = 'cols-t-' . (12 / $value);
+        break;
+
+      case 'agtheme_post_grid_columns_laptop':
+        $classes['laptop'] = 'cols-l-' . (12 / $value);
+        break;
+
+      case 'agtheme_post_grid_columns_desktop':
+        $classes['desktop'] = 'cols-d-' . (12 / $value);
+        break;
+
+      case 'agtheme_post_grid_columns_desktop_xl':
+        $classes['desktop_xl'] = 'cols-dxl-' . (12 / $value);
+        break;
+    }
+  }
+
+  return $classes;
+}
+
+
+
+/**
+ * Checks if we're outputting the archive filters.
+ */
+function agtheme_show_archive_filters()
+{
+
+  $paged = get_query_var('paged') ? get_query_var('paged') : (get_query_var('page') ? get_query_var('page') : 1);
+  $archive_filters = is_home() && get_theme_mod('agtheme_show_archive_filters', true);
+
+  if (is_page_template('page-templates/template-custom-archive.php')) {
+    $archive_filters = get_post_meta(get_the_ID(), 'custom_archive_filters', true);
+  }
+
+  return $archive_filters &&  $paged == 1;
+}
+
+/**
+ * Outputs the post archive filters, if enabled.
+ */
+function agtheme_the_archive_filters()
+{
+
+  // Check if we're showing the filter
+  if (!agtheme_show_archive_filters()) {
+    return;
+  }
+
+  $filter_taxonomy = 'category';
+
+  // Get the terms.
+  $terms = get_terms(array(
+    'depth'     => 1,
+    'taxonomy' => $filter_taxonomy,
+  ));
+
+  if (is_wp_error($terms) || !$terms) {
+    return;
+  }
+
+  $home_url   = '';
+  $post_type   = '';
+
+  // Whether the show the number of posts in each category.
+  $show_category_post_count = get_theme_mod('agtheme_show_filter_category_post_count', false);
+
+  // Determine the correct home URL to link to.
+  if (is_home()) {
+    $post_type = 'post';
+    $home_url  = home_url();
+  } elseif (is_post_type_archive()) {
+    $post_type = get_post_type();
+    $home_url  = get_post_type_archive_link($post_type);
+  } else if (is_page_template('page-templates/template-custom-archive.php')) {
+    $post_type = get_post_meta(get_the_ID(), 'custom_archive_post_type', true) ?: 'post';
+    $home_url  = get_permalink();
+  }
+?>
+
+  <div class="filter-wrapper i-a a-fade-up a-del-200">
+    <ul class="filter-list reset-list-style">
+
+      <?php if ($home_url) : ?>
+        <li class="filter-show-all"><a class="filter-link active" data-filter-post-type="<?php echo esc_attr($post_type); ?>" href="<?php echo esc_url($home_url); ?>"><span class="term-name"><?php esc_html_e('Show All', 'agtheme'); ?></span></a></li>
+      <?php endif; ?>
+
+      <?php foreach ($terms as $term) : ?>
+        <li class="filter-term-<?php echo esc_attr($term->slug); ?>">
+          <a class="filter-link" data-filter-term-id="<?php echo esc_attr($term->term_id); ?>" data-filter-taxonomy="<?php echo esc_attr($term->taxonomy); ?>" data-filter-post-type="<?php echo esc_attr($post_type); ?>" href="<?php echo esc_url(get_term_link($term)); ?>">
+            <span class="term-name"><?php echo $term->name; ?></span>
+            <?php if ($show_category_post_count) : ?>
+              <span class="term-count"><?php echo $term->count; ?></span>
+            <?php endif; ?>
+          </a>
+        </li>
+      <?php endforeach; ?>
+
+    </ul><!-- .filter-list -->
+  </div><!-- .filter-wrapper -->
+
+<?php
+
+}
+
+
 /**
  * Outputs the post meta for a given context and post ID.
  */
@@ -257,45 +388,18 @@ function ag_get_post_meta($context = 'archive', $post_id = '')
 }
 
 /**
- * Returns the post archive column classes.
+ * Outputs the SVG code for a given icon.
  */
-function agtheme_get_archive_columns_classes()
+function agtheme_the_icon_svg($group, $icon, $width = 24, $height = 24, $stroke = 0)
 {
+  echo agtheme_get_icon_svg($group, $icon, $width, $height, $stroke);
+}
 
-  $classes = array();
 
-  // Get the array holding all of the columns options.
-  $archive_columns_options = AG_Customizer::get_archive_columns_options();
-
-  // Loop over the array, and class value of each one to the array.
-  foreach ($archive_columns_options as $setting_name => $setting_data) {
-
-    // Get the value of the setting, or the default if none is set.
-    $value = get_theme_mod($setting_name, $setting_data['default']);
-
-    // Convert the number in the setting (1/2/3/4) to the class names used in our twelve column grid.
-    switch ($setting_name) {
-      case 'agtheme_post_grid_columns_mobile':
-        $classes['mobile'] = 'cols-' . (12 / $value);
-        break;
-
-      case 'agtheme_post_grid_columns_tablet':
-        $classes['tablet'] = 'cols-t-' . (12 / $value);
-        break;
-
-      case 'agtheme_post_grid_columns_laptop':
-        $classes['laptop'] = 'cols-l-' . (12 / $value);
-        break;
-
-      case 'agtheme_post_grid_columns_desktop':
-        $classes['desktop'] = 'cols-d-' . (12 / $value);
-        break;
-
-      case 'agtheme_post_grid_columns_desktop_xl':
-        $classes['desktop_xl'] = 'cols-dxl-' . (12 / $value);
-        break;
-    }
-  }
-
-  return $classes;
+/**
+ * Returns the SVG code for a given icon.
+ */
+function agtheme_get_icon_svg($group, $icon, $width = 24, $height = 24, $stroke = 0)
+{
+  return AG_Theme_SVG_Icons::get_svg($group, $icon, $width, $height, $stroke);
 }
