@@ -18,6 +18,8 @@ web/.htaccess
 
 # Logs
 *.log
+/conf/
+/logs/
 
 # Databases
 *.sql

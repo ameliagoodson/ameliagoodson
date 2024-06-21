@@ -4,19 +4,20 @@
 /* Main Menu --------------------------------- */
 
 .main-menu {
-  font-size: 2.1rem;
+  font-size: 1.8rem;
   display: flex;
+  margin: 0;
 
   @media (min-width: $tablet) {
-    font-size: 2.4rem;
+    font-size: 2rem;
   }
-}
 
-.main-menu li {
+  li {
   display: flex;
   flex-wrap: wrap;
   line-height: 1;
   justify-content: flex-start;
+  }
 }
 .main-menu li:not(:first-child) {
   margin-left: 2rem;
@@ -89,12 +90,6 @@ a.sub-menu-toggle svg {
 
 a.sub-menu-toggle.active svg {
   transform: rotate(180deg) translateY(0.2rem);
-}
-
-.main-menu ul {
-  margin: 0;
-  width: 100%;
-  display: flex;
 }
 
 .main-menu .sub-menu {

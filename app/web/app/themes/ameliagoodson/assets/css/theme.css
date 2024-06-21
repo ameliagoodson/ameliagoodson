@@ -81,6 +81,7 @@
   /* Site Header */
   --ag-site-header-background-color: transparent;
   --ag-site-header-text-color: var(--ag-primary-color);
+  --ag-site-header-height: clamp(6.4rem, 14.2vw - 2.667rem, 16rem);
   --ag-site-header-fixed-background-color: var(--ag-black-color);
   --ag-site-header-fixed-text-color: var(--ag-white-color);
   /* Site Footer */
@@ -141,7 +142,7 @@ html {
   }
 }
 body {
-  background-color: var(--ag-background-color) !important;
+  background-color: var(--ag-background-color);
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -2721,7 +2722,7 @@ ul.social-icons li {
   display: flex;
   background: var(--ag-site-header-background-color);
   color: var(--ag-site-header-text-color);
-  min-height: 8.2rem;
+  min-height: var(--ag-site-header-height);
   padding: 1.2rem 0;
   -webkit-transition-property: background, color, min-height;
   transition-property: background, color, min-height;
@@ -2730,7 +2731,6 @@ ul.social-icons li {
 }
 @media (min-width: 700px) {
   .header-inner-wrapper {
-    min-height: 12rem;
     padding: 2.4rem 0;
   }
 }
@@ -2898,18 +2898,28 @@ ul.social-icons li {
   }
 }
 
+/* Hero ------------------------------ */
 body .background-image {
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-/* Hero ------------------------------ */
 .hero {
+  height: calc(100vh - var(--ag-site-header-height));
   padding-top: 2rem;
   padding-bottom: 5rem;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media (min-width: 700px) {
   .hero {
@@ -2945,17 +2955,17 @@ body .background-image {
 /* -------------------------------------------------------------------------------- */
 /* Main Menu --------------------------------- */
 .main-menu {
-  font-size: 2.1rem;
+  font-size: 1.8rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 0;
 }
 @media (min-width: 700px) {
   .main-menu {
-    font-size: 2.4rem;
+    font-size: 2rem;
   }
 }
-
 .main-menu li {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3057,14 +3067,6 @@ a.sub-menu-toggle svg {
 a.sub-menu-toggle.active svg {
   -webkit-transform: rotate(180deg) translateY(0.2rem);
           transform: rotate(180deg) translateY(0.2rem);
-}
-
-.main-menu ul {
-  margin: 0;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .main-menu .sub-menu {

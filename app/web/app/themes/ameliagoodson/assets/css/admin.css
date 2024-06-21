@@ -80,6 +80,7 @@
   /* Site Header */
   --ag-site-header-background-color: transparent;
   --ag-site-header-text-color: var(--ag-primary-color);
+  --ag-site-header-height: clamp(6.4rem, 14.2vw - 2.667rem, 16rem);
   --ag-site-header-fixed-background-color: var(--ag-black-color);
   --ag-site-header-fixed-text-color: var(--ag-white-color);
   /* Site Footer */

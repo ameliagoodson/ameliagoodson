@@ -94,7 +94,7 @@
 	/* Site Header */
   --ag-site-header-background-color: #{$header-background-color};
   --ag-site-header-text-color: #{$header-text-color};
-  
+  --ag-site-header-height: #{$header-min-height};
   --ag-site-header-fixed-background-color: #{$header-fixed-background-color};
   --ag-site-header-fixed-text-color: #{$header-fixed-text-color};
 

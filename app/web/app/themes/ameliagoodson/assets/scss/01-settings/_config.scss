@@ -141,12 +141,11 @@ $button-outline-background-color-active: var(--ag-accent-color);
 
 // Site Header ---------------------------------- //
 
-// $header-background-color: var(--ag-background-color);
 $header-background-color: transparent;
 $header-text-color: var(--ag-primary-color);
-
 $header-fixed-background-color: var(--ag-black-color);
 $header-fixed-text-color: var(--ag-white-color);
+$header-min-height: clamp(6.4rem, calc(14.2vw - 2.667rem), 16rem);
 
 // Site Footer ---------------------------------- //
 

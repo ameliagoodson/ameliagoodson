@@ -34,7 +34,6 @@ class AG_Customizer
 			'choices' => array(
 				'Half image' => __('Half Image', 'agtheme'),
 				'Full image' => __('Full Image', 'agtheme'),
-				'transparent header' => __('Full Image Transparent Header', 'agtheme'),
 				'No image' => __('No Image', 'agtheme'),
 			),
 		));
@@ -82,6 +81,19 @@ class AG_Customizer
 			),
 		));
 
+		// Hero background image setting
+		$wp_customize->add_setting('hero_transparent_header', array(
+			'default' => '',
+			'sanitize_callback' => 'esc_url_raw',
+		));
+
+		$wp_customize->add_control('hero_transparent_header', array(
+			'label' => __('Transparent header', 'agtheme'),
+			'type' => 'checkbox',
+			'section' => 'hero_bg_image_section',
+			'settings' => 'hero_transparent_header',
+		));
+
 		// Add a section for Hero image
 		$wp_customize->add_section('hero_image_section', array(
 			'title' => __('Hero Image', 'agtheme'),
@@ -89,7 +101,6 @@ class AG_Customizer
 			'priority' => 30,
 		));
 
-		// Hero image setting
 		$wp_customize->add_setting('hero_image', array(
 			'default' => '',
 			'sanitize_callback' => 'esc_url_raw',

@@ -14,13 +14,13 @@
   display: flex;
   background: var(--ag-site-header-background-color);
   color: var(--ag-site-header-text-color);
-  min-height: 8.2rem;
+  min-height: var(--ag-site-header-height);
   padding: 1.2rem 0;
   transition-property: background, color, min-height;
   transition: var(--ag-trans-speed-slow) var(--ag-trans-ease);
 
   @media (min-width: $tablet) {
-    min-height: 12rem;
+    // min-height: 12rem;
     padding: 2.4rem 0;
   }
 }
@@ -144,20 +144,23 @@
   }
 }
 
-// Hero
+
+/* Hero ------------------------------ */
 body .background-image {
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-/* Hero ------------------------------ */
-
 .hero {
+  height: calc(100vh - var(--ag-site-header-height));
   padding-top: 2rem;
   padding-bottom: 5rem;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   @media (min-width: $tablet) {
     padding-top: 4rem;
