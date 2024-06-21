@@ -1,23 +1,27 @@
 <?php
 
 /**
- * Displays the default single post content.
+ * Displays the single post content.
  *
  */
 
-
 ?>
 
-<div class="post-inner">
-  <div class="section-inner mw-medium do-spot spot-fade-up a-del-200">
+<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-    <?php get_template_part('parts/single/entry-content'); ?>
+  <?php get_template_part('parts/single/entry-hero'); ?>
 
-  </div><!-- .section-inner -->
-</div><!-- .post-inner -->
+  <div class="post-inner">
+    <div class="section-inner mw-thin do-spot spot-fade-up a-del-200">
 
-<?php get_template_part('parts/single/post-navigation'); ?>
+      <?php get_template_part('parts/single/entry-content'); ?>
+      <!-- <?php get_template_part('parts/single/entry-footer'); ?> -->
 
-<?php comments_template(); ?>
+    </div>
+  </div>
 
-</article><!-- .post -->
+  <!-- <?php get_template_part('parts/single/post-navigation'); ?> -->
+
+  <?php comments_template(); ?>
+
+</article>

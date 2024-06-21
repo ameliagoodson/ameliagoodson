@@ -56,6 +56,9 @@ require get_template_directory() . '/inc/helpers.php';
 // Template functions
 require get_template_directory() . '/inc/template-functions.php';
 
+// Template tags.
+require get_template_directory() . '/inc/template-tags.php';
+
 // Customizer class
 require get_template_directory() . '/inc/classes/class-ag-customizer.php';
 
