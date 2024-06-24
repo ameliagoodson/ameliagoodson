@@ -29,9 +29,9 @@ class AG_Customizer_CSS
   public static function get_customizer_css()
   {
     $css = '';
-    $hero_layout = get_theme_mod('hero_layout');
+    $transparent_header = get_theme_mod('hero_transparent_header');
 
-    if ($hero_layout == 'transparent header') {
+    if ($transparent_header) {
       $css .= self::get_background_position_css('background-image', 'hero_bg_image_position');
       $css .= '.hero {background-image: none !important}';
     } else {
