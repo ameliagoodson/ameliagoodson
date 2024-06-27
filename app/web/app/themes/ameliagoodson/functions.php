@@ -1,10 +1,14 @@
 <?php
 
+/* ------------------------------------------------------------------------------ /*
+/*  ENQUEUE STYLES
+/* ------------------------------------------------------------------------------ */
+
 function ag_register_styles()
 {
   wp_enqueue_style('ag_styles', get_template_directory_uri() . '/assets/css/theme.css');
-  wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap', false);
 
+  wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap', false);
 
   // Customizer styles.
   wp_add_inline_style('ag_styles', AG_Customizer_CSS::get_customizer_css());
@@ -13,6 +17,40 @@ function ag_register_styles()
 }
 add_action('wp_enqueue_scripts', 'ag_register_styles');
 
+/* ------------------------------------------------------------------------------ /*
+/*  ENQUEUE SCRIPTS
+/* ------------------------------------------------------------------------------ */
+
+function agtheme_register_scripts()
+{
+  // Built-in JS assets.
+  $js_dependencies = array('jquery', 'imagesloaded');
+
+  // CSS variables ponyfill.
+  wp_register_script('agtheme-css-vars-ponyfill', get_template_directory_uri() . '/assets/js/vendor/css-vars-ponyfill.min.js', array(), '3.6.0');
+  $js_dependencies[] = 'agtheme-css-vars-ponyfill';
+
+  // Isotope.
+  wp_register_script('isotope', get_template_directory_uri() . '/assets/js/vendor/isotope.pkgd.min.js', array(), '3.0.6');
+  $js_dependencies[] = 'isotope';
+
+  // Theme scripts.
+  wp_enqueue_script('agtheme-scripts', get_template_directory_uri() . '/assets/js/scripts.js', $js_dependencies, filemtime(get_template_directory() . '/assets/js/scripts.js'));
+
+  // Setup AJAX.
+  $ajax_url = admin_url('admin-ajax.php');
+
+  // AJAX Load More.
+  wp_localize_script('agtheme-scripts', 'agtheme_ajax_load_more', array(
+    'ajaxurl' => esc_url($ajax_url),
+  ));
+
+  // AJAX Filters.
+  wp_localize_script('agtheme-scripts', 'agtheme_ajax_filters', array(
+    'ajaxurl' => esc_url($ajax_url),
+  ));
+}
+add_action('wp_enqueue_scripts', 'agtheme_register_scripts');
 
 
 

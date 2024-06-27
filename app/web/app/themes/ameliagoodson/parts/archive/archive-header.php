@@ -3,13 +3,12 @@
 /**
  * Displays the archive header.
  *
- * @package NC Theme
  */
 
 
-$archive_prefix      = agtheme_get_the_archive_title_prefix();
+$archive_prefix       = agtheme_get_the_archive_title_prefix();
 $archive_title        = get_the_archive_title();
-$archive_description = get_the_archive_description('<div>', '</div>');
+$archive_description  = get_the_archive_description('<div>', '</div>');
 
 // Return if we have nothing to output.
 if (!$archive_title && !$archive_description && !agtheme_show_archive_filters()) {

@@ -82,23 +82,6 @@ function agtheme_get_archive_columns_classes()
 }
 
 
-
-/**
- * Checks if we're outputting the archive filters.
- */
-function agtheme_show_archive_filters()
-{
-
-  $paged = get_query_var('paged') ? get_query_var('paged') : (get_query_var('page') ? get_query_var('page') : 1);
-  $archive_filters = is_home() && get_theme_mod('agtheme_show_archive_filters', true);
-
-  if (is_page_template('page-templates/template-custom-archive.php')) {
-    $archive_filters = get_post_meta(get_the_ID(), 'custom_archive_filters', true);
-  }
-
-  return $archive_filters &&  $paged == 1;
-}
-
 /**
  * Outputs the post archive filters, if enabled.
  */
@@ -170,7 +153,7 @@ function agtheme_the_archive_filters()
 /**
  * Outputs the post meta for a given context and post ID.
  */
-function ag_the_post_meta($context = 'archive', $post_id = '')
+function agtheme_the_post_meta($context = 'archive', $post_id = '')
 {
 
   if (!$post_id) {
@@ -179,13 +162,13 @@ function ag_the_post_meta($context = 'archive', $post_id = '')
   }
 
   // Escaped in ag_get_post_meta().
-  echo ag_get_post_meta($context, $post_id);
+  echo agtheme_get_post_meta($context, $post_id);
 }
 
 /**
  * Returns the post meta for a given post and context.
  */
-function ag_get_post_meta($context = 'archive', $post_id = '')
+function agtheme_get_post_meta($context = 'archive', $post_id = '')
 {
 
   if (!$post_id) {

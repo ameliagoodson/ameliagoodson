@@ -136,6 +136,31 @@ class AG_Customizer
 			),
 		));
 
+		/* ------------------------------------------------------------------------------ /*
+    /*  GENERAL OPTIONS
+    /* ------------------------------------------------------------------------------ */
+
+		$wp_customize->add_section('agtheme_general_options', array(
+			'title'      => esc_html__('General Options', 'agtheme'),
+			'priority'   => 10,
+			'capability' => 'edit_theme_options',
+			'panel'      => 'agtheme_theme_options',
+		));
+
+		/* Disable Animations ------------ */
+
+		$wp_customize->add_setting('agtheme_disable_animations', array(
+			'capability'        => 'edit_theme_options',
+			'default'           => false,
+			'sanitize_callback' => 'agtheme_sanitize_checkbox'
+		));
+
+		$wp_customize->add_control('agtheme_disable_animations', array(
+			'type'        => 'checkbox',
+			'section'     => 'agtheme_general_options',
+			'label'       => esc_html__('Disable Animations', 'agtheme'),
+			'description' => esc_html__('Check to disable animations and transitions in the theme.', 'agtheme'),
+		));
 
 		// ------------------------------------------------------------------------------ //
 		//  SITE HEADER
@@ -385,8 +410,142 @@ class AG_Customizer
 				'choices'     => self::get_post_meta_options($post_type),
 			)));
 		}
+
+
+
+		/* ------------------------------------------------------------------------------ /*
+    /*  SANITATION FUNCTIONS
+    /* ------------------------------------------------------------------------------ */
+
+		/* Sanitize Checkbox ------------- */
+
+		function agtheme_sanitize_checkbox($checked)
+		{
+			return ((isset($checked) && true == $checked) ? true : false);
+		}
+
+		/* Sanitize Multiple Checkboxes -- */
+
+		function agtheme_sanitize_multiple_checkboxes($values)
+		{
+			$multi_values = !is_array($values) ? explode(',', $values) : $values;
+			return !empty($multi_values) ? array_map('sanitize_text_field', $multi_values) : array();
+		}
+
+		/* Sanitize Select --------------- */
+
+		function agtheme_sanitize_select($input, $setting)
+		{
+			$input = sanitize_key($input);
+			$choices = $setting->manager->get_control($setting->id)->choices;
+			return (array_key_exists($input, $choices) ? $input : $setting->default);
+		}
 	}
 
+	/**
+	 * Returns the global color options.
+	 */
+	public static function get_color_options()
+	{
+
+		return array(
+			'regular'   => array(
+				// Note: The body background color uses the built-in WordPress theme mod, which is why it isn't included in this array.
+				'agtheme_light_background_color' => array(
+					'default' => '#f3efe9',
+					'label'   => esc_html__('Light Background Color', 'agtheme'),
+					'slug'    => 'light-background',
+					'palette' => true,
+				),
+				'agtheme_primary_color' => array(
+					'default' => '#1e2d32',
+					'label'   => esc_html__('Primary Text Color', 'agtheme'),
+					'slug'    => 'primary',
+					'palette' => true,
+				),
+				'agtheme_secondary_color' => array(
+					'default' => '#707376',
+					'label'   => esc_html__('Secondary Text Color', 'agtheme'),
+					'slug'    => 'secondary',
+					'palette' => true,
+				),
+				'agtheme_border_color' => array(
+					'default' => '#d6d5d4',
+					'label'   => esc_html__('Border Color', 'agtheme'),
+					'slug'    => 'border',
+					'palette' => true,
+				),
+				'agtheme_accent_color' => array(
+					'default' => '#d23c50',
+					'label'   => esc_html__('Accent Color', 'agtheme'),
+					'slug'    => 'accent',
+					'palette' => true,
+				),
+				'agtheme_menu_modal_text_color' => array(
+					'default' => '#ffffff',
+					'label'   => esc_html__('Menu Modal Text Color', 'agtheme'),
+					'slug'    => 'menu-modal-text',
+					'palette' => false,
+				),
+				'agtheme_menu_modal_background_color' => array(
+					'default' => '#1e2d32',
+					'label'   => esc_html__('Menu Modal Background Color', 'agtheme'),
+					'slug'    => 'menu-modal-background',
+					'palette' => false,
+				),
+			),
+			'dark_mode'   => array(
+				'agtheme_dark_mode_background_color' => array(
+					'default' => '#1E2D32',
+					'label'   => esc_html__('Background Color', 'agtheme'),
+					'slug'    => 'background',
+					'palette' => false,
+				),
+				'agtheme_dark_mode_light_background_color' => array(
+					'default' => '#29373C',
+					'label'   => esc_html__('Light Background Color', 'agtheme'),
+					'slug'    => 'light-background',
+					'palette' => false,
+				),
+				'agtheme_dark_mode_primary_color' => array(
+					'default' => '#ffffff',
+					'label'   => esc_html__('Primary Text Color', 'agtheme'),
+					'slug'    => 'primary',
+					'palette' => false,
+				),
+				'agtheme_dark_mode_secondary_color' => array(
+					'default' => '#939699',
+					'label'   => esc_html__('Secondary Text Color', 'agtheme'),
+					'slug'    => 'secondary',
+					'palette' => false,
+				),
+				'agtheme_dark_mode_border_color' => array(
+					'default' => '#404C51',
+					'label'   => esc_html__('Border Color', 'agtheme'),
+					'slug'    => 'border',
+					'palette' => false,
+				),
+				'agtheme_dark_mode_accent_color' => array(
+					'default' => '#d23c50',
+					'label'   => esc_html__('Accent Color', 'agtheme'),
+					'slug'    => 'accent',
+					'palette' => false,
+				),
+				'agtheme_dark_mode_menu_modal_text_color' => array(
+					'default' => '#ffffff',
+					'label'   => esc_html__('Menu Modal Text Color', 'agtheme'),
+					'slug'    => 'menu-modal-text',
+					'palette' => false,
+				),
+				'agtheme_dark_mode_menu_modal_background_color' => array(
+					'default' => '#344247',
+					'label'   => esc_html__('Menu Modal Background Color', 'agtheme'),
+					'slug'    => 'menu-modal-background',
+					'palette' => false,
+				),
+			),
+		);
+	}
 	/**
 	 * Returns the post archive column options.
 	 */
@@ -430,12 +589,12 @@ class AG_Customizer
 
 		$post_meta_options = array(
 			'post' => array(
-				'author'     => esc_html__('Author', 'nctheme'),
-				'categories' => esc_html__('Categories', 'nctheme'),
-				'tags'       => esc_html__('Tags', 'nctheme'),
-				'comments'   => esc_html__('Comments', 'nctheme'),
-				'date'       => esc_html__('Date', 'nctheme'),
-				'edit-link'  => esc_html__('Edit link (for logged in users)', 'nctheme'),
+				'author'     => esc_html__('Author', 'agtheme'),
+				'categories' => esc_html__('Categories', 'agtheme'),
+				'tags'       => esc_html__('Tags', 'agtheme'),
+				'comments'   => esc_html__('Comments', 'agtheme'),
+				'date'       => esc_html__('Date', 'agtheme'),
+				'edit-link'  => esc_html__('Edit link (for logged in users)', 'agtheme'),
 			),
 		);
 
@@ -458,6 +617,14 @@ class AG_Customizer
 			),
 		);
 	}
+
+	/**
+	 * Enqueue the Customizer JavaScript.
+	 */
+	public static function enqueue_customizer_javascript()
+	{
+		wp_enqueue_script('agtheme-customizer-javascript', get_template_directory_uri() . '/assets/js/customizer.js', array('jquery', 'customize-controls'), '', true);
+	}
 }
 
 // Create new instance of the AG_Customizer class. 
@@ -465,6 +632,7 @@ $ag_customizer = new AG_Customizer();
 
 // Tells WordPress to call the agtheme_register method of the $ag_customizer instance when it's time to register customizer settings.
 add_action('customize_register', array($ag_customizer, 'agtheme_register'));
+add_action('customize_controls_enqueue_scripts', array('AG_Customizer', 'enqueue_customizer_javascript'));
 
 /* ------------------------------------------------------------------------------ /*
 /*  CUSTOM CUSTOMIZER CONTROLS

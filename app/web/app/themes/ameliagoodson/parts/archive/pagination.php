@@ -3,7 +3,6 @@
 /**
  * Displays the post archive pagination.
  *
- * @package NC Theme
  */
 
 // Use the custom query if it exists...
@@ -17,7 +16,7 @@ else {
 	$pagination_query = $wp_query;
 }
 
-$pagination_type = get_theme_mod('nctheme_pagination_type', 'button');
+$pagination_type = get_theme_mod('agtheme_pagination_type', 'button');
 $wrapper_class 	 = 'pagination-type-' . $pagination_type;
 $query_args 		 = array_merge($pagination_query->query, $pagination_query->query_vars);
 
@@ -47,8 +46,8 @@ if (!($query_args['max_num_pages'] > $query_args['paged'])) {
 }
 
 // The pagination links also work as a no-js fallback, so they always need to be output.
-$prev_link 				= get_previous_posts_link('<span class="arrow stroke-cc">' . agtheme_get_icon_svg('ui', 'arrow-left', 96, 49) . '</span><span class="screen-reader-text">' . esc_html__('Previous Page', 'nctheme') . '</span></span>', $query_args['max_num_pages']);
-$next_link 				= get_next_posts_link('<span class="screen-reader-text">' . esc_html__('Next Page', 'nctheme') . '</span></span><span class="arrow stroke-cc">' . agtheme_get_icon_svg('ui', 'arrow-right', 96, 49) . '</span>', $query_args['max_num_pages']);
+$prev_link 				= get_previous_posts_link('<span class="arrow stroke-cc">' . agtheme_get_icon_svg('ui', 'arrow-left', 96, 49) . '</span><span class="screen-reader-text">' . esc_html__('Previous Page', 'agtheme') . '</span></span>', $query_args['max_num_pages']);
+$next_link 				= get_next_posts_link('<span class="screen-reader-text">' . esc_html__('Next Page', 'agtheme') . '</span></span><span class="arrow stroke-cc">' . agtheme_get_icon_svg('ui', 'arrow-right', 96, 49) . '</span>', $query_args['max_num_pages']);
 $pagination_class = !$prev_link ? ' only-next' : (!$next_link ? ' only-previous' : '');
 ?>
 
@@ -67,7 +66,7 @@ $pagination_class = !$prev_link ? ' only-next' : (!$next_link ? ' only-previous'
 
 			<?php if ($pagination_type == 'button') : ?>
 				<button id="load-more" class="d-no-js-none do-spot spot-fade-up">
-					<span class="load-text"><?php esc_html_e('Load More', 'nctheme'); ?></span>
+					<span class="load-text"><?php esc_html_e('Load More', 'agtheme'); ?></span>
 					<span class="loading-icon"><span class="dot-pulse"></span></span>
 				</button>
 			<?php endif; ?>

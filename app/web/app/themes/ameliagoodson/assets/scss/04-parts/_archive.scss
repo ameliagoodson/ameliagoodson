@@ -142,21 +142,6 @@
 	}
 }
 
-.posts:before {
-	background-color: var(--ag-light-background-color);
-	content: "";
-	display: block;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	top: 2.4rem;
-
-	@media (min-width: $tablet) {
-		top: 4.8rem;
-	}
-}
-
 .posts .section-inner {
 	position: relative;
 }
