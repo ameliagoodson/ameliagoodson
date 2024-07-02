@@ -994,11 +994,18 @@ agtheme.filters = {
 
 	init: function() {
 
+
+		    console.log('init called'); // Add this line
+
 		$agthemeDoc.on( 'click', '.filter-link', function() {
+			      event.stopPropagation(); // Add this line
+
 
 			if ( $( this ).hasClass( 'active' ) ) {
 				return false;
 			}
+
+			
 
 			$( 'body' ).addClass( 'filtering-posts' );
 
@@ -1020,6 +1027,16 @@ agtheme.filters = {
 				},
 				success: function( result ) {
 
+					console.log('Request data:', {
+					action: 'agtheme_ajax_filters',
+					post_type: postType,
+					term_id: termId,
+					taxonomy: taxonomy,
+				});
+
+					// Check pagination and other data
+					console.log('Pagination:', result.pagination);
+
 					// Add them to the pagination.
 					$( '#pagination' ).attr( 'data-query-args', result );
 
@@ -1033,7 +1050,7 @@ agtheme.filters = {
 				},
 	
 				error: function( jqXHR, exception ) {
-					agthemeAJAXErrors( jqXHR, exception );
+					agthemeAjaxErrors( jqXHR, exception );
 				}
 			} );
 

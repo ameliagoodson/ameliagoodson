@@ -108,7 +108,7 @@ function agtheme_the_archive_filters()
   $home_url   = '';
   $post_type   = '';
 
-  // Whether the show the number of posts in each category.
+  // Whether to show the number of posts in each category.
   $show_category_post_count = get_theme_mod('agtheme_show_filter_category_post_count', false);
 
   // Determine the correct home URL to link to.

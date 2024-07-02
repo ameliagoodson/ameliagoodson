@@ -12,8 +12,6 @@ function ag_register_styles()
 
   // Customizer styles.
   wp_add_inline_style('ag_styles', AG_Customizer_CSS::get_customizer_css());
-
-  wp_enqueue_script('custom-scripts', get_template_directory_uri() . '/assets/js/scripts.js', array(), false, true);
 }
 add_action('wp_enqueue_scripts', 'ag_register_styles');
 
@@ -23,6 +21,8 @@ add_action('wp_enqueue_scripts', 'ag_register_styles');
 
 function agtheme_register_scripts()
 {
+  error_log('agtheme_register_scripts function called');
+
   // Built-in JS assets.
   $js_dependencies = array('jquery', 'imagesloaded');
 
@@ -53,6 +53,15 @@ function agtheme_register_scripts()
 add_action('wp_enqueue_scripts', 'agtheme_register_scripts');
 
 
+function check_enqueued_scripts()
+{
+  global $wp_scripts;
+  foreach ($wp_scripts->queue as $handle) {
+    error_log($handle);
+  }
+}
+
+add_action('wp_print_scripts', 'check_enqueued_scripts');
 
 function ag_add_features()
 {
