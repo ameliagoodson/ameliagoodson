@@ -149,7 +149,10 @@
 body .background-image {
   background-repeat: no-repeat;
   background-size: cover;
+  
+  // background-image: url('http://ameliagoodson.local/app/uploads/2024/05/Background-dark-02-e1719880770899.png') !important;
 }
+
 
 .hero {
   height: calc(100vh - var(--ag-site-header-height));

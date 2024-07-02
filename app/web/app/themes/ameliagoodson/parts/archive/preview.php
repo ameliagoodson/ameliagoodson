@@ -21,7 +21,6 @@ $fallback_image = agtheme_get_fallback_image();
 				} else {
 					echo $fallback_image;
 				}
-
 				if (is_sticky()) {
 					echo '<div class="sticky-note">' . esc_html__('Featured', 'agtheme') . '</div>';
 				}
