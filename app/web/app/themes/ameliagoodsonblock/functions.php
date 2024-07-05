@@ -12,6 +12,14 @@ function ag_register_styles()
 }
 add_action('wp_enqueue_scripts', 'ag_register_styles');
 
+
+function ag_enqueue_editor_styles()
+{
+  add_editor_style('/assets/css/editor.css');
+}
+add_action('admin_init', 'ag_enqueue_editor_styles');
+
+
 /* ------------------------------------------------------------------------------ /*
 /*  ENQUEUE SCRIPTS
 /* ------------------------------------------------------------------------------ */
@@ -73,6 +81,8 @@ function ag_add_features()
 
   // Add excerpts for pages
   add_post_type_support('page', 'excerpt');
+
+  // Add styles in editor screen
   add_theme_support('editor-styles');
 }
 add_action('after_setup_theme', 'ag_add_features');
@@ -104,9 +114,8 @@ require get_template_directory() . '/inc/template-tags.php';
 
 
 /* ------------------------------------------------------------------------------ /*
-/*  ENQUEUE BLOCK SCRIPTS
+/*  REGISTER BLOCKS
 /* ------------------------------------------------------------------------------ */
-// Register blocks
 function agtheme_register_blocks()
 {
   wp_localize_script('wp-editor', 'ourThemeData', array('themePath' => get_stylesheet_directory_uri()));
