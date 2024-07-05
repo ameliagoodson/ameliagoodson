@@ -1,0 +1,1 @@
+(()=>{"use strict";const e=window.React,t=window.wp.blocks,o=JSON.parse('{"UU":"agblocktheme/hero"}');(0,t.registerBlockType)(o.UU,{edit:function(){return console.log("Hero block editor script loaded"),(0,e.createElement)("div",null,(0,e.createElement)("p",null,"This is some dummy text."))}})})();

@@ -1,0 +1,1 @@
+(()=>{"use strict";const e=window.wp.blocks,o=JSON.parse('{"UU":"ourblocktheme/singleevent"}'),t=window.React,c=window.wp.blockEditor;(0,e.registerBlockType)(o.UU,{edit:function(){const e=(0,c.useBlockProps)();return(0,t.createElement)("div",{...e},(0,t.createElement)("div",{className:"our-placeholder-block"},"University Single Event Placeholder"))}})})();

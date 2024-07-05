@@ -1,0 +1,1 @@
+(()=>{"use strict";const e=window.wp.blocks,o=JSON.parse('{"UU":"ourblocktheme/singleprofessor"}'),r=window.React,s=window.wp.blockEditor;(0,e.registerBlockType)(o.UU,{edit:function(){const e=(0,s.useBlockProps)();return(0,r.createElement)("div",{...e},(0,r.createElement)("div",{className:"our-placeholder-block"},"University Single Professor Placeholder"))}})})();
