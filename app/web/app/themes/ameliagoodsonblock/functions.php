@@ -24,36 +24,36 @@ add_action('admin_init', 'ag_enqueue_editor_styles');
 /*  ENQUEUE SCRIPTS
 /* ------------------------------------------------------------------------------ */
 
-function agtheme_register_scripts()
+function agblocktheme_register_scripts()
 {
   // Built-in JS assets.
   $js_dependencies = array('jquery', 'imagesloaded');
 
   // CSS variables ponyfill.
-  wp_register_script('agtheme-css-vars-ponyfill', get_template_directory_uri() . '/assets/js/vendor/css-vars-ponyfill.min.js', array(), '3.6.0');
-  $js_dependencies[] = 'agtheme-css-vars-ponyfill';
+  wp_register_script('agblocktheme-css-vars-ponyfill', get_template_directory_uri() . '/assets/js/vendor/css-vars-ponyfill.min.js', array(), '3.6.0');
+  $js_dependencies[] = 'agblocktheme-css-vars-ponyfill';
 
   // Isotope.
   wp_register_script('isotope', get_template_directory_uri() . '/assets/js/vendor/isotope.pkgd.min.js', array(), '3.0.6');
   $js_dependencies[] = 'isotope';
 
   // Theme scripts.
-  wp_enqueue_script('agtheme-scripts', get_template_directory_uri() . '/assets/js/scripts.js', $js_dependencies, filemtime(get_template_directory() . '/assets/js/scripts.js'));
+  wp_enqueue_script('agblocktheme-scripts', get_template_directory_uri() . '/assets/js/scripts.js', $js_dependencies, filemtime(get_template_directory() . '/assets/js/scripts.js'));
 
   // Setup AJAX.
   $ajax_url = admin_url('admin-ajax.php');
 
   // AJAX Load More.
-  wp_localize_script('agtheme-scripts', 'agtheme_ajax_load_more', array(
+  wp_localize_script('agblocktheme-scripts', 'agblocktheme_ajax_load_more', array(
     'ajaxurl' => esc_url($ajax_url),
   ));
 
   // AJAX Filters.
-  wp_localize_script('agtheme-scripts', 'agtheme_ajax_filters', array(
+  wp_localize_script('agblocktheme-scripts', 'agblocktheme_ajax_filters', array(
     'ajaxurl' => esc_url($ajax_url),
   ));
 }
-add_action('wp_enqueue_scripts', 'agtheme_register_scripts');
+add_action('wp_enqueue_scripts', 'agblocktheme_register_scripts');
 
 
 function check_enqueued_scripts()
@@ -91,8 +91,8 @@ add_action('after_setup_theme', 'ag_add_features');
 function ag_register_menus()
 {
   register_nav_menus(array(
-    'primary' => __('Main menu', 'agtheme'),
-    'footer' => __('Footer menu', 'agtheme'),
+    'primary' => __('Main menu', 'agblocktheme'),
+    'footer' => __('Footer menu', 'agblocktheme'),
   ));
 };
 add_action('after_setup_theme', 'ag_register_menus');
@@ -111,17 +111,3 @@ require get_template_directory() . '/inc/template-functions.php';
 
 // Template tags.
 require get_template_directory() . '/inc/template-tags.php';
-
-
-/* ------------------------------------------------------------------------------ /*
-/*  REGISTER BLOCKS
-/* ------------------------------------------------------------------------------ */
-function agtheme_register_blocks()
-{
-  wp_localize_script('wp-editor', 'ourThemeData', array('themePath' => get_stylesheet_directory_uri()));
-
-  register_block_type_from_metadata(__DIR__ . '/build/hero');
-  register_block_type_from_metadata(__DIR__ . '/build/banner');
-  register_block_type_from_metadata(__DIR__ . '/build/footer');
-}
-add_action('init', 'agtheme_register_blocks');
