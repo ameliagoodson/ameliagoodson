@@ -1,0 +1,68 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "agblocks/curvy",
+	"version": "0.1.0",
+	"title": "Curvy Block",
+	"category": "widgets",
+	"icon": "smiley",
+	"description": "Background image with customisable curve.",
+	"example": {},
+	"supports": {
+		"html": true,
+		"color": {
+			"background": true,
+			"link": true,
+			"text": true
+		},
+		"spacing": {
+			"padding": true,
+			"margin": true
+		}
+	},
+	"attributes": {
+		"style": {
+			"type": "object",
+			"default": {
+				"color": {
+					"background": "#fb2e00"
+				},
+				"spacing": {
+					"padding": {
+						"top": "70px",
+						"right": "70px",
+						"bottom": "70px",
+						"left": "70px"
+					},
+					"margin": "0px"
+				}
+			}
+		},
+		"enableTopCurve": {
+			"type": "boolean",
+			"default": true
+		},
+		"topWidth": {
+			"type": "number",
+			"default": 100
+		},
+		"topHeight": {
+			"type": "number",
+			"default": 100
+		},
+		"flipHorizontal": {
+			"type": "boolean",
+			"default": false
+		},
+		"flipVertical": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+
+	"textdomain": "curvy",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}

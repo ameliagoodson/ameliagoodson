@@ -1,0 +1,18 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-agblocks-curvy {
+  position: relative;
+}
+.wp-block-agblocks-curvy .svg-container {
+  width: 100%;
+  overflow: hidden;
+}
+.wp-block-agblocks-curvy .svg-container, .wp-block-agblocks-curvy svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
