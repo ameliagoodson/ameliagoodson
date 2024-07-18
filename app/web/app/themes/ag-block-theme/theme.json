@@ -18,7 +18,46 @@
         }
       ]
     },
-    "useRootPaddingAwareAlignments": true
+    "useRootPaddingAwareAlignments": true,
+    "color": {
+      "palette": [
+        {
+          "name": "Cyan",
+          "slug": "cyan",
+          "color": "#00eeff"
+        },
+        {
+          "name": "Green",
+          "slug": "green",
+          "color": "#91ff00"
+        },
+        {
+          "name": "White",
+          "slug": "white",
+          "color": "#ffffff"
+        },
+        {
+          "name": "Black",
+          "slug": "black",
+          "color": "#000000"
+        },
+        {
+          "name": "Orange",
+          "slug": "orange",
+          "color": "#fb2e00"
+        },
+        {
+          "name": "Pink",
+          "slug": "pink",
+          "color": "#ff00c7"
+        },
+        {
+          "name": "Dark Purple",
+          "slug": "dark-purple",
+          "color": "#650d94"
+        }
+      ]
+    }
   },
   "templateParts": [
     {

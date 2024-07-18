@@ -9,13 +9,23 @@
  */
 .wp-block-agblocks-curvy {
   position: relative;
+  background-color: #fb2e00;
+  padding: 70px;
 }
-.wp-block-agblocks-curvy .svg-container {
+.wp-block-agblocks-curvy .curve {
+  position: absolute;
+  right: 0;
   width: 100%;
   overflow: hidden;
 }
-.wp-block-agblocks-curvy .svg-container, .wp-block-agblocks-curvy svg {
-  position: absolute;
+.wp-block-agblocks-curvy .curve.top-curve {
+  top: 0;
+}
+.wp-block-agblocks-curvy .curve.bottom-curve {
+  bottom: 0;
+}
+.wp-block-agblocks-curvy .curve svg {
+  position: "absolute";
   top: 0;
   right: 0;
 }

@@ -14,14 +14,9 @@ import { __ } from "@wordpress/i18n";
 import {
 	useBlockProps,
 	InspectorControls,
-	ColorPalette,
+	InnerBlocks,
 } from "@wordpress/block-editor";
-import {
-	PanelBody,
-	ToggleControl,
-	HorizontalRule,
-	RangeControl,
-} from "@wordpress/components";
+import { PanelBody, ToggleControl } from "@wordpress/components";
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -40,6 +35,8 @@ import "./editor.scss";
 
 import metadata from "./block.json";
 import { Curve } from "./components/curve";
+import { TopCurveSettings } from "./components/topCurveSettings";
+import { BottomCurveSettings } from "./components/bottomCurveSettings";
 
 // Attributes from block.json are passed automatically to Edit Component. It is typically called props.
 export default function Edit(props) {
@@ -54,8 +51,21 @@ export default function Edit(props) {
 					<Curve
 						width={props.attributes.topWidth}
 						height={props.attributes.topHeight}
-						flipHorizontal={props.attributes.flipHorizontal}
-						flipVertical={props.attributes.flipVertical}
+						flipHorizontal={props.attributes.topFlipHorizontal}
+						flipVertical={props.attributes.topFlipVertical}
+						color={props.attributes.topColor}
+					/>
+				)}
+				<InnerBlocks />
+				{props.attributes.enableBottomCurve && (
+					// Passes props to the Curve component
+					<Curve
+						isBottom
+						width={props.attributes.bottomWidth}
+						height={props.attributes.bottomHeight}
+						flipHorizontal={props.attributes.bottomFlipHorizontal}
+						flipVertical={props.attributes.bottomFlipVertical}
+						color={props.attributes.bottomColor}
 					/>
 				)}
 			</section>
@@ -74,54 +84,33 @@ export default function Edit(props) {
 					</div>
 					{props.attributes.enableTopCurve && (
 						<>
-							<HorizontalRule />
-							<RangeControl
-								min={100}
-								max={300}
-								value={props.attributes.topWidth || 100}
-								onChange={(newValue) => {
-									props.setAttributes({
-										topWidth: parseInt(newValue),
-									});
-								}}
-								label={__("Width", metadata.textdomain)}
+							{/* Pass props down to TopCurveSettings component */}
+							<TopCurveSettings
+								attributes={props.attributes}
+								setAttributes={props.setAttributes}
 							/>
-							<RangeControl
-								min={0}
-								max={200}
-								value={props.attributes.topHeight}
-								onChange={(newValue) => {
-									props.setAttributes({
-										topHeight: parseInt(newValue),
-									});
-								}}
-								label={__("Height", metadata.textdomain)}
+						</>
+					)}
+				</PanelBody>
+				<PanelBody title={__("Bottom Curve", metadata.textdomain)}>
+					<div style={{ display: "flex" }}>
+						{/* setAttributes is a method of each prop. You need to pass in a new value for your attribute */}
+						<ToggleControl
+							onChange={(isChecked) => {
+								props.setAttributes({ enableBottomCurve: isChecked });
+							}}
+							// Sets the initial state of the attribute (topcurve)
+							checked={props.attributes.enableBottomCurve}
+						/>
+						<span>{__("Enable bottom curve", metadata.textdomain)}</span>
+					</div>
+					{props.attributes.enableBottomCurve && (
+						<>
+							{/* Pass props down to BottomCurveSettings component */}
+							<BottomCurveSettings
+								attributes={props.attributes}
+								setAttributes={props.setAttributes}
 							/>
-							<HorizontalRule />
-							<div style={{ display: "flex" }}>
-								<ToggleControl
-									onChange={(isChecked) => {
-										props.setAttributes({ flipHorizontal: isChecked });
-									}}
-									// Sets the initial state of the toggle control
-									checked={props.attributes.flipHorizontal}
-								/>
-								<span>{__("Flip horizontally", metadata.textdomain)}</span>
-							</div>
-							<div style={{ display: "flex" }}>
-								<ToggleControl
-									onChange={(isChecked) => {
-										props.setAttributes({ flipVertical: isChecked });
-									}}
-									// Sets the initial state of the toggle control
-									checked={props.attributes.flipVertical}
-								/>
-								<span>{__("Flip vertically", metadata.textdomain)}</span>
-							</div>
-							<HorizontalRule />
-							<label>{__("Curve colour", metadata.textdomain)}</label>
-
-							<ColorPalette />
 						</>
 					)}
 				</PanelBody>

@@ -4,12 +4,27 @@
   "name": "agblocks/curvy",
   "version": "0.1.0",
   "title": "Curvy Block",
-  "category": "widgets",
+  "category": "design",
   "icon": "smiley",
-  "description": "Background image with customisable curve.",
-  "example": {},
+  "description": "Divider shape with customisable curve.",
+  "example": {
+    "innerBlocks": [
+      {
+        "name": "core/heading",
+        "attributes": {
+          "content": "Curvy Block"
+        }
+      },
+      {
+        "name": "core/paragraph",
+        "attributes": {
+          "content": "This is an example curvy block"
+        }
+      }
+    ]
+  },
   "supports": {
-    "html": true,
+    "html": false,
     "color": {
       "background": true,
       "link": true,
@@ -50,18 +65,46 @@
       "type": "number",
       "default": 100
     },
-    "flipHorizontal": {
+    "topFlipHorizontal": {
       "type": "boolean",
       "default": false
     },
-    "flipVertical": {
+    "topFlipVertical": {
       "type": "boolean",
       "default": false
+    },
+    "topColor": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "enableBottomCurve": {
+      "type": "boolean",
+      "default": true
+    },
+    "bottomWidth": {
+      "type": "number",
+      "default": 100
+    },
+    "bottomHeight": {
+      "type": "number",
+      "default": 100
+    },
+    "bottomFlipHorizontal": {
+      "type": "boolean",
+      "default": false
+    },
+    "bottomFlipVertical": {
+      "type": "boolean",
+      "default": false
+    },
+    "bottomColor": {
+      "type": "string",
+      "default": "#ffffff"
     }
   },
-  "textdomain": "curvy",
+  "textdomain": "custom-blocks",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
   "style": "file:./style-index.css",
-  "viewScript": "file:./view.js"
+  "render": "file:./render.php"
 }

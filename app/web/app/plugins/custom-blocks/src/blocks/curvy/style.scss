@@ -6,19 +6,30 @@
  */
 
 //  Can set default styles here but if you want to allow the user to change the styles, you should use the block.json file to define the styles
+
+// Due to BUG with get_block_wrapper_attributes(), you need to put default styles here
 .wp-block-agblocks-curvy {
 	position: relative;
+	background-color: #fb2e00;
+	padding: 70px;
 
-	.svg-container {
+	.curve {
+		position: absolute;
+		left: 0;
 		width: 100%;
 		overflow: hidden;
-	}
-	.svg-container, svg {
-		position: absolute;
-		top: 0;
-		left: 0;
+
+		// If curve also has a class of top-curve
+		&.top-curve {
+			top: 0;
+		}
+		&.bottom-curve {
+			bottom: 0;
+		}
+		svg {
+			position: "absolute";
+			top: 0;
+			left: 0;
+		}
 	}
 }
-
-
-

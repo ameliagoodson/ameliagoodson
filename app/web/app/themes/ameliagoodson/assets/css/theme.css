@@ -5,7 +5,6 @@
 :root {
   /* Colors */
   --ag-background-color: #650d94;
-  --ag-light-background-color: #d5caba;
   --ag-primary-color: #ffffff;
   --ag-secondary-color: #00eeff;
   --ag-border-color: #91ff00;
@@ -877,18 +876,6 @@ section:not(.hero) {
 
 :root .has-background-border-color {
   border-color: var(--ag-background-color);
-}
-
-:root .has-light-background-color {
-  color: var(--ag-light-background-color);
-}
-
-:root .has-light-background-background-color {
-  background-color: var(--ag-light-background-color);
-}
-
-:root .has-light-background-border-color {
-  border-color: var(--ag-light-background-color);
 }
 
 :root .has-primary-color {
