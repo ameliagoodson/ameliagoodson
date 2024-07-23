@@ -6379,76 +6379,23 @@ hr + .comment-reply-title {
   }
 }
 
-.footer-inner {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+/* Footer Columns ----------------------------- */
+.footer-columns {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 1.4rem;
+  width: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-@media (min-width: 700px) {
-  .footer-inner {
-    font-size: 1.6rem;
-  }
+.footer-columns .footer-branding {
+  margin-right: var(--ag-spacer-sm);
 }
-
-.has-footer-menu .footer-inner {
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-}
-
-.footer-inner a {
-  color: inherit;
-  outline: none;
-  text-decoration: none;
-}
-
-.footer-inner a:hover,
-.footer-inner a:focus {
-  text-decoration: underline;
-}
-
-/* Footer Credits ---------------------------- */
-.footer-credits {
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+.footer-columns .footer-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  margin: -0.4rem 2.4rem 0 -2.4rem;
-}
-@media (min-width: 700px) {
-  .footer-credits {
-    margin: -0.8rem 2.4rem 0 -2.4rem;
-  }
-}
-
-.footer-credits p {
-  margin: 0.4rem 0 0 2.4rem;
-}
-@media (min-width: 700px) {
-  .footer-credits p {
-    margin: 0.8rem 0 0 2.4rem;
-  }
-}
-
-/* STATE: ONLY CREDITS */
-.footer-credits:only-child {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-right: 0;
 }
 
 /* Footer Menu ------------------------------- */
@@ -6461,33 +6408,95 @@ hr + .comment-reply-title {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  margin: -0.4rem 0 0 -1.6rem;
+  margin-right: var(--ag-spacer-md);
   text-align: right;
 }
+.footer-menu ul {
+  margin: 0;
+  list-style-type: none;
+  text-align: left;
+}
+.footer-menu ul li {
+  margin-top: 0;
+}
+.footer-menu ul li:not(:first-child) {
+  margin-top: 0.4rem;
+}
 @media (min-width: 700px) {
-  .footer-menu {
-    margin: -0.8rem 0 0 -2.4rem;
+  .footer-menu ul li:not(:first-child) {
+    margin-top: 0.8rem;
   }
 }
 
-.footer-menu li {
-  margin: 0.4rem 0 0 1.6rem;
+/* Footer Bottom / Credits  ---------------------------- */
+.footer-bottom {
+  padding: var(--ag-spacer-sm);
+  border-top: 1px solid var(--ag-border-color);
+}
+.footer-bottom .footer-credits {
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin: -0.4rem 2.4rem 0 -2.4rem;
 }
 @media (min-width: 700px) {
-  .footer-menu li {
+  .footer-bottom .footer-credits {
+    margin: -0.8rem 2.4rem 0 -2.4rem;
+  }
+}
+.footer-bottom .footer-credits p {
+  margin: 0.4rem 0 0 2.4rem;
+}
+@media (min-width: 700px) {
+  .footer-bottom .footer-credits p {
     margin: 0.8rem 0 0 2.4rem;
   }
 }
 
+.footer-inner {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.4rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: var(--ag-spacer-sm);
+}
+@media (min-width: 700px) {
+  .footer-inner {
+    font-size: 1.6rem;
+  }
+}
+.footer-inner a {
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+
+.has-footer-menu .footer-inner {
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.footer-inner .footer-inner a:hover,
+.footer-inner a:focus {
+  text-decoration: underline;
+}
+
 /* Footer Social ----------------------------- */
-#site-footer .social-menu {
+.footer-social {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
   margin: 0 -1.2rem;
-}
-
-#site-footer .social-menu a:focus {
-  -webkit-box-shadow: inset 0 0 0 0.2rem var(--ag-border-color);
-          box-shadow: inset 0 0 0 0.2rem var(--ag-border-color);
 }
