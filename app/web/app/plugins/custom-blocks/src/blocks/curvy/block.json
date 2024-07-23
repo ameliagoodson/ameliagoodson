@@ -31,9 +31,9 @@
 			"text": true
 		},
 		"spacing": {
-			"padding": true,
-			"margin": true
-		}
+			"padding": true
+		},
+		"align": ["wide", "full"]
 	},
 	"attributes": {
 		"style": {
@@ -48,8 +48,7 @@
 						"right": "70px",
 						"bottom": "70px",
 						"left": "70px"
-					},
-					"margin": "0px"
+					}
 				}
 			}
 		},

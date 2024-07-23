@@ -3,12 +3,11 @@
 /**
  * The main index template file - displays post archives
  *
- * @package NC Theme
  */
 
 get_header();
 ?>
-
+<!-- Index -->
 <main id="site-content" role="main">
 	<div class="site-content-inner">
 
@@ -25,8 +24,8 @@ get_header();
 
 		<?php endif; ?>
 
-	</div><!-- .site-content-inner -->
-</main><!-- #site-content -->
+	</div>
+</main>
 
 <?php
 get_footer();

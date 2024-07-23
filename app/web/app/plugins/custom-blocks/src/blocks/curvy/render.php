@@ -1,7 +1,7 @@
 <?php
 
 $block_wrapper_attributes = get_block_wrapper_attributes([
-  'class' => 'alignfull'
+  'class' => 'alignfull',
 ]);
 // wp_send_json($attributes);
 // wp_send_json($block_wrapper_attributes);
@@ -16,7 +16,7 @@ $bottomTransform = "scaleY(-1) scaleX(" . ($attributes['bottomFlipHorizontal'] ?
 
 ?>
 
-<div <?php echo $block_wrapper_attributes; ?>>
+<div <?php echo $block_wrapper_attributes ?>>
   <div class="curve top-curve" style="display: <?php echo $attributes['enableTopCurve'] ? "block" : "none" ?>; height: <?php echo $attributes['topHeight'] ?>px; transform: <?php echo $topTransform ?> ">
     <svg preserveAspectRatio=" none" viewBox="0 0 1200 120" style="height: <?php echo $attributes['topHeight'] ?>px; width: <?php echo $attributes['topWidth'] ?>%">
       <path fill="<?php echo $attributes['topColor'] ?? "#FFFFFF" ?>" d="<?php echo $attributes['topFlipVertical'] ? $flipPath : $normalPath ?>">

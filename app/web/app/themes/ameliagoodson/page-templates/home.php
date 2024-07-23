@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * Template Name: Home
+ * *
+ */
+?>
+
+
+<?php get_header();
+$hero_layout = get_theme_mod('hero_layout');
+?>
+
+  <?php if ($hero_layout == 'Full image' || $hero_layout == "No image") {
+
+    get_template_part('parts/single/hero-full');
+  } else {
+    get_template_part('parts/single/hero-half');
+  } ?>
+
+<?php get_template_part('/parts/single/content') ?>
+
+<?php get_footer(); ?>

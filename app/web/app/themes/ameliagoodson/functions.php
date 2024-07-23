@@ -63,6 +63,10 @@ function check_enqueued_scripts()
 
 add_action('wp_print_scripts', 'check_enqueued_scripts');
 
+
+/* ------------------------------------------------------------------------------ /*
+/*  ADD FEATURES
+/* ------------------------------------------------------------------------------ */
 function ag_add_features()
 {
   // Add featured image
@@ -78,6 +82,9 @@ function ag_add_features()
 
   // Add excerpts for pages
   add_post_type_support('page', 'excerpt');
+
+  // Add align wide and align full for blocks
+  add_theme_support('align-wide');
 }
 add_action('after_setup_theme', 'ag_add_features');
 

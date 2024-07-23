@@ -40,10 +40,13 @@ import { BottomCurveSettings } from "./components/bottomCurveSettings";
 
 // Attributes from block.json are passed automatically to Edit Component. It is typically called props.
 export default function Edit(props) {
-	const { className, ...blockProps } = useBlockProps();
+	const { className } = useBlockProps();
+	const blockProps = useBlockProps({
+		className: props.attributes.align ? `align${props.attributes.align}` : "",
+	});
 	return (
 		<>
-			<section className={`${className} alignfull`} {...blockProps}>
+			<section className={{ className }} {...blockProps}>
 				{/* If the enableTopCurve attribute is true, the Curve component is rendered */}
 				{props.attributes.enableTopCurve && (
 					// Passes width and height props to the Curve component

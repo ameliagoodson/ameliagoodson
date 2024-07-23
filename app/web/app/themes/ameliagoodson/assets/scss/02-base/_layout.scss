@@ -61,6 +61,16 @@ section:not(.hero) {
   width: calc(100% - var(--ag-gutter));
 }
 
+// Ensures full width blocks are full width
+.section-inner .alignfull {
+  width: 100vw; /* Full viewport width */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
 .section-inner.max-percentage {
   width: 100%;
 }
@@ -474,9 +484,9 @@ section:not(.hero) {
   max-width: var(--ag-inner-width-max);
 }
 
-.alignfull {
-  max-width: 100%;
-}
+// .alignfull {
+//   max-width: 100%;
+// }
 
 /* STACKED BACKGROUND BLOCKS */
 
