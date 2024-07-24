@@ -1,0 +1,86 @@
+/* Hero ------------------------------ */
+body .background-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero {
+  height: calc(80vh - var(--ag-site-header-height));
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: $tablet) {
+    padding-top: 4rem;
+    padding-bottom: 10rem;
+  }
+
+  .hero-content {
+    .hero-copy {
+      display: flex;
+      flex-direction: column;
+      row-gap: 2em;
+
+      .hero-title {
+        font-size: clamp(5.4rem, 5vw, 11.2rem);
+        line-height: 1;
+        letter-spacing: 2px;
+        margin: 0;
+      }
+      .hero-subtitle {
+        font-size: clamp(3.4rem, 2vw, 6rem);
+        p {
+          line-height: normal;
+        }
+      }
+    }
+  }
+}
+
+// Bento grid
+.work-grid {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "item01 item02 item02"
+    "item01 item03 item04"
+    "item05 item05 item06";
+  grid-gap: 1rem;
+}
+.grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.grid-item01 {
+  background: rgb(72, 43, 72);
+  grid-area: item01;
+}
+.grid-item02 {
+  background: orange;
+  grid-area: item02;
+}
+.grid-item03 {
+  background: white;
+  color: black;
+  grid-area: item03;
+}
+.grid-item04 {
+  background: cyan;
+  grid-area: item04;
+}
+.grid-item05 {
+  background: hotpink;
+  grid-area: item05;
+}
+.grid-item06 {
+  background: purple;
+  grid-area: item06;
+}

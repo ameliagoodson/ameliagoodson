@@ -23,6 +23,10 @@
 
   .footer-branding {
     margin-right: var(--ag-spacer-sm);
+
+    .footer-logo {
+      max-width: 200px;
+    }
   }
 
   .footer-nav {
