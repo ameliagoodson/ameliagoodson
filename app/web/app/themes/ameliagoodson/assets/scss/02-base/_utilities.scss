@@ -131,6 +131,24 @@
 .d-flex {
   display: flex;
 }
+.d-none {
+  display: none;
+}
+.d-block {
+  display: block;
+}
+.d-desktop {
+  display: none !important;
+  @media (min-width: $tablet) {
+    display: block !important;
+  }
+}
+.d-mobile {
+  display: block !important;
+  @media (min-width: $tablet) {
+    display: none !important;
+  }
+}
 .align-center {
   display: flex;
   justify-items: center;
