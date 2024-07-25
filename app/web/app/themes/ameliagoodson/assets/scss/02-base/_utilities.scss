@@ -143,12 +143,25 @@
     display: block !important;
   }
 }
+.d-flex-desktop {
+  display: none !important;
+  @media (min-width: $tablet) {
+    display: flex !important;
+  }
+}
 .d-mobile {
   display: block !important;
   @media (min-width: $tablet) {
     display: none !important;
   }
 }
+.d-flex-mobile {
+  display: flex !important;
+  @media (min-width: $tablet) {
+    display: none !important;
+  }
+}
+
 .align-center {
   display: flex;
   justify-items: center;

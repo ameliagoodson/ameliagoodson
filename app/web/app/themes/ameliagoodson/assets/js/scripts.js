@@ -253,15 +253,20 @@ agtheme.toggles = {
 
 document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.querySelector(".hamburger-btn");
-  const mobile_menu = document.querySelector(".mobile-menu-container");
+  const mobile_menu = document.querySelector(".mobile-header");
+  const mobile_container = document.querySelector(".mobile-menu-container");
 
   if (hamburger && mobile_menu) {
     hamburger.addEventListener("click", function () {
-      console.log("clicked");
-      if (mobile_menu.classList.contains("active")) {
+      if (
+        mobile_menu.classList.contains("active") &&
+        mobile_container.classList.contains("active")
+      ) {
         mobile_menu.classList.remove("active");
+        mobile_container.classList.remove("active");
       } else {
         mobile_menu.classList.add("active");
+        mobile_container.classList.add("active");
       }
     });
   }

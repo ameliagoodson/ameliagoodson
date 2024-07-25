@@ -18,21 +18,21 @@ $header_color = get_theme_mod('header_color');
       </h1>
       <?php wp_nav_menu(array(
         'theme_location' => 'primary',
-        'menu_class' => 'main-menu',
+        'menu_class' => 'menu main-menu',
       ))
       ?>
     </nav>
   </div>
-  <div class="mobile-header d-mobile">
+  <div class="mobile-header d-flex-mobile">
     <button class="hamburger-btn" aria-controls="mobile-menu" aria-expanded="false">
       <div class="menu-bar top"></div>
       <div class="menu-bar middle"></div>
       <div class="menu-bar bottom"></div>
     </button>
-    <nav class="mobile-menu-container">
-      <?php wp_nav_menu(array(
-        'theme_location' => 'primary',
-        'menu_class' => 'mobile-menu',
-      )) ?>
-    </nav>
+    <?php wp_nav_menu(array(
+      'theme_location' => 'primary',
+      'menu_class' => 'menu mobile-menu',
+      'container' => 'nav',
+      'container_class' => 'mobile-menu-container',
+    )) ?>
 </header>
