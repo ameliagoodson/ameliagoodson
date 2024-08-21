@@ -35,7 +35,9 @@ function agtheme_register_scripts()
   $js_dependencies[] = 'isotope';
 
   // Theme scripts.
-  wp_enqueue_script('agtheme-scripts', get_template_directory_uri() . '/assets/js/scripts.js', $js_dependencies, filemtime(get_template_directory() . '/assets/js/scripts.js'));
+  wp_enqueue_script('agtheme-scripts', get_template_directory_uri() . '/assets/js/scripts-ag.js', $js_dependencies, filemtime(get_template_directory() . '/assets/js/scripts-ag.js'));
+
+
 
   // Setup AJAX.
   $ajax_url = admin_url('admin-ajax.php');
