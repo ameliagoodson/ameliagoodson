@@ -43,44 +43,109 @@ body .background-image {
 }
 
 // Bento grid
-.work-grid {
+.bento-grid {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto auto auto;
   grid-template-areas:
     "item01 item02 item02"
     "item01 item03 item04"
     "item05 item05 item06";
-  grid-gap: 1rem;
+  grid-gap: 2.4rem;
 }
-.grid-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
+.bento-card {
+  min-height: 20rem;
   border-radius: 1rem;
+  padding: 1rem;
+  position: relative;
+  display: flex;
+
+  .bento-card-description {
+    // max-width: 14rem;
+
+    .bento-title {
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
+    .bento-link {
+      text-decoration: none;
+    }
+  }
+  .bento-card-details {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: hidden;
+
+    img {
+      border-radius: 1rem;
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: cover;
+      flex-shrink: 1; /* Allows the image to shrink to fit the container */
+      flex-grow: 1;
+      object-position: top;
+    }
+  }
 }
+
 .grid-item01 {
-  background: rgb(72, 43, 72);
+  background: var(--ag-dark-purple-color);
   grid-area: item01;
+  flex-direction: column;
+
+  .bento-card-description,
+  .bento-link {
+    color: var(--ag-white-color);
+  }
 }
 .grid-item02 {
-  background: orange;
+  background: var(--ag-orange-color);
   grid-area: item02;
+  color: var(--ag-white-color);
+  flex-direction: column;
+
+  .bento-card-description,
+  .bento-link {
+    color: var(--ag-white-color);
+  }
 }
 .grid-item03 {
-  background: white;
-  color: black;
+  background: var(--ag-cyan-color);
   grid-area: item03;
 }
 .grid-item04 {
-  background: cyan;
+  background: var(--ag-green-color);
   grid-area: item04;
 }
+.grid-item03,
+.grid-item04 {
+  max-width: 50rem;
+  max-height: 50rem;
+  flex-direction: column;
+
+  .bento-card-description,
+  .bento-link {
+    color: var(--ag-black-color);
+  }
+}
 .grid-item05 {
-  background: hotpink;
+  background: var(--ag-pink-color);
   grid-area: item05;
+  flex-direction: column;
+
+  .bento-card-description,
+  .bento-link {
+    color: var(--ag-white-color);
+  }
 }
 .grid-item06 {
-  background: purple;
+  background: var(--ag-dark-purple-color);
   grid-area: item06;
+
+  .bento-card-description,
+  .bento-link {
+    color: var(--ag-white-color);
+  }
 }

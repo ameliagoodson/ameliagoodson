@@ -11,6 +11,8 @@
   --ag-accent-color: #fb2e00;
   --ag-white-color: #ffffff;
   --ag-black-color: #000000;
+  --ag-green-color: #91ff00;
+  --ag-cyan-color: #00eeff;
   --ag-orange-color: #fb2e00;
   --ag-pink-color: #ff00c7;
   --ag-dark-purple-color: #650d94;
@@ -451,6 +453,30 @@
 
 :root .has-black-border-color {
   border-color: var(--ag-black-color);
+}
+
+:root .has-green-color {
+  color: var(--ag-green-color);
+}
+
+:root .has-green-background-color {
+  background-color: var(--ag-green-color);
+}
+
+:root .has-green-border-color {
+  border-color: var(--ag-green-color);
+}
+
+:root .has-cyan-color {
+  color: var(--ag-cyan-color);
+}
+
+:root .has-cyan-background-color {
+  background-color: var(--ag-cyan-color);
+}
+
+:root .has-cyan-border-color {
+  border-color: var(--ag-cyan-color);
 }
 
 :root .has-orange-color {
