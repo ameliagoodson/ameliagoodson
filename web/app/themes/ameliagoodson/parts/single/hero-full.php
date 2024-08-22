@@ -12,18 +12,18 @@ $transparent_header = get_theme_mod('hero_transparent_header');
 ?>
 
 <main class="hero" <?php if ($background_image && $hero_layout != "No image" && !$transparent_header) : ?> style="background-image: url(<?php echo esc_url($background_image); ?>)" <?php endif ?>>
-  <div class="section-inner mw-<?php echo $hero_width ?> i-a a-fade-up">
+  <div class="section-inner mw-<?php echo $hero_width ?>">
     <div class="hero-content">
       <div class="hero-copy <?php echo "align-" . strtolower($text_alignment) ?>">
         <?php if ($hero_title) : ?>
-          <div class="h1 hero-title"><?php echo $hero_title; ?></div>
+          <div class="h1 hero-title reveal"><?php echo $hero_title; ?></div>
         <?php endif; ?>
         <?php if ($hero_subtitle) : ?>
-          <div class="hero-subtitle contain-margins">
+          <div class="hero-subtitle contain-margins reveal-100">
             <?php echo $hero_subtitle ?>
           </div>
         <?php endif; ?>
-        <a class="button" href="<?php echo esc_url(home_url('/work')); ?>">See work</a>
+        <a class="button reveal-400" href="<?php echo esc_url(home_url('/work')); ?>">See work</a>
       </div>
     </div>
   </div>

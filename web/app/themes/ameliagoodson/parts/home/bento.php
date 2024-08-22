@@ -16,7 +16,7 @@ $default_work_link = '/work'; // Default link to the /work page
     </div>
     <div class="grid bento-grid">
       <?php if (!empty(array_filter($work1))) : ?>
-        <div class="grid-item bento-card grid-item01">
+        <div class="grid-item bento-card grid-item01 reveal">
           <div class="bento-card-description">
             <?php
             $work1_link = !empty($work1['work_link']) ? esc_url($work1['work_link']) : esc_url($default_work_link);
@@ -31,7 +31,7 @@ $default_work_link = '/work'; // Default link to the /work page
       <?php endif ?>
 
       <?php if (!empty(array_filter($work2))) : ?>
-        <div class="grid-item bento-card grid-item02">
+        <div class="grid-item bento-card grid-item02 reveal">
           <div class="bento-card-description">
             <?php
             $work2_link = !empty($work2['work_link']) ? esc_url($work2['work_link']) : esc_url($default_work_link);
@@ -46,7 +46,7 @@ $default_work_link = '/work'; // Default link to the /work page
       <?php endif ?>
 
       <?php if (!empty(array_filter($work3))) : ?>
-        <div class="grid-item bento-card grid-item03">
+        <div class="grid-item bento-card grid-item03 reveal">
           <div class="bento-card-description">
             <?php
             $work3_link = !empty($work3['work_link']) ? esc_url($work3['work_link']) : esc_url($default_work_link);
@@ -61,7 +61,7 @@ $default_work_link = '/work'; // Default link to the /work page
       <?php endif ?>
 
       <?php if (!empty(array_filter($work4))) : ?>
-        <div class="grid-item bento-card grid-item04">
+        <div class="grid-item bento-card grid-item04 reveal">
           <div class="bento-card-description">
             <?php
             $work4_link = !empty($work4['work_link']) ? esc_url($work4['work_link']) : esc_url($default_work_link);
@@ -76,7 +76,7 @@ $default_work_link = '/work'; // Default link to the /work page
       <?php endif ?>
 
       <?php if (!empty(array_filter($work5))) : ?>
-        <div class="grid-item bento-card grid-item05">
+        <div class="grid-item bento-card grid-item05 reveal">
           <div class="bento-card-description">
             <?php
             $work5_link = !empty($work5['work_link']) ? esc_url($work5['work_link']) : esc_url($default_work_link);
@@ -91,7 +91,7 @@ $default_work_link = '/work'; // Default link to the /work page
       <?php endif ?>
 
       <?php if (!empty(array_filter($work6))) : ?>
-        <div class="grid-item bento-card grid-item06">
+        <div class="grid-item bento-card grid-item06 reveal">
           <div class="bento-card-description">
             <?php
             $work6_link = !empty($work6['work_link']) ? esc_url($work6['work_link']) : esc_url($default_work_link);

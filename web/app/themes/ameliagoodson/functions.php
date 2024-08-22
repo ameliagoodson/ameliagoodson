@@ -34,10 +34,11 @@ function agtheme_register_scripts()
   wp_register_script('isotope', get_template_directory_uri() . '/assets/js/vendor/isotope.pkgd.min.js', array(), '3.0.6');
   $js_dependencies[] = 'isotope';
 
+  // Scroll Reveal
+  wp_enqueue_script('scroll-reveal', get_template_directory_uri() . '/assets/js/vendor/scrollreveal.min.js', array(), '4.0.5');
+
   // Theme scripts.
   wp_enqueue_script('agtheme-scripts', get_template_directory_uri() . '/assets/js/scripts-ag.js', $js_dependencies, filemtime(get_template_directory() . '/assets/js/scripts-ag.js'));
-
-
 
   // Setup AJAX.
   $ajax_url = admin_url('admin-ajax.php');
