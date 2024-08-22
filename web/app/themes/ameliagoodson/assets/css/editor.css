@@ -3,12 +3,18 @@
 /*  EDITOR STYLES
 /* ------------------------------------------------------------------------------ */
 :root {
+  /* Alignments */
+  --ag-inner-width-thin: 65.2rem;
+  --ag-inner-width-small: 76rem;
+  --ag-inner-width-medium: 104rem;
+  --ag-inner-width-large: 130rem;
+  --ag-inner-width-max: 205.2rem;
   /* Colors */
   --ag-background-color: #650d94;
   --ag-primary-color: #ffffff;
   --ag-secondary-color: #00eeff;
   --ag-border-color: #91ff00;
-  --ag-accent-color: #fb2e00;
+  --ag-accent-color: #ff00c7;
   --ag-white-color: #ffffff;
   --ag-black-color: #000000;
   --ag-green-color: #91ff00;
@@ -16,12 +22,6 @@
   --ag-orange-color: #fb2e00;
   --ag-pink-color: #ff00c7;
   --ag-dark-purple-color: #650d94;
-  /* Alignments */
-  --ag-inner-width-thin: 65.2rem;
-  --ag-inner-width-small: 76rem;
-  --ag-inner-width-medium: 104rem;
-  --ag-inner-width-large: 130rem;
-  --ag-inner-width-max: 205.2rem;
   /* Spacing */
   --ag-gutter: clamp(4.8rem, calc(11.8vw + 0.392rem), 19.2rem);
   --ag-gap: clamp(2.4rem, calc(5.9vw + 0.196rem), 9.6rem);
@@ -61,7 +61,7 @@
   /* Buttons */
   --ag-button-text-color: var(--ag-accent-color);
   --ag-button-background-color: var(--ag-white-color);
-  --ag-button-border-color: var(--ag-accent-color);
+  --ag-button-border-color: none;
   --ag-button-border-width: 0.2rem;
   --ag-button-border-radius: 0;
   --ag-button-font-size: 2rem;
@@ -72,8 +72,8 @@
   --ag-button-text-transform: uppercase;
   --ag-button-letter-spacing: 0.1em;
   --ag-button-text-color-active: var(--ag-white-color);
-  --ag-button-background-color-active: var(--ag-accent-color);
-  --ag-button-border-color-active: var(--ag-white-color);
+  --ag-button-background-color-active: var(--ag-black-color);
+  --ag-button-border-color-active: none;
   --ag-button-outline-border-width: 0.2rem;
   --ag-button-outline-color: var(--ag-accent-color);
   --ag-button-outline-color-active: var(--ag-accent-color);

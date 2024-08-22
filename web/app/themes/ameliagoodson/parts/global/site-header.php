@@ -36,3 +36,9 @@ $header_color = get_theme_mod('header_color');
       'container_class' => 'mobile-menu-container',
     )) ?>
 </header>
+
+<script>
+  document.querySelector('.hamburger-btn').addEventListener('click', function() {
+    document.querySelector('.mobile-menu-container').classList.toggle('active')
+  })
+</script>

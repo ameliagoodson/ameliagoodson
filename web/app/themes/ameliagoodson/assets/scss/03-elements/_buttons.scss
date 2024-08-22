@@ -34,7 +34,6 @@ input[type="submit"],
   text-decoration-thickness: 0.1rem;
   transition: var(--ag-trans-speed) var(--ag-trans-ease);
   transition-property: background, border, color;
-  border-radius: 1em;
   width: fit-content;
 
   &:hover,
@@ -42,6 +41,21 @@ input[type="submit"],
     color: var(--ag-button-text-color-active);
     background: var(--ag-button-background-color-active);
     border-color: var(--ag-button-border-color-active);
+    box-shadow: $box-shadow-sm;
+  }
+}
+
+.btn-cta {
+  color: var(--ag-button-text-color-active);
+  background: var(--ag-button-background-color-active);
+  border-color: var(--ag-button-border-color-active);
+  box-shadow: $box-shadow-sm;
+
+  &:hover,
+  &:focus {
+    color: var(--ag-button-text-color);
+    background: var(--ag-button-background-color);
+    border-color: var(--ag-button-border-color);
   }
 }
 
