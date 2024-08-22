@@ -65,7 +65,7 @@ $pagination_class = !$prev_link ? ' only-next' : (!$next_link ? ' only-previous'
 			<?php endif; ?>
 
 			<?php if ($pagination_type == 'button') : ?>
-				<button id="load-more" class="d-no-js-none do-spot spot-fade-up">
+				<button id="load-more" class="d-no-js-none">
 					<span class="load-text"><?php esc_html_e('Load More', 'agtheme'); ?></span>
 					<span class="loading-icon"><span class="dot-pulse"></span></span>
 				</button>

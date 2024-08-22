@@ -9,7 +9,7 @@
 $fallback_image = agtheme_get_fallback_image();
 ?>
 
-<article <?php post_class('preview do-spot spot-fade-up a-del-200 preview-' . get_post_type()); ?> id="post-<?php the_ID(); ?>">
+<article <?php post_class('preview reveal preview-' . get_post_type()); ?> id="post-<?php the_ID(); ?>">
 
 	<?php if ((has_post_thumbnail() && !post_password_required()) || $fallback_image) : ?>
 		<?php $has_post_thumbnail = has_post_thumbnail() && !post_password_required() || $fallback_image;  ?>

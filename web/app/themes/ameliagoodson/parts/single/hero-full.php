@@ -19,7 +19,7 @@ $transparent_header = get_theme_mod('hero_transparent_header');
           <div class="h1 hero-title reveal"><?php echo $hero_title; ?></div>
         <?php endif; ?>
         <?php if ($hero_subtitle) : ?>
-          <div class="hero-subtitle contain-margins reveal-100">
+          <div class="hero-subtitle contain-margins reveal">
             <?php echo $hero_subtitle ?>
           </div>
         <?php endif; ?>
