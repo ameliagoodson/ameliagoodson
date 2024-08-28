@@ -6,9 +6,9 @@
  */
 
 ?>
-
+<!-- Entry header -->
 <div class="entry-header">
-  <div class="section-inner mw-small">
+  <div class="section-inner mw-medium">
 
     <?php
     // Home = blog homepage
@@ -24,7 +24,6 @@
         <?php the_excerpt(); ?>
       </div>
     <?php endif; ?>
-
   </div>
 
   <?php if (has_post_thumbnail() && !post_password_required()) : ?>
@@ -34,5 +33,5 @@
       </div>
     </figure>
   <?php endif; ?>
-
 </div>
+<!-- End entry header -->
