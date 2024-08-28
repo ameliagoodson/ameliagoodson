@@ -20,8 +20,8 @@
         ?>
         <div class="footer-social footer-menu">
           <ul>
-            <li>LinkedIn</li>
-            <li>Github</li>
+            <li><a href="https://www.linkedin.com/in/ameliagoodson/">LinkedIn</a></li>
+            <li><a href="https://github.com/ameliagoodson">Github</a></li>
           </ul>
         </div>
       </div>

@@ -6554,10 +6554,21 @@ hr + .comment-reply-title {
 }
 
 /* Footer Menu ------------------------------- */
+.footer-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-right: var(--ag-spacer-md);
+  text-align: right;
+}
 .footer-menu ul {
-  margin: 0;
+  margin: 0 0 0 2.4rem;
   list-style-type: none;
-  text-align: left;
 }
 .footer-menu ul li {
   margin-top: 0;
@@ -6634,14 +6645,6 @@ hr + .comment-reply-title {
 .footer-inner .footer-inner a:hover,
 .footer-inner a:focus {
   text-decoration: underline;
-}
-
-/* Footer Social ----------------------------- */
-.footer-social {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  margin: 0 -1.2rem;
 }
 
 /* Hero ------------------------------ */
