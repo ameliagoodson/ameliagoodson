@@ -6,6 +6,7 @@
  */
 
 get_header();
+ag_get_content_type();
 ?>
 
 <main id="site-content" role="main">
@@ -14,7 +15,7 @@ get_header();
     <?php
     while (have_posts()) {
       the_post();
-      get_template_part('parts/single/content', get_post_type());
+      get_template_part('parts/single/content', ag_get_content_type());
     }
     ?>
 

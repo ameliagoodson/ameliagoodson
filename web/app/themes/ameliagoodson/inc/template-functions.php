@@ -755,3 +755,20 @@ function agtheme_classic_editor_post_types($current_status, $post_type)
   return $current_status;
 }
 add_filter('use_block_editor_for_post_type', 'agtheme_classic_editor_post_types', 10, 2);
+
+
+/**
+ * Returns the single content type.
+ */
+function ag_get_content_type()
+{
+
+  // Default: Post type.
+  $content_type = get_post_type();
+
+  if (is_page_template()) {
+    $content_type = str_replace('template-', '', basename(get_page_template_slug(), '.php'));
+  }
+
+  return $content_type;
+}

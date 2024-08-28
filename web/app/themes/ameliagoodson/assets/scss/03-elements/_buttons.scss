@@ -1,5 +1,5 @@
 button,
-.button,
+.btn,
 .faux-button,
 .wp-block-button__link,
 :root .wp-block-file__button,
@@ -26,7 +26,7 @@ input[type="submit"],
   text-transform: var(--ag-button-text-transform);
   letter-spacing: var(--ag-button-letter-spacing);
   line-height: var(--ag-button-line-height);
-  margin: 0;
+  margin: 0 0 1.4rem 0;
   padding: var(--ag-button-padding-y) var(--ag-button-padding-x);
   text-align: center;
   text-decoration: none;
@@ -41,7 +41,6 @@ input[type="submit"],
     color: var(--ag-button-text-color-active);
     background: var(--ag-button-background-color-active);
     border-color: var(--ag-button-border-color-active);
-    box-shadow: $box-shadow-sm;
   }
 }
 
@@ -50,6 +49,7 @@ input[type="submit"],
   background: var(--ag-button-background-color-active);
   border-color: var(--ag-button-border-color-active);
   box-shadow: $box-shadow-sm;
+  margin: 20px;
 
   &:hover,
   &:focus {
@@ -57,6 +57,11 @@ input[type="submit"],
     background: var(--ag-button-background-color);
     border-color: var(--ag-button-border-color);
   }
+}
+
+.btn-sm {
+  font-size: 15px;
+  padding: 10px 18px;
 }
 
 .wp-block-button__link:visited {

@@ -1857,12 +1857,18 @@ body.no-anim *:after {
 /* ------------------------------------------------------------------------------ /*
 /*  ELEMENTS
 /* ------------------------------------------------------------------------------ */
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
   font-family: var(--ag-heading-font);
   -webkit-font-feature-settings: "lnum";
           font-feature-settings: "lnum";
@@ -1874,50 +1880,68 @@ h6, .h6 {
   margin: 4.8rem 0 3.2rem;
 }
 @media (min-width: 700px) {
-  h1, .h1,
-  h2, .h2,
-  h3, .h3,
-  h4, .h4,
-  h5, .h5,
-  h6, .h6 {
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6 {
     margin-top: 6.4rem;
   }
 }
-h1 strong, .h1 strong,
-h2 strong, .h2 strong,
-h3 strong, .h3 strong,
-h4 strong, .h4 strong,
-h5 strong, .h5 strong,
-h6 strong, .h6 strong {
+h1 strong,
+.h1 strong,
+h2 strong,
+.h2 strong,
+h3 strong,
+.h3 strong,
+h4 strong,
+.h4 strong,
+h5 strong,
+.h5 strong,
+h6 strong,
+.h6 strong {
   font-weight: var(--ag-heading-font-weight-bold);
 }
 
-h1, .h1 {
+h1,
+.h1 {
   font-size: var(--ag-h1-font-size);
   line-height: var(--ag-h1-line-height);
 }
 
-h2, .h2 {
+h2,
+.h2 {
   font-size: var(--ag-h2-font-size);
   line-height: var(--ag-h2-line-height);
 }
 
-h3, .h3 {
+h3,
+.h3 {
   font-size: var(--ag-h3-font-size);
   line-height: var(--ag-h3-line-height);
 }
 
-h4, .h4 {
+h4,
+.h4 {
   font-size: var(--ag-h4-font-size);
   line-height: var(--ag-h4-line-height);
 }
 
-h5, .h5 {
+h5,
+.h5 {
   font-size: var(--ag-h5-font-size);
   line-height: var(--ag-h5-line-height);
 }
 
-h6, .h6 {
+h6,
+.h6 {
   font-size: var(--ag-h6-font-size);
   line-height: var(--ag-h6-line-height);
 }
@@ -1963,6 +1987,10 @@ a {
 }
 a:hover, a:focus {
   text-decoration: none;
+}
+
+.section-title {
+  margin-top: 0;
 }
 
 /* Drop Cap ---------------------------------- */
@@ -2132,7 +2160,8 @@ iframe {
 
 img,
 embed,
-object {
+object,
+video {
   display: block;
   height: auto;
   max-width: 100%;
@@ -2477,7 +2506,7 @@ textarea.reset {
 }
 
 button,
-.button,
+.btn,
 .faux-button,
 .wp-block-button__link,
 :root .wp-block-file__button,
@@ -2508,7 +2537,7 @@ input[type=submit],
   text-transform: var(--ag-button-text-transform);
   letter-spacing: var(--ag-button-letter-spacing);
   line-height: var(--ag-button-line-height);
-  margin: 0;
+  margin: 0 0 1.4rem 0;
   padding: var(--ag-button-padding-y) var(--ag-button-padding-x);
   text-align: center;
   text-decoration: none;
@@ -2523,8 +2552,8 @@ input[type=submit],
   width: fit-content;
 }
 button:hover, button:focus,
-.button:hover,
-.button:focus,
+.btn:hover,
+.btn:focus,
 .faux-button:hover,
 .faux-button:focus,
 .wp-block-button__link:hover,
@@ -2550,8 +2579,6 @@ input[type=submit]:focus,
   color: var(--ag-button-text-color-active);
   background: var(--ag-button-background-color-active);
   border-color: var(--ag-button-border-color-active);
-  -webkit-box-shadow: var(--ag-pink-color) 0px 0px 10px 10px;
-          box-shadow: var(--ag-pink-color) 0px 0px 10px 10px;
 }
 
 .btn-cta {
@@ -2560,11 +2587,17 @@ input[type=submit]:focus,
   border-color: var(--ag-button-border-color-active);
   -webkit-box-shadow: var(--ag-pink-color) 0px 0px 10px 10px;
           box-shadow: var(--ag-pink-color) 0px 0px 10px 10px;
+  margin: 20px;
 }
 .btn-cta:hover, .btn-cta:focus {
   color: var(--ag-button-text-color);
   background: var(--ag-button-background-color);
   border-color: var(--ag-button-border-color);
+}
+
+.btn-sm {
+  font-size: 15px;
+  padding: 10px 18px;
 }
 
 .wp-block-button__link:visited {
@@ -6521,18 +6554,6 @@ hr + .comment-reply-title {
 }
 
 /* Footer Menu ------------------------------- */
-.footer-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  margin-right: var(--ag-spacer-md);
-  text-align: right;
-}
 .footer-menu ul {
   margin: 0;
   list-style-type: none;
@@ -6675,6 +6696,7 @@ body .background-image {
   line-height: normal;
 }
 
+/* Bento grid ------------------------------ */
 .bento-grid {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto auto auto;
@@ -6800,4 +6822,14 @@ body .background-image {
 .grid-item06 .bento-card-description,
 .grid-item06 .bento-link {
   color: var(--ag-white-color);
+}
+
+/* Contact ------------------------------ */
+.contact-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: var(--ag-spacer-sm);
+     -moz-column-gap: var(--ag-spacer-sm);
+          column-gap: var(--ag-spacer-sm);
 }
