@@ -27,7 +27,7 @@ input[type="submit"],
   letter-spacing: var(--ag-button-letter-spacing);
   line-height: var(--ag-button-line-height);
   margin: 0 0 1.4rem 0;
-  padding: var(--ag-button-padding-y) var(--ag-button-padding-x);
+  padding: var(--ag-button-padding-y) var(--ag-button-padding-x) !important;
   text-align: center;
   text-decoration: none;
   text-underline-offset: 0.25em;

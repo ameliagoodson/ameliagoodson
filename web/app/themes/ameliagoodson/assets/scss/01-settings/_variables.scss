@@ -93,12 +93,15 @@
     $h6-line-height-max * $h6-font-size-max
   );
 
+  //  Style
+  --ag-border-radius: #{rem($border-radius)};
+
   /* Buttons */
   --ag-button-text-color: #{$button-text-color};
   --ag-button-background-color: #{$button-background-color};
   --ag-button-border-color: #{$button-border-color};
   --ag-button-border-width: #{rem($button-border-width)};
-  --ag-button-border-radius: #{rem($button-border-radius)};
+  --ag-button-border-radius: #{$button-border-radius};
   --ag-button-font-size: #{rem($button-font-size)};
   --ag-button-line-height: #{$button-line-height};
   --ag-button-font-weight: #{$button-font-weight};

@@ -14,6 +14,7 @@ fieldset {
 form {
   margin-bottom: 3rem;
   margin-top: 3rem;
+  border-radius: var(--ag-border-radius) !important;
 }
 
 legend {
@@ -28,11 +29,12 @@ legend {
 
 label {
   display: block;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin: 0 0 0.5rem 0;
+  color: var(--ag-background-color);
 
   @media (min-width: $tablet) {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -52,8 +54,9 @@ button {
 
 input,
 textarea {
-  background-color: var(--ag-background-color);
+  background-color: var(--ag-white-color);
   border-color: var(--ag-border-color);
+  color: var(--ag-background-color) !important;
 }
 
 input[type="text"],
@@ -74,11 +77,10 @@ textarea {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border-radius: 0;
+  border-radius: var(--ag-border-radius);
   border-style: solid;
   border-width: 0.1rem;
   box-shadow: none;
-  color: inherit;
   display: block;
   font-size: 1.6rem;
   line-height: normal;
@@ -100,24 +102,24 @@ select {
 }
 
 ::-webkit-input-placeholder {
-  color: var(--ag-secondary-color);
+  color: var(--ag-background-color);
   line-height: normal;
 }
 ::-moz-placeholder {
-  color: var(--ag-secondary-color);
+  color: var(--ag-background-color);
   line-height: normal;
 }
 :-ms-input-placeholder {
-  color: var(--ag-secondary-color);
+  color: var(--ag-background-color);
   line-height: normal;
 }
 :-moz-placeholder {
-  color: var(--ag-secondary-color);
+  color: var(--ag-background-color);
   opacity: 1;
   line-height: normal;
 }
 ::placeholder {
-  color: var(--ag-secondary-color);
+  color: var(--ag-background-color);
   line-height: normal;
   opacity: 1;
 }
@@ -169,12 +171,12 @@ textarea.reset {
 }
 
 .search-form .search-field:focus {
-  border-color: var(--ag-secondary-color);
+  border-color: var(--ag-background-color);
 }
 
 .search-form .search-submit {
   align-items: center;
-  color: var(--ag-secondary-color);
+  color: var(--ag-background-color);
   display: flex;
   justify-content: center;
   position: absolute;
@@ -184,6 +186,18 @@ textarea.reset {
   width: 6.6rem;
 }
 
-.forminator-ui.forminator-custom-form .forminator-button:hover {
-  box-shadow: none !important;
+#forminator-module-131 {
+  button {
+    font-size: 15px;
+    background-color: var(--ag-pink-color);
+    color: var(--ag-white-color);
+    &:hover {
+      background-color: var(--ag-white-color);
+      color: var(--ag-pink-color);
+      border: 1px solid var(--ag-pink-color);
+    }
+  }
+  input {
+    color: var(--ag-background-color) !important;
+  }
 }
