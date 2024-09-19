@@ -76,7 +76,6 @@ body .background-image {
 
     img {
       border-radius: 1rem;
-      max-width: 100%;
       max-height: 100%;
       width: auto;
       height: auto;
@@ -84,67 +83,98 @@ body .background-image {
       flex-shrink: 1; /* Allows the image to shrink to fit the container */
       flex-grow: 1;
       object-position: top;
+      animation: fade-in-scale 1s linear 0.5s;
     }
   }
-}
 
-.grid-item01 {
-  background: var(--ag-dark-purple-color);
-  grid-area: item01;
-  flex-direction: column;
+  &.grid-item01 {
+    background: var(--ag-dark-purple-color);
+    grid-area: item01;
+    flex-direction: column;
 
-  .bento-card-description,
-  .bento-link {
-    color: var(--ag-white-color);
+    .bento-card-details {
+      margin-top: 3rem;
+      overflow: visible;
+
+      img {
+        width: 120%;
+        max-width: 120%;
+      }
+    }
+
+    .bento-card-description,
+    .bento-link {
+      color: var(--ag-white-color);
+    }
   }
-}
-.grid-item02 {
-  background: var(--ag-orange-color);
-  grid-area: item02;
-  color: var(--ag-white-color);
-  flex-direction: column;
-
-  .bento-card-description,
-  .bento-link {
+  &.grid-item02 {
+    background: var(--ag-orange-color);
+    grid-area: item02;
     color: var(--ag-white-color);
-  }
-}
-.grid-item03 {
-  background: var(--ag-cyan-color);
-  grid-area: item03;
-}
-.grid-item04 {
-  background: var(--ag-green-color);
-  grid-area: item04;
-}
-.grid-item03,
-.grid-item04 {
-  max-width: 50rem;
-  max-height: 50rem;
-  flex-direction: column;
+    flex-direction: row;
+    max-height: 40rem;
 
-  .bento-card-description,
-  .bento-link {
-    color: var(--ag-black-color);
-  }
-}
-.grid-item05 {
-  background: var(--ag-pink-color);
-  grid-area: item05;
-  flex-direction: column;
+    .bento-card-description {
+      max-width: 20rem;
+    }
 
-  .bento-card-description,
-  .bento-link {
-    color: var(--ag-white-color);
-  }
-}
-.grid-item06 {
-  background: var(--ag-dark-purple-color);
-  grid-area: item06;
+    .bento-card-description,
+    .bento-link {
+      color: var(--ag-white-color);
+    }
 
-  .bento-card-description,
-  .bento-link {
-    color: var(--ag-white-color);
+    .bento-card-details {
+      overflow: visible;
+    }
+
+    img {
+      max-height: 115%;
+      width: 120%;
+      max-width: 120%;
+      position: relative;
+      left: 10%;
+      bottom: 10%;
+    }
+  }
+  &.grid-item03 {
+    background: var(--ag-cyan-color);
+    grid-area: item03;
+  }
+
+  &.grid-item04 {
+    background: var(--ag-green-color);
+    grid-area: item04;
+  }
+  &.grid-item03,
+  &.grid-item04 {
+    max-width: 50rem;
+    max-height: 50rem;
+    flex-direction: column;
+
+    .bento-card-description,
+    .bento-link {
+      color: var(--ag-black-color);
+    }
+  }
+  &.grid-item05 {
+    background: var(--ag-pink-color);
+    grid-area: item05;
+    flex-direction: column;
+
+    .bento-card-description,
+    .bento-link {
+      color: var(--ag-white-color);
+    }
+  }
+
+  &.grid-item06 {
+    background: var(--ag-dark-purple-color);
+    grid-area: item06;
+
+    .bento-card-description,
+    .bento-link {
+      color: var(--ag-white-color);
+    }
   }
 }
 
