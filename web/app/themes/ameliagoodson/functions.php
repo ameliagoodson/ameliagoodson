@@ -102,6 +102,17 @@ function ag_register_menus()
 add_action('after_setup_theme', 'ag_register_menus');
 
 
+/* ------------------------------------------------------------------------------ /*
+/*  HIDE BLOCK EDITOR 
+/* ------------------------------------------------------------------------------ */
+function ag_hide_block_editor($use_block_editor, $post)
+{
+  if ($post->post_name == "home-page") {
+    return false;
+  }
+  return $use_block_editor;
+}
+add_filter('use_block_editor_for_post', 'ag_hide_block_editor', 10, 2);
 
 /* ------------------------------------------------------------------------------ /*
 /*  REQUIRED FILES
