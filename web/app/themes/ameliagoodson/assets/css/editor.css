@@ -22,6 +22,7 @@
   --ag-orange-color: #fb2e00;
   --ag-pink-color: #ff00c7;
   --ag-dark-purple-color: #650d94;
+  --ag-light-grey-color: #e2e2e2;
   /* Spacing */
   --ag-gutter: clamp(4.8rem, calc(11.8vw + 0.392rem), 19.2rem);
   --ag-gap: clamp(2.4rem, calc(5.9vw + 0.196rem), 9.6rem);
@@ -60,8 +61,8 @@
   --ag-h6-line-height: clamp(2.43rem, calc(0.1vw + 2.378rem), 2.6rem);
   --ag-border-radius: 1rem;
   /* Buttons */
-  --ag-button-text-color: var(--ag-accent-color);
-  --ag-button-background-color: var(--ag-white-color);
+  --ag-button-text-color: var(--ag-white-color);
+  --ag-button-background-color: var(--ag-orange-color);
   --ag-button-border-color: none;
   --ag-button-border-width: 0.2rem;
   --ag-button-border-radius: 2px;
@@ -514,6 +515,18 @@
 
 :root .has-dark-purple-border-color {
   border-color: var(--ag-dark-purple-color);
+}
+
+:root .has-light-grey-color {
+  color: var(--ag-light-grey-color);
+}
+
+:root .has-light-grey-background-color {
+  background-color: var(--ag-light-grey-color);
+}
+
+:root .has-light-grey-border-color {
+  border-color: var(--ag-light-grey-color);
 }
 
 :root .has-text-color a {

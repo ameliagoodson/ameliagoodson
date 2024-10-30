@@ -34,6 +34,7 @@ $default_work_link = '/work'; // Default link to the /work page
                 </video>
               <?php else : ?>
                 <?php echo isset($work['work_image']['url']) ? '<img src="' . esc_url($work['work_image']['url']) . '">' : '' ?>
+                <?php echo isset($work['work_image_2']['url']) ? '<img src="' . esc_url($work['work_image_2']['url']) . '">' : '' ?>
               <?php endif; ?>
             </div>
           </div>

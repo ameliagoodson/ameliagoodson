@@ -100,6 +100,11 @@ body .background-image {
         width: 120%;
         max-width: 120%;
       }
+
+      &:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease-in-out;
+      }
     }
 
     .bento-card-description,
@@ -108,7 +113,7 @@ body .background-image {
     }
   }
   &.grid-item02 {
-    background: var(--ag-orange-color);
+    background: var(--ag-pink-color);
     grid-area: item02;
     color: var(--ag-white-color);
     flex-direction: row;
@@ -125,6 +130,18 @@ body .background-image {
 
     .bento-card-details {
       overflow: visible;
+
+      img:first-child,
+      img:last-child {
+        transition: transform 0.3s ease-in-out;
+      }
+
+      &:hover img:first-child {
+        transform: rotate(15deg);
+      }
+      &:hover img:last-child {
+        transform: rotate(-15deg);
+      }
     }
 
     img {
@@ -132,18 +149,43 @@ body .background-image {
       width: 120%;
       max-width: 120%;
       position: relative;
-      left: 10%;
-      bottom: 10%;
+
+      &:first-child {
+        left: 25%;
+        bottom: 18%;
+      }
+      &:last-child {
+        right: 3%;
+        bottom: 14%;
+      }
     }
   }
   &.grid-item03 {
-    background: var(--ag-cyan-color);
+    background: var(--ag-light-grey-color);
     grid-area: item03;
+
+    img:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s ease-in-out;
+    }
   }
 
   &.grid-item04 {
     background: var(--ag-green-color);
     grid-area: item04;
+
+    .bento-card-details {
+      img {
+        transition: transform 0.3s ease-in-out;
+        max-height: max-content;
+      }
+
+      &:hover {
+        img {
+          transform: translateY(-30%); // Scroll up the image
+        }
+      }
+    }
   }
   &.grid-item03,
   &.grid-item04 {

@@ -38,6 +38,7 @@ $colors: (
   "orange": #fb2e00,
   "pink": #ff00c7,
   "dark-purple": #650d94,
+  "light-grey": #e2e2e2,
 );
 
 // Alignments ---------------------------------- //
@@ -118,8 +119,8 @@ $border-radius: 10px;
 
 // Buttons ---------------------------------- //
 
-$button-text-color: var(--ag-accent-color);
-$button-background-color: var(--ag-white-color);
+$button-text-color: var(--ag-white-color);
+$button-background-color: var(--ag-orange-color);
 $button-border-color: none;
 $button-border-width: 2px;
 $button-border-radius: 2px;
