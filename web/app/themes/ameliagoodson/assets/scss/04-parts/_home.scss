@@ -146,9 +146,9 @@ body .background-image {
       max-width: none;
       flex: 1;
 
-      // @media (min-width: $tablet) {
-      //   max-width: 25rem;
-      // }
+      @media (min-width: $tablet) {
+        margin-right: 3rem;
+      }
     }
 
     .bento-card-description,
@@ -161,7 +161,7 @@ body .background-image {
       flex: 1;
 
       img {
-        position: relative; /* Default for mobile */
+        position: relative;
         width: 100%;
         max-width: 100%;
         max-height: 100%;
@@ -172,15 +172,7 @@ body .background-image {
           width: 120%;
           max-width: 120%;
           position: relative;
-
-          &:first-child {
-            left: 25%;
-            bottom: 18%;
-          }
-          &:last-child {
-            right: 3%;
-            bottom: 14%;
-          }
+          bottom: 10%;
         }
       }
 
@@ -192,9 +184,9 @@ body .background-image {
       &:hover img:first-child {
         transform: rotate(15deg);
       }
-      &:hover img:last-child {
-        transform: rotate(-15deg);
-      }
+      // &:hover img:last-child {
+      //   transform: rotate(-15deg);
+      // }
     }
   }
 
@@ -258,20 +250,9 @@ body .background-image {
   }
 }
 
-/* Contact ------------------------------ */
-.contact-inner {
-  display: flex;
-  column-gap: var(--ag-spacer-sm);
-}
-
-/* Define the keyframes for the fade-in and scaling */
-@keyframes fadeInPop {
-  0% {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0.9); /* Slightly smaller */
-  }
-  100% {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1); /* Final position */
+// Contact ----------------------------------------- //
+#contact {
+  form {
+    margin-top: 0;
   }
 }

@@ -11,15 +11,16 @@
 $hero_layout = get_theme_mod('hero_layout');
 ?>
 
-  <?php if ($hero_layout == 'Full image' || $hero_layout == "No image") {
+<?php if ($hero_layout == 'Full image' || $hero_layout == "No image") {
 
-    get_template_part('parts/single/hero-full');
-  } else {
-    get_template_part('parts/single/hero-half');
-  } ?>
+  get_template_part('parts/single/hero-full');
+} else {
+  get_template_part('parts/single/hero-half');
+} ?>
 
 <?php get_template_part('/parts/home/bento') ?>
 <?php get_template_part('/parts/home/contact')
 ?>
+
 
 <?php get_footer(); ?>
