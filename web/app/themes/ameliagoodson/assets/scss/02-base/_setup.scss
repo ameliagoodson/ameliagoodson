@@ -4,6 +4,7 @@
 
 html {
   font-size: percent($rem, 16px);
+  scroll-behavior: smooth;
 }
 
 /* Fix for the admin bar */
@@ -88,10 +89,7 @@ main {
 :root .wp-site-blocks > .skip-link + *,
 :root .comment-content > *:first-child,
 :root *[class*="_inner-container"] > *:first-child,
-:root
-  *[class*="_inner-container"]
-  > .wp-block-image:first-child
-  > [class*="align"],
+:root *[class*="_inner-container"] > .wp-block-image:first-child > [class*="align"],
 :root fieldset > *:first-child,
 :root form > *:first-child,
 :root .wp-block-column > *:first-child,
@@ -104,10 +102,7 @@ main {
 :root .entry-content > *:last-child,
 :root .comment-content > *:last-child,
 :root *[class*="_inner-container"] > *:last-child,
-:root
-  *[class*="_inner-container"]
-  > .wp-block-image:last-child
-  > [class*="align"],
+:root *[class*="_inner-container"] > .wp-block-image:last-child > [class*="align"],
 :root fieldset > *:last-child,
 :root form > *:last-child,
 :root .wp-block-column > *:last-child,

@@ -1,10 +1,9 @@
 <?php
-$work1 = get_field('work_group_1');
-$work2 = get_field('work_group_2');
-$work3 = get_field('work_group_3');
-$work4 = get_field('work_group_4');
-$work5 = get_field('work_group_5');
-$work6 = get_field('work_group_6');
+$works = get_posts(array(
+  "post_type" => "work",
+  "posts_per_page" => 6, // Fetch all posts
+  "orderby" => "menu_order",
+));
 
 $default_work_link = '/work'; // Default link to the /work page
 ?>
@@ -15,30 +14,53 @@ $default_work_link = '/work'; // Default link to the /work page
       <p class="reveal">Here are some of the projects I've worked on.</p>
     </div>
     <div class="grid bento-grid">
-      <?php foreach ([$work1, $work2, $work3, $work4, $work5, $work6] as $index => $work) : ?>
-        <?php if (!empty(array_filter($work))) : ?>
+      <?php foreach ($works as $index => $work) : ?>
+        <?php
+        // Fetch the group field
+        $work_group = get_field('work', $work->ID); // Fetch the "work" group
+
+        // Check if the group field has data
+        if ($work_group) {
+          $work_title = $work_group['work_title'] ?: ''; // Access subfields
+          $work_subtitle = get_the_excerpt($work->ID);
+          $work_image = get_the_post_thumbnail($work->ID, 'full');
+          $work_video = $work_group['work_video'] ?: [];
+          $work_link = $work_group['work_link'] ?: $default_work_link;
+          $work_button = $work_group['work_button'] ?: false;
+        }
+        ?>
+        <?php if (!empty(array_filter($works))) : ?>
           <div class="grid-item bento-card grid-item0<?= $index + 1 ?> reveal">
             <div class="bento-card-description">
+              <?php if ($work_title) : ?>
+                <a class="bento-link" href="<?php echo esc_url($work_link) ?>">
+                  <h3 class="bento-title"><?php echo $work_title ?></h3>
+                </a>
+              <?php endif ?>
               <?php
-              $work_link = !empty($work['work_link']) ? esc_url($work['work_link']) : esc_url($default_work_link);
-              echo $work['work_title'] ? '<a class="bento-link" href="' . $work_link . '"><h3 class="bento-title">' . $work['work_title'] . '</h3></a>' : '';
-              ?>
-              <?php echo $work['work_subtitle'] ? '<p>' . $work['work_subtitle'] . '</p>' : '' ?>
-              <?php echo $work['work_button'] != false ? '<a class="btn btn-sm" href="' . $work_link . '">See More</a>' : '' ?>
+              if ($work_subtitle) : ?>
+                <p><?php echo $work_subtitle ?></p>
+              <?php endif ?>
+              <?php if ($work_button) : ?>
+                <a class="btn btn-sm bento-button" href="<?php esc_url($work_link['url']) ?>">See More</a>
+              <?php endif ?>
             </div>
             <div class="bento-card-details">
-              <?php if (!empty($work['work_video'])) : ?>
-                <video controls poster="<?php echo esc_url($work['work_image']['url']); ?>">
-                  <source src="<?php echo esc_url($work['work_video']['url']); ?>" type="video/mp4">
+              <?php if ($work_video) : ?>
+                <video controls poster>
+                  <source src="" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               <?php else : ?>
-                <?php echo isset($work['work_image']['url']) ? '<img src="' . esc_url($work['work_image']['url']) . '">' : '' ?>
-                <?php echo isset($work['work_image_2']['url']) ? '<img src="' . esc_url($work['work_image_2']['url']) . '">' : '' ?>
+                <?php echo $work_image;
+                ?>
+                <?php ?>
               <?php endif; ?>
             </div>
           </div>
         <?php endif; ?>
+
+
       <?php endforeach; ?>
     </div>
   </div>

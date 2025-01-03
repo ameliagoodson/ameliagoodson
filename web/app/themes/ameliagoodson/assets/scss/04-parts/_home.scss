@@ -44,13 +44,27 @@ body .background-image {
 
 /* Bento grid ------------------------------ */
 .bento-grid {
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto auto;
+  display: grid;
+  // grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-rows: repeat(3, auto);
   grid-template-areas:
     "item01 item02 item02"
-    "item01 item03 item04"
-    "item05 item05 item06";
+    "item01 item03 item03"
+    "item04 item05 item06";
   grid-gap: 2.4rem;
+  justify-content: space-between;
+
+  @media (max-width: $tablet) {
+    grid-template-columns: 1fr; /* One column for small screens */
+    grid-template-areas:
+      "item01"
+      "item02"
+      "item03"
+      "item04"
+      "item05"
+      "item06";
+  }
 }
 .bento-card {
   min-height: 20rem;
@@ -58,6 +72,7 @@ body .background-image {
   padding: 1rem;
   position: relative;
   display: flex;
+  aspect-ratio: auto;
 
   .bento-card-description {
     .bento-title {
@@ -73,17 +88,25 @@ body .background-image {
     align-items: flex-start;
     justify-content: center;
     overflow: hidden;
-
     img {
       border-radius: 1rem;
-      max-height: 100%;
+      max-height: 40rem; /* Mobile default */
+      max-width: 100%;
       width: auto;
       height: auto;
       object-fit: cover;
-      flex-shrink: 1; /* Allows the image to shrink to fit the container */
+      flex-shrink: 1;
       flex-grow: 1;
       object-position: top;
       animation: fade-in-scale 1s linear 0.5s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      @media (min-width: $tablet) {
+        max-height: 100%; /* Tablet-specific rule */
+      }
     }
   }
 
@@ -91,19 +114,19 @@ body .background-image {
     background: var(--ag-dark-purple-color);
     grid-area: item01;
     flex-direction: column;
+    position: relative;
 
-    .bento-card-details {
-      margin-top: 3rem;
-      overflow: visible;
+    img {
+      position: relative; /* Default for mobile (no 'pop out') */
+      width: 100%;
+      max-width: 100%;
 
-      img {
-        width: 120%;
-        max-width: 120%;
-      }
-
-      &:hover {
-        transform: scale(1.1);
-        transition: transform 0.3s ease-in-out;
+      @media (min-width: $tablet) {
+        position: absolute; /* Allows the image to 'pop out' */
+        width: 120%; /* Enlarges the image slightly */
+        height: auto; /* Maintains aspect ratio */
+        max-width: none; /* Prevents scaling issues */
+        max-height: 100%;
       }
     }
 
@@ -112,15 +135,20 @@ body .background-image {
       color: var(--ag-white-color);
     }
   }
+
   &.grid-item02 {
     background: var(--ag-pink-color);
     grid-area: item02;
     color: var(--ag-white-color);
     flex-direction: row;
-    max-height: 40rem;
 
     .bento-card-description {
-      max-width: 20rem;
+      max-width: none;
+      flex: 1;
+
+      // @media (min-width: $tablet) {
+      //   max-width: 25rem;
+      // }
     }
 
     .bento-card-description,
@@ -130,6 +158,31 @@ body .background-image {
 
     .bento-card-details {
       overflow: visible;
+      flex: 1;
+
+      img {
+        position: relative; /* Default for mobile */
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        inset: inherit; /* Shorthand for top, right, bottom, and left */
+
+        @media (min-width: $tablet) {
+          max-height: 115%;
+          width: 120%;
+          max-width: 120%;
+          position: relative;
+
+          &:first-child {
+            left: 25%;
+            bottom: 18%;
+          }
+          &:last-child {
+            right: 3%;
+            bottom: 14%;
+          }
+        }
+      }
 
       img:first-child,
       img:last-child {
@@ -143,23 +196,8 @@ body .background-image {
         transform: rotate(-15deg);
       }
     }
-
-    img {
-      max-height: 115%;
-      width: 120%;
-      max-width: 120%;
-      position: relative;
-
-      &:first-child {
-        left: 25%;
-        bottom: 18%;
-      }
-      &:last-child {
-        right: 3%;
-        bottom: 14%;
-      }
-    }
   }
+
   &.grid-item03 {
     background: var(--ag-light-grey-color);
     grid-area: item03;
@@ -177,7 +215,6 @@ body .background-image {
     .bento-card-details {
       img {
         transition: transform 0.3s ease-in-out;
-        max-height: max-content;
       }
 
       &:hover {
@@ -189,8 +226,9 @@ body .background-image {
   }
   &.grid-item03,
   &.grid-item04 {
-    max-width: 50rem;
-    max-height: 50rem;
+    // aspect-ratio: 1/1;
+    max-height: none;
+    width: auto;
     flex-direction: column;
 
     .bento-card-description,
@@ -224,4 +262,16 @@ body .background-image {
 .contact-inner {
   display: flex;
   column-gap: var(--ag-spacer-sm);
+}
+
+/* Define the keyframes for the fade-in and scaling */
+@keyframes fadeInPop {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9); /* Slightly smaller */
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); /* Final position */
+  }
 }

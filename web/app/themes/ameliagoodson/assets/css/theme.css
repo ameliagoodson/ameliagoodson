@@ -136,6 +136,7 @@ blockquote:after {
 /* ------------------------------------------------------------------------------ */
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 /* Fix for the admin bar */
@@ -6726,10 +6727,20 @@ body .background-image {
 
 /* Bento grid ------------------------------ */
 .bento-grid {
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto auto;
-  grid-template-areas: "item01 item02 item02" "item01 item03 item04" "item05 item05 item06";
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "item01 item02 item02" "item01 item03 item03" "item04 item05 item06";
   grid-gap: 2.4rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media (max-width: 700px) {
+  .bento-grid {
+    grid-template-columns: 1fr; /* One column for small screens */
+    grid-template-areas: "item01" "item02" "item03" "item04" "item05" "item06";
+  }
 }
 
 .bento-card {
@@ -6740,6 +6751,7 @@ body .background-image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  aspect-ratio: auto;
 }
 .bento-card .bento-card-description .bento-title {
   margin-top: 1rem;
@@ -6762,13 +6774,14 @@ body .background-image {
 }
 .bento-card .bento-card-details img {
   border-radius: 1rem;
-  max-height: 100%;
+  max-height: 40rem; /* Mobile default */
+  max-width: 100%;
   width: auto;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
   -ms-flex-negative: 1;
-      flex-shrink: 1; /* Allows the image to shrink to fit the container */
+      flex-shrink: 1;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -6777,6 +6790,15 @@ body .background-image {
   -webkit-animation: fade-in-scale 1s linear 0.5s;
           animation: fade-in-scale 1s linear 0.5s;
 }
+.bento-card .bento-card-details img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+@media (min-width: 700px) {
+  .bento-card .bento-card-details img {
+    max-height: 100%; /* Tablet-specific rule */
+  }
+}
 .bento-card.grid-item01 {
   background: var(--ag-dark-purple-color);
   grid-area: item01;
@@ -6784,22 +6806,21 @@ body .background-image {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
 }
-.bento-card.grid-item01 .bento-card-details {
-  margin-top: 3rem;
-  overflow: visible;
+.bento-card.grid-item01 img {
+  position: relative; /* Default for mobile (no 'pop out') */
+  width: 100%;
+  max-width: 100%;
 }
-.bento-card.grid-item01 .bento-card-details img {
-  width: 120%;
-  max-width: 120%;
-}
-.bento-card.grid-item01 .bento-card-details:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  transition: -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+@media (min-width: 700px) {
+  .bento-card.grid-item01 img {
+    position: absolute; /* Allows the image to 'pop out' */
+    width: 120%; /* Enlarges the image slightly */
+    height: auto; /* Maintains aspect ratio */
+    max-width: none; /* Prevents scaling issues */
+    max-height: 100%;
+  }
 }
 .bento-card.grid-item01 .bento-card-description,
 .bento-card.grid-item01 .bento-link {
@@ -6813,10 +6834,12 @@ body .background-image {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  max-height: 40rem;
 }
 .bento-card.grid-item02 .bento-card-description {
-  max-width: 20rem;
+  max-width: none;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 .bento-card.grid-item02 .bento-card-description,
 .bento-card.grid-item02 .bento-link {
@@ -6824,6 +6847,32 @@ body .background-image {
 }
 .bento-card.grid-item02 .bento-card-details {
   overflow: visible;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.bento-card.grid-item02 .bento-card-details img {
+  position: relative; /* Default for mobile */
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  inset: inherit; /* Shorthand for top, right, bottom, and left */
+}
+@media (min-width: 700px) {
+  .bento-card.grid-item02 .bento-card-details img {
+    max-height: 115%;
+    width: 120%;
+    max-width: 120%;
+    position: relative;
+  }
+  .bento-card.grid-item02 .bento-card-details img:first-child {
+    left: 25%;
+    bottom: 18%;
+  }
+  .bento-card.grid-item02 .bento-card-details img:last-child {
+    right: 3%;
+    bottom: 14%;
+  }
 }
 .bento-card.grid-item02 .bento-card-details img:first-child,
 .bento-card.grid-item02 .bento-card-details img:last-child {
@@ -6839,20 +6888,6 @@ body .background-image {
 .bento-card.grid-item02 .bento-card-details:hover img:last-child {
   -webkit-transform: rotate(-15deg);
           transform: rotate(-15deg);
-}
-.bento-card.grid-item02 img {
-  max-height: 115%;
-  width: 120%;
-  max-width: 120%;
-  position: relative;
-}
-.bento-card.grid-item02 img:first-child {
-  left: 25%;
-  bottom: 18%;
-}
-.bento-card.grid-item02 img:last-child {
-  right: 3%;
-  bottom: 14%;
 }
 .bento-card.grid-item03 {
   background: var(--ag-light-grey-color);
@@ -6875,17 +6910,14 @@ body .background-image {
   transition: -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  max-height: -webkit-max-content;
-  max-height: -moz-max-content;
-  max-height: max-content;
 }
 .bento-card.grid-item04 .bento-card-details:hover img {
   -webkit-transform: translateY(-30%);
           transform: translateY(-30%);
 }
 .bento-card.grid-item03, .bento-card.grid-item04 {
-  max-width: 50rem;
-  max-height: 50rem;
+  max-height: none;
+  width: auto;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -6925,4 +6957,30 @@ body .background-image {
   -webkit-column-gap: var(--ag-spacer-sm);
      -moz-column-gap: var(--ag-spacer-sm);
           column-gap: var(--ag-spacer-sm);
+}
+
+/* Define the keyframes for the fade-in and scaling */
+@-webkit-keyframes fadeInPop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) scale(0.9);
+            transform: translate(-50%, -50%) scale(0.9); /* Slightly smaller */
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1); /* Final position */
+  }
+}
+@keyframes fadeInPop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) scale(0.9);
+            transform: translate(-50%, -50%) scale(0.9); /* Slightly smaller */
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1); /* Final position */
+  }
 }
