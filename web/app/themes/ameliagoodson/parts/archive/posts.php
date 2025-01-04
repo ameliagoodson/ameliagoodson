@@ -23,6 +23,7 @@ $archive_columns_classes     = agtheme_get_archive_columns_classes();
 $archive_columns_class_attr = 'list' !== $archive_layout && $archive_columns_classes ? ' ' . implode(' ', $archive_columns_classes) : '';
 ?>
 
+<!-- Archive posts -->
 <div class="posts">
   <div class="section-inner">
     <div class="posts-grid grid load-more-target<?php echo esc_attr($archive_columns_class_attr); ?>" data-layout="<?php echo esc_attr($archive_layout); ?>">

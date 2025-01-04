@@ -3705,6 +3705,7 @@ a.sub-menu-toggle.active svg {
   line-height: 1.3;
   max-width: var(--ag-inner-width-small);
   margin: 0;
+  padding: 0 2.4rem;
 }
 @media (min-width: 700px) {
   .archive-title {
@@ -3839,6 +3840,11 @@ a.sub-menu-toggle.active svg {
 }
 
 /* Preview: Post ----------------------------- */
+.preview {
+  background-color: var(--ag-light-grey-color);
+  border-radius: var(--ag-border-radius);
+}
+
 .preview a {
   color: inherit;
   text-decoration: none;
@@ -3847,6 +3853,7 @@ a.sub-menu-toggle.active svg {
 .preview-media {
   overflow: hidden;
   position: relative;
+  padding: 2rem;
 }
 
 .preview-media-link {
@@ -3857,6 +3864,9 @@ a.sub-menu-toggle.active svg {
 
 .preview-media img {
   width: 100%;
+  aspect-ratio: 1/1;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .preview .preview-media .sticky-note,
@@ -3876,6 +3886,20 @@ a.sub-menu-toggle.active svg {
 
 .preview-media + .preview-header {
   margin-top: 1.2rem;
+  min-height: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-color: var(--ag-dark-purple-color);
+  border-bottom-left-radius: var(--ag-border-radius);
+  border-bottom-right-radius: var(--ag-border-radius);
 }
 
 .preview .preview-title {
