@@ -18,6 +18,7 @@
   --ag-white-color: #ffffff;
   --ag-black-color: #000000;
   --ag-green-color: #91ff00;
+  --ag-chartreuse-color: #c7ff00;
   --ag-cyan-color: #00eeff;
   --ag-orange-color: #fb2e00;
   --ag-pink-color: #ff00c7;
@@ -1072,6 +1073,18 @@ section:not(.hero) {
 
 :root .has-green-border-color {
   border-color: var(--ag-green-color);
+}
+
+:root .has-chartreuse-color {
+  color: var(--ag-chartreuse-color);
+}
+
+:root .has-chartreuse-background-color {
+  background-color: var(--ag-chartreuse-color);
+}
+
+:root .has-chartreuse-border-color {
+  border-color: var(--ag-chartreuse-color);
 }
 
 :root .has-cyan-color {
@@ -3841,7 +3854,7 @@ a.sub-menu-toggle.active svg {
 
 /* Preview: Post ----------------------------- */
 .preview {
-  background-color: var(--ag-light-grey-color);
+  background-color: var(--ag-orange-color);
   border-radius: var(--ag-border-radius);
 }
 
@@ -7031,7 +7044,7 @@ body .background-image {
           transform: rotate(15deg);
 }
 .bento-card.grid-item03 {
-  background: var(--ag-light-grey-color);
+  background: var(--ag-chartreuse-color);
   grid-area: item03;
 }
 .bento-card.grid-item03 img:hover {
