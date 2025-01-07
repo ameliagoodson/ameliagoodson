@@ -5,7 +5,13 @@
 #site-footer {
   margin-top: 0;
   padding: 3.2rem 0;
-  background-color: var(--ag-site-footer-background-color);
+  background: rgb(24, 0, 45);
+  background: linear-gradient(
+    180deg,
+    var(--ag-background-color) 10%,
+    var(--ag-dark-purple-xtra-dark) 64%,
+    var(--ag-orange-color) 100%
+  );
   color: var(--ag-site-footer-text-color);
 
   @media (min-width: $tablet) {
@@ -42,8 +48,9 @@ body:not(.home) #site-footer {
 
 .footer-menu {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: flex-start;
   margin-right: var(--ag-spacer-md);
   text-align: right;
 
