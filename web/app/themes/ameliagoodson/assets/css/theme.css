@@ -11,19 +11,61 @@
   --ag-inner-width-max: 205.2rem;
   /* Colors */
   --ag-background-color: #18002d;
+  --ag-background-light: #4e0093;
+  --ag-background-dark: black;
+  --ag-background-xtra-dark: black;
   --ag-primary-color: #ffffff;
+  --ag-primary-light: white;
+  --ag-primary-dark: #e6e6e6;
+  --ag-primary-xtra-dark: #cccccc;
   --ag-secondary-color: #00eeff;
+  --ag-secondary-light: #66f5ff;
+  --ag-secondary-dark: #00becc;
+  --ag-secondary-xtra-dark: #008f99;
   --ag-border-color: #650d94;
+  --ag-border-light: #a31ceb;
+  --ag-border-dark: #450965;
+  --ag-border-xtra-dark: #250536;
   --ag-accent-color: #ff00c7;
+  --ag-accent-light: #ff66dd;
+  --ag-accent-dark: #cc009f;
+  --ag-accent-xtra-dark: #990077;
   --ag-white-color: #ffffff;
+  --ag-white-light: white;
+  --ag-white-dark: #e6e6e6;
+  --ag-white-xtra-dark: #cccccc;
   --ag-black-color: #000000;
+  --ag-black-light: #333333;
+  --ag-black-dark: black;
+  --ag-black-xtra-dark: black;
   --ag-green-color: #91ff00;
+  --ag-green-light: #bdff66;
+  --ag-green-dark: #74cc00;
+  --ag-green-xtra-dark: #579900;
   --ag-chartreuse-color: #c7ff00;
+  --ag-chartreuse-light: #ddff66;
+  --ag-chartreuse-dark: #9fcc00;
+  --ag-chartreuse-xtra-dark: #779900;
   --ag-cyan-color: #00eeff;
+  --ag-cyan-light: #66f5ff;
+  --ag-cyan-dark: #00becc;
+  --ag-cyan-xtra-dark: #008f99;
   --ag-orange-color: #fb2e00;
+  --ag-orange-light: #ff7f62;
+  --ag-orange-dark: #c82500;
+  --ag-orange-xtra-dark: #951b00;
   --ag-pink-color: #ff00c7;
+  --ag-pink-light: #ff66dd;
+  --ag-pink-dark: #cc009f;
+  --ag-pink-xtra-dark: #990077;
   --ag-dark-purple-color: #650d94;
+  --ag-dark-purple-light: #a31ceb;
+  --ag-dark-purple-dark: #450965;
+  --ag-dark-purple-xtra-dark: #250536;
   --ag-light-grey-color: #e2e2e2;
+  --ag-light-grey-light: white;
+  --ag-light-grey-dark: #c9c9c9;
+  --ag-light-grey-xtra-dark: #afafaf;
   /* Spacing */
   --ag-gutter: clamp(4.8rem, calc(11.8vw + 0.392rem), 19.2rem);
   --ag-gap: clamp(2.4rem, calc(5.9vw + 0.196rem), 9.6rem);
@@ -6705,16 +6747,20 @@ hr + .comment-reply-title {
 /*  SITE FOOTER
 /* ------------------------------------------------------------------------------ */
 #site-footer {
-  margin-top: 6.4rem;
+  margin-top: 0;
   padding: 3.2rem 0;
   background-color: var(--ag-site-footer-background-color);
   color: var(--ag-site-footer-text-color);
 }
 @media (min-width: 700px) {
   #site-footer {
-    margin-top: 8rem;
+    margin-top: 0;
     padding: 4.8rem 0;
   }
+}
+
+body:not(.home) #site-footer {
+  margin-top: 6.4rem;
 }
 
 /* Footer Columns ----------------------------- */
@@ -6960,7 +7006,7 @@ body .background-image {
   }
 }
 .bento-card.grid-item01 {
-  background: var(--ag-dark-purple-color);
+  background: var(--ag-orange-color);
   grid-area: item01;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -6984,12 +7030,12 @@ body .background-image {
 }
 .bento-card.grid-item01 .bento-card-description,
 .bento-card.grid-item01 .bento-link {
-  color: var(--ag-white-color);
+  color: var(--ag-black-color);
 }
 .bento-card.grid-item02 {
   background: var(--ag-pink-color);
   grid-area: item02;
-  color: var(--ag-white-color);
+  color: var(--ag-black-color);
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -7008,7 +7054,7 @@ body .background-image {
 }
 .bento-card.grid-item02 .bento-card-description,
 .bento-card.grid-item02 .bento-link {
-  color: var(--ag-white-color);
+  color: var(--ag-black-color);
 }
 .bento-card.grid-item02 .bento-card-details {
   overflow: visible;
@@ -7103,6 +7149,17 @@ body .background-image {
   color: var(--ag-white-color);
 }
 
+#about {
+  background: var(--ag-dark-purple-xtra-dark);
+}
+#about img {
+  border-radius: var(--ag-border-radius);
+  border: 1px solid var(--ag-background-color);
+}
+
+#contact {
+  background: var(--ag-dark-purple-xtra-dark);
+}
 #contact form {
   margin-top: 0;
 }

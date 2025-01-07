@@ -18,6 +18,7 @@ $hero_layout = get_theme_mod('hero_layout');
   get_template_part('parts/single/hero-half');
 } ?>
 
+<?php get_template_part('/parts/home/about') ?>
 <?php get_template_part('/parts/home/bento') ?>
 <?php get_template_part('/parts/home/contact')
 ?>

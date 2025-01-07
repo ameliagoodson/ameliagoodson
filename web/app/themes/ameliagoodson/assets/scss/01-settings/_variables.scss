@@ -11,6 +11,9 @@
   /* Colors */
   @each $color, $hex in $colors {
     --ag-#{$color}-color: #{$hex};
+    --ag-#{$color}-light: #{lighten($hex, 20%)};
+    --ag-#{$color}-dark: #{darken($hex, 10%)};
+    --ag-#{$color}-xtra-dark: #{darken($hex, 20%)};
   }
   /* Spacing */
   @include fluid(--ag-gutter, $gutter-min, $gutter-max); // 48px to 192px

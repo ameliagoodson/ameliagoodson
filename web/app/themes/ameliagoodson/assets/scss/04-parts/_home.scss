@@ -111,7 +111,7 @@ body .background-image {
   }
 
   &.grid-item01 {
-    background: var(--ag-dark-purple-color);
+    background: var(--ag-orange-color);
     grid-area: item01;
     flex-direction: column;
     position: relative;
@@ -132,14 +132,14 @@ body .background-image {
 
     .bento-card-description,
     .bento-link {
-      color: var(--ag-white-color);
+      color: var(--ag-black-color);
     }
   }
 
   &.grid-item02 {
     background: var(--ag-pink-color);
     grid-area: item02;
-    color: var(--ag-white-color);
+    color: var(--ag-black-color);
     flex-direction: row;
 
     .bento-card-description {
@@ -153,7 +153,7 @@ body .background-image {
 
     .bento-card-description,
     .bento-link {
-      color: var(--ag-white-color);
+      color: var(--ag-black-color);
     }
 
     .bento-card-details {
@@ -250,8 +250,20 @@ body .background-image {
   }
 }
 
+// About ----------------------------------------- //
+#about {
+  background: var(--ag-dark-purple-xtra-dark);
+
+  img {
+    border-radius: var(--ag-border-radius);
+    border: 1px solid var(--ag-background-color);
+  }
+}
+
 // Contact ----------------------------------------- //
 #contact {
+  background: var(--ag-dark-purple-xtra-dark);
+
   form {
     margin-top: 0;
   }
