@@ -6750,8 +6750,8 @@ hr + .comment-reply-title {
   margin-top: 0;
   padding: 3.2rem 0;
   background: rgb(24, 0, 45);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, var(--ag-background-color)), color-stop(64%, var(--ag-dark-purple-xtra-dark)), to(var(--ag-orange-color)));
-  background: linear-gradient(180deg, var(--ag-background-color) 10%, var(--ag-dark-purple-xtra-dark) 64%, var(--ag-orange-color) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, var(--ag-background-color)), color-stop(64%, var(--ag-dark-purple-xtra-dark)), to(var(--ag-dark-purple-color)));
+  background: linear-gradient(180deg, var(--ag-background-color) 10%, var(--ag-dark-purple-xtra-dark) 64%, var(--ag-dark-purple-color) 100%);
   color: var(--ag-site-footer-text-color);
 }
 @media (min-width: 700px) {

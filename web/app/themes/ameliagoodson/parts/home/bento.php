@@ -6,12 +6,17 @@ $works = get_posts(array(
 ));
 
 $default_work_link = '/work'; // Default link to the /work page
+$work_text = get_field('work_text');
 ?>
+
 <section id="work">
   <div class="section-inner mw-medium">
     <div class="section-intro">
       <h2 class="section-title">Work</h2>
-      <p class="reveal">Here are some of the projects I've worked on.</p>
+      <?php
+      if ($work_text) : ?>
+        <p class="reveal"><?php echo $work_text ?></p>
+      <?php endif ?>
     </div>
     <div class="grid bento-grid">
       <?php foreach ($works as $index => $work) : ?>
