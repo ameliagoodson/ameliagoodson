@@ -17,8 +17,8 @@
         ?>
         <div class="footer-social">
           <ul class="footer-menu reset-list-style">
-            <li><a href="https://www.linkedin.com/in/ameliagoodson/">LinkedIn</a></li>
-            <li><a href="https://github.com/ameliagoodson">Github</a></li>
+            <li><a href="https://www.linkedin.com/in/ameliagoodson/"><?php echo ag_get_icon_svg('linkedin') ?></a></li>
+            <li><a href="https://github.com/ameliagoodson"><?php echo ag_get_icon_svg('github') ?></a></li>
           </ul>
         </div>
       </div>

@@ -76,3 +76,38 @@ function console_log($obj)
   </script>
 <?php
 }
+
+/* ------------------------------------------------------------------------------ /*
+/*  SVG ICON HELPER 
+/* ------------------------------------------------------------------------------ */
+function ag_get_icon_svg($icon_name, $size = '24')
+{
+  global $icons;
+
+  if (isset($icons[$icon_name])) {
+    $svg = $icons[$icon_name];
+
+    // Check if width/height attributes are missing
+    if (strpos($svg, 'width=') === false && strpos($svg, 'height=') === false) {
+      // Inject width and height attributes into the <svg> tag
+      $svg = preg_replace(
+        '/<svg /', // Match the opening <svg> tag
+        '<svg width="' . $size . '" height="' . $size . '" ', // Add the attributes
+        $svg,
+        1 // Replace only the first match
+      );
+    } else {
+      // Replace existing width and height attributes with the new size
+      $svg = str_replace(
+        ['width="24"', 'height="24"'],
+        ['width="' . $size . '"', 'height="' . $size . '"'],
+        $svg
+      );
+    }
+
+    return $svg;
+  }
+
+  // Fallback if the icon is not found
+  return '<svg class="svg-icon" width="' . $size . '" height="' . $size . '" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><circle cx="' . ($size / 2) . '" cy="' . ($size / 2) . '" r="' . ($size / 2) . '"></circle></svg>';
+}

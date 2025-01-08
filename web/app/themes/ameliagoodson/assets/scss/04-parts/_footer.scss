@@ -51,6 +51,7 @@ body:not(.home) #site-footer {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-start;
+  align-items: flex-end;
   margin-right: var(--ag-spacer-md);
   text-align: right;
 
@@ -120,4 +121,12 @@ body:not(.home) #site-footer {
 .footer-inner .footer-inner a:hover,
 .footer-inner a:focus {
   text-decoration: underline;
+}
+
+// Footer social ----------------------------------------- //
+.footer-social {
+  .footer-menu {
+    flex-direction: row;
+    gap: 1rem;
+  }
 }
