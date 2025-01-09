@@ -2364,6 +2364,11 @@ svg {
   display: block;
 }
 
+.icon {
+  width: 28px;
+  height: 28px;
+}
+
 figcaption,
 .wp-caption-text {
   color: var(--ag-secondary-color);
@@ -2802,6 +2807,30 @@ input[type=submit]:focus,
 .btn-sm {
   font-size: 15px;
   padding: 10px 18px;
+}
+
+.btn-back-to-top {
+  display: none;
+  position: fixed !important;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: var(--ag-button-background-color);
+  position: absolute;
+  bottom: 10%;
+  right: 2%;
+  padding: 0 !important;
+}
+.btn-back-to-top.show {
+  display: block;
+}
+.btn-back-to-top .icon {
+  width: 5rem;
+  height: 5rem;
+}
+.btn-back-to-top .icon svg {
+  height: 100%;
+  width: 100%;
+  padding: 0.1rem;
 }
 
 .wp-block-button__link:visited {

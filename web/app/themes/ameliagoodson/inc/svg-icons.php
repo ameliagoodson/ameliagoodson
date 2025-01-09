@@ -2,10 +2,10 @@
 
 
 $icons = [
-  'arrow-left'                          => '<svg viewBox="0 0 98 50" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2"><path d="M26 1L2 25L26 49"></path><path d="M2 25H98"></path></svg>',
-  'arrow-right'                         => '<svg viewBox="0 0 98 50" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2"><path d="M72 1L96 25L72 49"></path><path d="M96 25H0"></path></svg>',
-  'chevron-down'                        => '<svg viewBox="0 0 18 11" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 1L9 9L1 1"></path></svg>',
-  'close'                               => '<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1L19 19"></path><path d="M1 19L19 1.00003"></path></svg>',
+  'arrow-left'                          => '<svg class="icon" viewBox="0 0 98 50" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2"><path d="M26 1L2 25L26 49"></path><path d="M2 25H98"></path></svg>',
+  'arrow-right'                         => '<svg class="icon" viewBox="0 0 98 50" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2"><path d="M72 1L96 25L72 49"></path><path d="M96 25H0"></path></svg>',
+  'chevron-down'                        => '<svg class="icon" viewBox="0 0 18 11" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 1L9 9L1 1"></path></svg>',
+  'close'                               => '<svg class="icon" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1L19 19"></path><path d="M1 19L19 1.00003"></path></svg>',
   'link'                                => '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2"><path d="m7.88225 10.6274-2.74517 2.7452c-1.51611 1.5161-1.51611 3.9742 0 5.4903 1.51612 1.5161 3.97422 1.5161 5.49032 0l2.7452-2.7452m-2.7452-8.23545 2.7452-2.74517c1.5161-1.51611 3.9742-1.51611 5.4903 0 1.5161 1.51612 1.5161 3.97422 0 5.49032l-2.7452 2.7452m-6.86287 1.3726 5.49037-5.49037"/></svg>',
   'menu'                                => '<svg viewBox="0 0 25 18" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2"><path d="M0.5 1H24.5"></path><path d="M0.5 9H24.5"></path><path d="M0.5 17H24.5"></path></svg>',
   'menu-search'                         => '<svg viewBox="0 0 27 19" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2"><path d="M0 18H24"></path><path d="M0 10H10"></path><path d="M0 2H10"></path><circle cx="19" cy="6" r="5"></circle><path d="M26.0001 13.0001L22.0278 9.02783"></path></svg>',

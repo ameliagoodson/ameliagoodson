@@ -130,9 +130,7 @@ agtheme.toggles = {
       setTimeout(function () {
         // Toggle the target of the clicked toggle.
         if ($toggle.data("toggle-type") == "slidetoggle") {
-          var duration = $toggle.data("toggle-duration")
-            ? $toggle.data("toggle-duration")
-            : 250;
+          var duration = $toggle.data("toggle-duration") ? $toggle.data("toggle-duration") : 250;
           if ($("body").hasClass("has-anim")) {
             $target.slideToggle(duration);
           } else {
@@ -195,9 +193,7 @@ agtheme.toggles = {
   // Check for toggle/untoggle on screen resize.
   resizeCheck: function () {
     if (
-      $(
-        "*[data-untoggle-above], *[data-untoggle-below], *[data-toggle-above], *[data-toggle-below]"
-      ).length
+      $("*[data-untoggle-above], *[data-untoggle-below], *[data-toggle-above], *[data-toggle-below]").length
     ) {
       $agthemeWin.on("resize", function () {
         var winWidth = $agthemeWin.width(),
@@ -212,22 +208,15 @@ agtheme.toggles = {
             toggleBelow = $toggle.data("toggle-below");
 
           // If no width comparison is set, continue
-          if (
-            !unToggleAbove &&
-            !unToggleBelow &&
-            !toggleAbove &&
-            !toggleBelow
-          ) {
+          if (!unToggleAbove && !unToggleBelow && !toggleAbove && !toggleBelow) {
             return;
           }
 
           // If the toggle width comparison is true, toggle the toggle
           if (
-            (((unToggleAbove && winWidth > unToggleAbove) ||
-              (unToggleBelow && winWidth < unToggleBelow)) &&
+            (((unToggleAbove && winWidth > unToggleAbove) || (unToggleBelow && winWidth < unToggleBelow)) &&
               $toggle.hasClass("active")) ||
-            (((toggleAbove && winWidth > toggleAbove) ||
-              (toggleBelow && winWidth < toggleBelow)) &&
+            (((toggleAbove && winWidth > toggleAbove) || (toggleBelow && winWidth < toggleBelow)) &&
               !$toggle.hasClass("active"))
           ) {
             $toggle.trigger("click");
@@ -258,10 +247,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (hamburger && mobile_menu) {
     hamburger.addEventListener("click", function () {
-      if (
-        mobile_menu.classList.contains("active") &&
-        mobile_container.classList.contains("active")
-      ) {
+      if (mobile_menu.classList.contains("active") && mobile_container.classList.contains("active")) {
         mobile_menu.classList.remove("active");
         mobile_container.classList.remove("active");
       } else {
@@ -368,9 +354,7 @@ agtheme.coverModals = {
     // The modal-target-string must match the string toggles use to target the modal.
     if ($modal.data("modal-target-string")) {
       var modalTargetClass = $modal.data("modal-target-string"),
-        $modalToggle = $(
-          '*[data-toggle-target="' + modalTargetClass + '"]'
-        ).first();
+        $modalToggle = $('*[data-toggle-target="' + modalTargetClass + '"]').first();
     }
 
     // If a modal toggle exists, trigger it so all of the toggle options are included.
@@ -454,10 +438,7 @@ agtheme.responsiveEmbeds = {
         iTargetWidth = $container.width();
 
       // Skip videos we want to ignore.
-      if (
-        $video.hasClass("intrinsic-ignore") ||
-        $video.parent().hasClass("intrinsic-ignore")
-      ) {
+      if ($video.hasClass("intrinsic-ignore") || $video.parent().hasClass("intrinsic-ignore")) {
         return true;
       }
 
@@ -570,9 +551,7 @@ agtheme.scrollLock = {
     $("html").attr("style", $("<x>").css(prevLockStyles).attr("style") || "");
     $("html").removeClass("scroll-locked");
     $("html").attr("scroll-lock-top", "");
-    $agthemeWin
-      .scrollLeft(prevScroll.scrollLeft)
-      .scrollTop(prevScroll.scrollTop);
+    $agthemeWin.scrollLeft(prevScroll.scrollLeft).scrollTop(prevScroll.scrollTop);
 
     window.scrollLocked = false;
   },
@@ -617,9 +596,7 @@ agtheme.focusManagement = {
 
         // Get the first and last visible focusable elements in the menu modal, for comparison against the focused element.
         var $menuModalFocusable = $(".menu-modal")
-            .find(
-              'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-            )
+            .find('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])')
             .filter(":visible"),
           $menuModalFirst = $menuModalFocusable.first(),
           $menuModalLast = $menuModalFocusable.last();
@@ -693,9 +670,7 @@ agtheme.navMenus = {
     $('.menu-modal a[href*="#"]:not([href="#"])').on("click", function () {
       agtheme.coverModals.untoggleModal($(".menu-modal"));
 
-      var $target = $(this.hash).length
-        ? $(this.hash)
-        : $("[name=" + this.hash.slice(1) + "]");
+      var $target = $(this.hash).length ? $(this.hash) : $("[name=" + this.hash.slice(1) + "]");
 
       if ($target.length) {
         setTimeout(function () {
@@ -763,9 +738,7 @@ agtheme.loadMore = {
       }
 
       // Get the load more type (button or scroll).
-      var loadMoreType = $pagination.data("pagination-type")
-        ? $pagination.data("pagination-type")
-        : "button";
+      var loadMoreType = $pagination.data("pagination-type") ? $pagination.data("pagination-type") : "button";
 
       // Do the appropriate load more detection, depending on the type.
       if (loadMoreType == "scroll") {
@@ -871,10 +844,7 @@ agtheme.loadMore = {
           // Wait for the images to load.
           $result.imagesLoaded(function () {
             // Append the results.
-            $articleWrapper
-              .append($result)
-              .isotope("appended", $result)
-              .isotope();
+            $articleWrapper.append($result).isotope("appended", $result).isotope();
 
             $agthemeWin.trigger("ajax-content-loaded");
             $agthemeWin.trigger("did-interval-scroll");
@@ -934,15 +904,9 @@ agtheme.filters = {
       $("body").addClass("filtering-posts");
 
       var $link = $(this),
-        termId = $link.data("filter-term-id")
-          ? $link.data("filter-term-id")
-          : null,
-        taxonomy = $link.data("filter-taxonomy")
-          ? $link.data("filter-taxonomy")
-          : null,
-        postType = $link.data("filter-post-type")
-          ? $link.data("filter-post-type")
-          : "";
+        termId = $link.data("filter-term-id") ? $link.data("filter-term-id") : null,
+        taxonomy = $link.data("filter-taxonomy") ? $link.data("filter-taxonomy") : null,
+        postType = $link.data("filter-post-type") ? $link.data("filter-post-type") : "";
 
       $link.addClass("pre-active");
 
@@ -1012,12 +976,9 @@ agtheme.elementInView = {
 
       agtheme.elementInView.handleFocus($targets);
 
-      $agthemeWin.on(
-        "load resize orientationchange did-interval-scroll",
-        function () {
-          agtheme.elementInView.handleFocus($targets);
-        }
-      );
+      $agthemeWin.on("load resize orientationchange did-interval-scroll", function () {
+        agtheme.elementInView.handleFocus($targets);
+      });
     }
   },
 
@@ -1046,9 +1007,7 @@ agtheme.elementInView = {
 
     // For elements with a transform: translateY value, subtract the translateY value for the elemTop comparison point.
     // IE11 doesn't support WebKitCSSMatrix, so don't do it in IE11.
-    var elemTransform = window
-      .getComputedStyle($elem[0])
-      .getPropertyValue("transform");
+    var elemTransform = window.getComputedStyle($elem[0]).getPropertyValue("transform");
     if (elemTransform && !agthemeIsIE11) {
       var elemTransformMatrix = new WebKitCSSMatrix(elemTransform);
 
@@ -1089,8 +1048,7 @@ agtheme.grid = {
           transitionDuration: "0.25s",
           hiddenStyle: { opacity: 0 },
           visibleStyle: { opacity: 1 },
-          layoutMode:
-            $wrapper.data("layout") == "masonry" ? "masonry" : "fitRows",
+          layoutMode: $wrapper.data("layout") == "masonry" ? "masonry" : "fitRows",
         });
 
         // Trigger will-be-spotted elements.
@@ -1216,13 +1174,10 @@ agtheme.smoothScroll = {
       .not(".disable-smooth-scroll")
       .on("click", function (e) {
         if (
-          location.pathname.replace(/^\//, "") ==
-            this.pathname.replace(/^\//, "") &&
+          location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") &&
           location.hostname == this.hostname
         ) {
-          var $target = $(this.hash).length
-            ? $(this.hash)
-            : $("[name=" + this.hash.slice(1) + "]");
+          var $target = $(this.hash).length ? $(this.hash) : $("[name=" + this.hash.slice(1) + "]");
           agtheme.smoothScroll.scrollToTarget($target, $(this));
           e.preventDefault();
         }
@@ -1249,9 +1204,7 @@ agtheme.smoothScroll = {
         (additionalOffset = $clickElem.data("scroll-offset")
           ? $clickElem.data("scroll-offset")
           : additionalOffset),
-          (scrollSpeed = $clickElem.data("scroll-speed")
-            ? $clickElem.data("scroll-speed")
-            : scrollSpeed);
+          (scrollSpeed = $clickElem.data("scroll-speed") ? $clickElem.data("scroll-speed") : scrollSpeed);
       }
 
       // Determine offset
@@ -1259,8 +1212,7 @@ agtheme.smoothScroll = {
 
       // Special handling of scroll offset when scroll locked
       if ($("html").attr("scroll-lock-top")) {
-        var originalOffset =
-          parseInt($("html").attr("scroll-lock-top")) + $target.offset().top;
+        var originalOffset = parseInt($("html").attr("scroll-lock-top")) + $target.offset().top;
       }
 
       // If the header is sticky, subtract its height from the offset
@@ -1270,8 +1222,7 @@ agtheme.smoothScroll = {
 
       // If the header is sticky, subtract its height from the offset
       if ($(".header-inner.stick-me").length) {
-        var originalOffset =
-          originalOffset - $(".header-inner.stick-me").outerHeight();
+        var originalOffset = originalOffset - $(".header-inner.stick-me").outerHeight();
       }
 
       // Close any parent modal before scrolling

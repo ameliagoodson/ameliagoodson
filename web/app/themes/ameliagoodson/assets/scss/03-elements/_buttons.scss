@@ -64,6 +64,33 @@ input[type="submit"],
   padding: 10px 18px;
 }
 
+.btn-back-to-top {
+  display: none;
+  position: fixed !important;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: var(--ag-button-background-color);
+  position: absolute;
+  bottom: 10%;
+  right: 2%;
+  padding: 0 !important;
+
+  &.show {
+    display: block;
+  }
+
+  .icon {
+    width: 5rem;
+    height: 5rem;
+
+    svg {
+      height: 100%;
+      width: 100%;
+      padding: 0.1rem;
+    }
+  }
+}
+
 .wp-block-button__link:visited {
   color: var(--ag-button-text-color);
 }

@@ -9,6 +9,7 @@
 
 <?php get_header();
 $hero_layout = get_theme_mod('hero_layout');
+global $icons;
 ?>
 
 <?php if ($hero_layout == 'Full image' || $hero_layout == "No image") {

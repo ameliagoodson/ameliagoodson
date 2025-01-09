@@ -2,16 +2,22 @@
 /*  NAMESPACE
 /* ------------------------------------------------------------------------------ */
 
-var agtheme = agtheme || {},
-  $ = jQuery;
+// let is used here because we need to declare agtheme first, and then conditionally initialize it.
+// const cannot be used because it requires initialization at the time of declaration.
+// Use $ instead of writing "jQuery" (shorthand)
+let agtheme;
+if (typeof agtheme === "undefined") {
+  agtheme = {};
+}
+const $ = jQuery;
 
 /* ------------------------------------------------------------------------------ /*
 /*  GLOBALS
 /* ------------------------------------------------------------------------------ */
 
-var $agthemeDoc = $(document),
-  $agthemeWin = $(window),
-  agthemeIsIE11 = !!window.MSInputMethodContext && !!document.documentMode;
+const $agthemeDoc = $(document);
+const $agthemeWin = $(window);
+const agthemeIsIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 
 /* ------------------------------------------------------------------------------ /*
 /*  GRID
@@ -120,3 +126,24 @@ document.addEventListener("DOMContentLoaded", function () {
     delay: 400,
   });
 });
+
+/* ------------------------------------------------------------------------------ /*
+/*  BACK TO TOP BUTTON
+/* ------------------------------------------------------------------------------ */
+
+window.addEventListener("scroll", displayButton);
+
+function displayButton() {
+  let btn = document.getElementById("btn-back-to-top");
+
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    btn.classList.add("show");
+  } else {
+    btn.classList.remove("show");
+  }
+}
+
+function backToTop() {
+  document.body.scrollTop = 0; // for Safari
+  document.documentElement.scrollTop = 0; // for other browsers
+}
