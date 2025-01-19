@@ -27,10 +27,11 @@ $fluid-max: $desktop-xl;
 $colors: (
   "background": #18002d,
   "primary": #ffffff,
-  // Font color
-  "secondary": #00eeff,
+  // Font color ^^
+  "secondary": #ff00c7,
   "border": #650d94,
-  "accent": #ff00c7,
+  "accent": #ffffff,
+  //button color
   "white": #ffffff,
   "black": #000000,
   "green": #91ff00,
@@ -120,8 +121,8 @@ $border-radius: 10px;
 
 // Buttons ---------------------------------- //
 
-$button-text-color: var(--ag-white-color);
-$button-background-color: var(--ag-orange-color);
+$button-text-color: var(--ag-black-color);
+$button-background-color: var(--ag-accent-color);
 $button-border-color: none;
 $button-border-width: 2px;
 $button-border-radius: 2px;

@@ -4,10 +4,8 @@
 
 <?php global $icons; ?>
 <!-- back to top button -->
-<button class="btn-back-to-top" id="btn-back-to-top" onclick="backToTop()">
-  <div class="icon">
-    <?php echo $icons['arrow-up-circle-outline'] ?>
-  </div>
+<button class="btn btn-back-to-top" id="btn-back-to-top" onclick="backToTop()">
+  <?php echo AG_SVG_Icons::get_svg('ionicons', 'arrow-up-outline') ?>
 </button>
 </div>
 </body>

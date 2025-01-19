@@ -384,5 +384,5 @@ function agtheme_the_icon_svg($group, $icon, $width = 24, $height = 24, $stroke 
  */
 function agtheme_get_icon_svg($group, $icon, $width = 24, $height = 24, $stroke = 0)
 {
-  return AG_Theme_SVG_Icons::get_svg($group, $icon, $width, $height, $stroke);
+  return AG_SVG_Icons::get_svg($group, $icon, $width, $height, $stroke);
 }

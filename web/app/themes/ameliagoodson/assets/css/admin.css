@@ -17,18 +17,18 @@
   --ag-primary-light: white;
   --ag-primary-dark: #e6e6e6;
   --ag-primary-xtra-dark: #cccccc;
-  --ag-secondary-color: #00eeff;
-  --ag-secondary-light: #66f5ff;
-  --ag-secondary-dark: #00becc;
-  --ag-secondary-xtra-dark: #008f99;
+  --ag-secondary-color: #ff00c7;
+  --ag-secondary-light: #ff66dd;
+  --ag-secondary-dark: #cc009f;
+  --ag-secondary-xtra-dark: #990077;
   --ag-border-color: #650d94;
   --ag-border-light: #a31ceb;
   --ag-border-dark: #450965;
   --ag-border-xtra-dark: #250536;
-  --ag-accent-color: #ff00c7;
-  --ag-accent-light: #ff66dd;
-  --ag-accent-dark: #cc009f;
-  --ag-accent-xtra-dark: #990077;
+  --ag-accent-color: #ffffff;
+  --ag-accent-light: white;
+  --ag-accent-dark: #e6e6e6;
+  --ag-accent-xtra-dark: #cccccc;
   --ag-white-color: #ffffff;
   --ag-white-light: white;
   --ag-white-dark: #e6e6e6;
@@ -103,8 +103,8 @@
   --ag-h6-line-height: clamp(2.43rem, calc(0.1vw + 2.378rem), 2.6rem);
   --ag-border-radius: 1rem;
   /* Buttons */
-  --ag-button-text-color: var(--ag-white-color);
-  --ag-button-background-color: var(--ag-orange-color);
+  --ag-button-text-color: var(--ag-black-color);
+  --ag-button-background-color: var(--ag-accent-color);
   --ag-button-border-color: none;
   --ag-button-border-width: 0.2rem;
   --ag-button-border-radius: 2px;

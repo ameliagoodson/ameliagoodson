@@ -13,7 +13,7 @@ $header_color = get_theme_mod('header_color');
   <div class="header-inner-wrapper d-desktop">
     <nav class="header-inner section-inner">
       <h1 class="site-logo">
-        <a href="<?php echo esc_url(home_url()) ?>"><img src="http://ameliagoodson.local/app/uploads/2024/06/logo-brand-black-future.png"></a>
+        <a href="<?php echo esc_url(home_url()) ?>"><img src="http://ameliagoodson.local/app/uploads/2024/06/logo-brand-black-future.png" alt="Amelia Goodson logo"></a>
         <span class="screen-reader-text">Amelia Goodson</span>
       </h1>
       <?php wp_nav_menu(array(
@@ -22,23 +22,25 @@ $header_color = get_theme_mod('header_color');
       ))
       ?>
     </nav>
+
   </div>
-  <div class="mobile-header d-flex-mobile">
-    <button class="hamburger-btn" aria-controls="mobile-menu" aria-expanded="false">
-      <div class="menu-bar top"></div>
-      <div class="menu-bar middle"></div>
-      <div class="menu-bar bottom"></div>
-    </button>
+  <div class="mobile-header">
+    <div class="mobile-header-inner d-flex-mobile">
+      <h1 class="site-logo">
+        <a href="<?php echo home_url() ?>"><img src="http://ameliagoodson.local/app/uploads/2024/06/logo-brand-black-future.png" alt="Amelia Goodson logo"></a>
+        <span class=" screen-reader-text">Amelia Goodson</span>
+
+      </h1>
+      <button class="hamburger-btn" aria-controls="mobile-menu" aria-expanded="false">
+        <?php echo AG_SVG_Icons::get_svg('ui', 'menu') ?>
+        <?php echo AG_SVG_Icons::get_svg('ui', 'close') ?>
+      </button>
+    </div>
     <?php wp_nav_menu(array(
       'theme_location' => 'primary',
       'menu_class' => 'menu mobile-menu',
       'container' => 'nav',
-      'container_class' => 'mobile-menu-container',
+      'container_class' => 'mobile-menu-container d-flex-mobile',
     )) ?>
-</header>
 
-<script>
-  document.querySelector('.hamburger-btn').addEventListener('click', function() {
-    document.querySelector('.mobile-menu-container').classList.toggle('active')
-  })
-</script>
+</header>

@@ -17,8 +17,8 @@
         ?>
         <div class="footer-social">
           <ul class="footer-menu reset-list-style">
-            <li><a href="https://www.linkedin.com/in/ameliagoodson/"><?php echo ag_get_icon_svg('linkedin') ?></a></li>
-            <li><a href="https://github.com/ameliagoodson"><?php echo ag_get_icon_svg('github') ?></a></li>
+            <li><a href="https://www.linkedin.com/in/ameliagoodson/"><?php echo AG_SVG_Icons::get_svg('social', 'linkedin') ?></a></li>
+            <li><a href="https://github.com/ameliagoodson"><?php echo AG_SVG_Icons::get_svg('social', 'github') ?></a></li>
           </ul>
         </div>
       </div>

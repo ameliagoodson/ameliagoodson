@@ -147,3 +147,21 @@ function backToTop() {
   document.body.scrollTop = 0; // for Safari
   document.documentElement.scrollTop = 0; // for other browsers
 }
+
+// ------------------------------------------------------------------------------ //
+//  MOBILE HAMBURGER MENU
+// ------------------------------------------------------------------------------ //
+
+document.addEventListener("DOMContentLoaded", function () {
+  const button = document.querySelector(".hamburger-btn");
+
+  button.addEventListener("click", function () {
+    const mobileMenu = document.querySelector(".mobile-menu-container");
+
+    if (mobileMenu) {
+      const isActive = mobileMenu.classList.toggle("active");
+      button.classList.toggle("active");
+      button.setAttribute("aria-expanded", isActive);
+    }
+  });
+});

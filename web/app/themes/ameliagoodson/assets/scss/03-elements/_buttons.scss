@@ -27,7 +27,7 @@ input[type="submit"],
   letter-spacing: var(--ag-button-letter-spacing);
   line-height: var(--ag-button-line-height);
   margin: 0 0 1.4rem 0;
-  padding: var(--ag-button-padding-y) var(--ag-button-padding-x) !important;
+  padding: var(--ag-button-padding-y) var(--ag-button-padding-x);
   text-align: center;
   text-decoration: none;
   text-underline-offset: 0.25em;
@@ -45,11 +45,7 @@ input[type="submit"],
 }
 
 .btn-cta {
-  color: var(--ag-button-text-color-active);
-  background: var(--ag-button-background-color-active);
-  border-color: var(--ag-button-border-color-active);
-  box-shadow: $box-shadow-sm;
-  margin: 20px;
+  margin: 20px 20px 20px 0;
 
   &:hover,
   &:focus {
@@ -65,11 +61,9 @@ input[type="submit"],
 }
 
 .btn-back-to-top {
+  background-color: var(--ag-orange-color);
   display: none;
   position: fixed !important;
-  text-transform: uppercase;
-  font-weight: bold;
-  background: var(--ag-button-background-color);
   position: absolute;
   bottom: 10%;
   right: 2%;
@@ -79,7 +73,12 @@ input[type="submit"],
     display: block;
   }
 
-  .icon {
+  &:hover,
+  &:focus {
+    background-color: var(--ag-button-background-color-active);
+  }
+
+  .svg-icon {
     width: 5rem;
     height: 5rem;
 
@@ -120,6 +119,36 @@ input[type="submit"],
     background: var(--ag-button-outline-background-color-active);
     border-color: var(--ag-button-outline-color-active);
   }
+}
+
+// Mobile button
+.hamburger-btn {
+  background-color: inherit;
+  color: inherit;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1.2rem;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  z-index: 2;
+  margin: 0;
+}
+.icon-menu {
+  display: block;
+}
+.icon-close {
+  display: none;
+}
+
+.active .icon-menu {
+  display: none;
+}
+.active .icon-close {
+  display: block;
 }
 
 /* Toggles ----------------------------------- */

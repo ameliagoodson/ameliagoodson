@@ -128,7 +128,7 @@ require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/template-tags.php';
 
 // SVG icons
-require get_template_directory() . '/inc/svg-icons.php';
+require get_template_directory() . '/inc/classes/svg-icons.php';
 
 // Customizer class
 require get_template_directory() . '/inc/classes/class-ag-customizer.php';

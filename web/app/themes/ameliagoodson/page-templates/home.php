@@ -4,6 +4,7 @@
  * Template Name: Home
  * *
  */
+
 ?>
 
 
@@ -25,4 +26,5 @@ global $icons;
 ?>
 
 
+<!--  -->
 <?php get_footer(); ?>
