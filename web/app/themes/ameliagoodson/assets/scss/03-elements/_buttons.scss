@@ -136,6 +136,11 @@ input[type="submit"],
   border-radius: 50%;
   z-index: 2;
   margin: 0;
+
+  &:focus,
+  &:hover {
+    background-color: inherit;
+  }
 }
 .icon-menu {
   display: block;

@@ -40,7 +40,7 @@ $header_color = get_theme_mod('header_color');
       'theme_location' => 'primary',
       'menu_class' => 'menu mobile-menu',
       'container' => 'nav',
-      'container_class' => 'mobile-menu-container d-flex-mobile',
+      'container_class' => 'mobile-menu-container',
     )) ?>
 
 </header>
