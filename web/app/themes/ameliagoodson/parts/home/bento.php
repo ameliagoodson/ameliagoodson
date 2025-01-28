@@ -46,8 +46,9 @@ $work_text = get_field('work_text');
               if ($work_subtitle) : ?>
                 <p><?php echo $work_subtitle ?></p>
               <?php endif ?>
-              <?php if ($work_button) : ?>
-                <a class="btn btn-sm bento-button" href="<?php esc_url($work_link['url']) ?>">See More</a>
+              <?php
+              if ($work_button) : ?>
+                <a class="btn btn-sm bento-button" href="<?php echo esc_url($work_link) ?>">See More</a>
               <?php endif ?>
             </div>
             <div class="bento-card-details">

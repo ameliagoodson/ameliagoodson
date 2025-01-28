@@ -52,7 +52,7 @@ body .background-image {
     "item01 item02 item02"
     "item01 item03 item03"
     "item04 item05 item06";
-  grid-gap: 2.4rem;
+  grid-gap: 4rem;
   justify-content: space-between;
 
   @media (max-width: $tablet) {
@@ -127,6 +127,7 @@ body .background-image {
         height: auto; /* Maintains aspect ratio */
         max-width: none; /* Prevents scaling issues */
         max-height: 100%;
+        margin-top: 2rem;
       }
     }
 
@@ -140,7 +141,11 @@ body .background-image {
     background: var(--ag-pink-color);
     grid-area: item02;
     color: var(--ag-black-color);
-    flex-direction: row;
+    flex-direction: column;
+
+    @media (min-width: $tablet) {
+      flex-direction: row;
+    }
 
     .bento-card-description {
       max-width: none;

@@ -161,6 +161,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (mobileMenu) {
       const isActive = mobileMenu.classList.toggle("active");
       button.classList.toggle("active");
+      document.body.classList.toggle("menu-open"); // prevent scrolling on mobile menu
       button.setAttribute("aria-expanded", isActive);
     }
   });
