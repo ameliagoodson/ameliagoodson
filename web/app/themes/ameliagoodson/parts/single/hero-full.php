@@ -23,7 +23,7 @@ $transparent_header = get_theme_mod('hero_transparent_header');
             <?php echo $hero_subtitle ?>
           </div>
         <?php endif; ?>
-        <a class="btn btn-cta reveal-400" href="<?php echo esc_url(home_url('/work')); ?>">See work</a>
+        <a class="btn reveal-400" href="<?php echo esc_url(home_url('/work')); ?>">See work</a>
       </div>
     </div>
   </div>

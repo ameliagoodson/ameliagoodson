@@ -30,7 +30,7 @@ $fallback_image = agtheme_get_fallback_image();
 	<?php endif; ?>
 
 	<header class="preview-header">
-		<h2 class="preview-title h4"><a href="<?php echo esc_url(get_permalink()); ?>"><?php the_title(); ?></a></h2>
+		<h2 class="preview-title h5"><a href="<?php echo esc_url(get_permalink()); ?>"><?php the_title(); ?></a></h2>
 	</header><!-- .preview-header -->
 
 	<?php agtheme_the_post_meta('archive'); ?>

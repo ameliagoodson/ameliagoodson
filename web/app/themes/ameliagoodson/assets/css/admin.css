@@ -25,10 +25,10 @@
   --ag-border-light: #a31ceb;
   --ag-border-dark: #450965;
   --ag-border-xtra-dark: #250536;
-  --ag-accent-color: #ffffff;
-  --ag-accent-light: white;
-  --ag-accent-dark: #e6e6e6;
-  --ag-accent-xtra-dark: #cccccc;
+  --ag-accent-color: #ff7f62;
+  --ag-accent-light: #ffd2c8;
+  --ag-accent-dark: #ff552f;
+  --ag-accent-xtra-dark: #fb2e00;
   --ag-white-color: #ffffff;
   --ag-white-light: white;
   --ag-white-dark: #e6e6e6;
@@ -77,8 +77,8 @@
   --ag-spacer-xl: clamp(3.2rem, calc(5.2vw + 1.241rem), 9.6rem);
   --ag-spacer-xxl: clamp(4.8rem, calc(6.5vw + 2.351rem), 12.8rem);
   /* Typography */
-  --ag-body-font-size: clamp(1.7rem, calc(0.1vw + 1.669rem), 1.8rem);
-  --ag-body-line-height: clamp(2.55rem, calc(0.1vw + 2.504rem), 2.7rem);
+  --ag-body-font-size: clamp(1.6rem, calc(0.1vw + 1.569rem), 1.7rem);
+  --ag-body-line-height: clamp(2.4rem, calc(0.1vw + 2.354rem), 2.55rem);
   --ag-body-font: "Montserrat", Helvetica, sans-serif;
   --ag-body-font-weight: 400;
   --ag-body-font-weight-bold: 700;

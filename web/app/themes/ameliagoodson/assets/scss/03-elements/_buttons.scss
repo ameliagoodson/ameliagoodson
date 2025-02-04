@@ -43,25 +43,12 @@ input[type="submit"],
     border-color: var(--ag-button-border-color-active);
   }
 }
-
-.btn-cta {
-  margin: 20px 20px 20px 0;
-
-  &:hover,
-  &:focus {
-    color: var(--ag-button-text-color);
-    background: var(--ag-button-background-color);
-    border-color: var(--ag-button-border-color);
-  }
-}
-
 .btn-sm {
   font-size: 15px;
   padding: 10px 18px;
 }
 
 .btn-back-to-top {
-  background-color: var(--ag-orange-color);
   display: none;
   position: fixed !important;
   position: absolute;

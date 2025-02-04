@@ -185,19 +185,3 @@ textarea.reset {
   bottom: 0;
   width: 6.6rem;
 }
-
-#forminator-module-131 {
-  button {
-    font-size: 15px;
-    background-color: var(--ag-pink-color);
-    color: var(--ag-white-color);
-    &:hover {
-      background-color: var(--ag-white-color);
-      color: var(--ag-pink-color);
-      border: 1px solid var(--ag-pink-color);
-    }
-  }
-  input {
-    color: var(--ag-background-color) !important;
-  }
-}

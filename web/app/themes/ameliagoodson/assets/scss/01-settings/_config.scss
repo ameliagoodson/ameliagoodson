@@ -30,7 +30,7 @@ $colors: (
   // Font color ^^
   "secondary": #ff00c7,
   "border": #650d94,
-  "accent": #ffffff,
+  "accent": #ff7f62,
   //button color
   "white": #ffffff,
   "black": #000000,
@@ -64,8 +64,8 @@ $gutter-max: $spacing-unit * 12; // 192px
 
 // Body
 $body-font: "Montserrat", Helvetica, sans-serif;
-$body-font-size-min: 17px;
-$body-font-size-max: 18px;
+$body-font-size-min: 16px;
+$body-font-size-max: 17px;
 $body-line-height-min: 1.5;
 $body-line-height-max: 1.5;
 $body-font-weight: 400;

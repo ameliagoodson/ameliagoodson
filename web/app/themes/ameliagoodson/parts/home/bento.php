@@ -10,7 +10,7 @@ $work_text = get_field('work_text');
 ?>
 
 <section id="work">
-  <div class="section-inner mw-medium">
+  <div class="section-inner mw-large">
     <div class="section-intro">
       <h2 class="section-title">Work</h2>
       <?php
@@ -27,7 +27,8 @@ $work_text = get_field('work_text');
         // Check if the group field has data
         if ($work_group) {
           $work_title = $work_group['work_title'] ?: ''; // Access subfields
-          $work_subtitle = get_the_excerpt($work->ID);
+          $work_subtitle = $work_group['work_subtitle'] ?: '';
+          $work_description = get_the_excerpt($work->ID);
           $work_image = get_the_post_thumbnail($work->ID, 'full');
           $work_video = $work_group['work_video'] ?: [];
           $work_link = $work_group['work_link'] ?: $default_work_link;
@@ -36,30 +37,36 @@ $work_text = get_field('work_text');
         ?>
         <?php if (!empty(array_filter($works))) : ?>
           <div class="grid-item bento-card grid-item0<?= $index + 1 ?> reveal">
-            <div class="bento-card-description">
+            <div class="bento-details">
               <?php if ($work_title) : ?>
                 <a class="bento-link" href="<?php echo esc_url($work_link) ?>">
                   <h3 class="bento-title"><?php echo $work_title ?></h3>
                 </a>
               <?php endif ?>
+              <?php if ($work_subtitle) : ?>
+                <p class="bento-subtitle"><?php echo $work_subtitle ?></p>
+              <? endif ?>
               <?php
-              if ($work_subtitle) : ?>
-                <p><?php echo $work_subtitle ?></p>
+              if ($work_description) : ?>
+                <p class="bento-description"><?php echo $work_description ?></p>
               <?php endif ?>
               <?php
               if ($work_button) : ?>
-                <a class="btn btn-sm bento-button" href="<?php echo esc_url($work_link) ?>">See More</a>
+                <div class="btn-container">
+                  <a class="btn bento-button" href="<?php echo esc_url($work_link) ?>">See More</a>
+                </div>
               <?php endif ?>
             </div>
-            <div class="bento-card-details">
+            <div class="bento-image">
               <?php if ($work_video) : ?>
                 <video controls poster>
                   <source src="" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               <?php else : ?>
-                <?php echo $work_image;
-                ?>
+                <a href="<?php echo $work_link ?>">
+                  <?php echo $work_image; ?>
+                </a>
                 <?php ?>
               <?php endif; ?>
             </div>

@@ -36,6 +36,7 @@ $header_color = get_theme_mod('header_color');
         <?php echo AG_SVG_Icons::get_svg('ui', 'close') ?>
       </button>
     </div>
+
     <?php wp_nav_menu(array(
       'theme_location' => 'primary',
       'menu_class' => 'menu mobile-menu',
