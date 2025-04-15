@@ -11,7 +11,8 @@ $hero_layout = get_theme_mod('hero_layout');
 $transparent_header = get_theme_mod('hero_transparent_header');
 ?>
 
-<main class="hero" <?php if ($background_image && $hero_layout != "No image" && !$transparent_header) : ?> style="background-image: url(<?php echo esc_url($background_image); ?>)" <?php endif ?>>
+<main class="hero" <?php if ($background_image && $hero_layout != "No image" && !$transparent_header) : ?>
+  style="background-image: url(<?php echo esc_url($background_image); ?>)" <?php endif ?>>
   <div class="section-inner mw-<?php echo $hero_width ?>">
     <div class="hero-content">
       <div class="hero-copy <?php echo "align-" . strtolower($text_alignment) ?>">

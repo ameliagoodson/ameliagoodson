@@ -57,3 +57,23 @@ table.xdebug-error {
   background: #fff !important;
   color: #000 !important;
 }
+
+/// Project snapshot table -----------------------------------------------///
+.project-snapshot__table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--ag-spacer);
+  background-color: var(--ag-dark-purple-xtra-dark);
+}
+
+.project-snapshot__table th {
+  text-align: left;
+  padding-right: 1rem;
+  font-weight: 600;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.project-snapshot__table td {
+  padding-bottom: 0.5rem;
+}

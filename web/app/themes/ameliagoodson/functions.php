@@ -10,6 +10,8 @@ function ag_register_styles()
 
   wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap', false);
 
+  wp_enqueue_style('material-icons', 'https://fonts.googleapis.com/icon?family=Material+Icons', false);
+
   // Customizer styles.
   wp_add_inline_style('ag_styles', AG_Customizer_CSS::get_customizer_css());
 }

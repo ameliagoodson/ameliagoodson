@@ -104,16 +104,16 @@
   --ag-h6-line-height: clamp(2.43rem, calc(0.1vw + 2.378rem), 2.6rem);
   --ag-border-radius: 1rem;
   /* Buttons */
-  --ag-button-text-color: var(--ag-black-color);
+  --ag-button-text-color: var(--ag-dark-purple-color);
   --ag-button-background-color: var(--ag-accent-color);
   --ag-button-border-color: none;
   --ag-button-border-width: 0.2rem;
   --ag-button-border-radius: 2px;
-  --ag-button-font-size: 2rem;
+  --ag-button-font-size: 1.6rem;
   --ag-button-line-height: 1.2;
   --ag-button-font-weight: 700;
-  --ag-button-padding-y: 1.5rem;
-  --ag-button-padding-x: 2.4rem;
+  --ag-button-padding-y: 1rem;
+  --ag-button-padding-x: 1.6rem;
   --ag-button-text-transform: uppercase;
   --ag-button-letter-spacing: 0.1em;
   --ag-button-text-color-active: var(--ag-white-color);
@@ -2796,8 +2796,8 @@ input[type=submit]:focus,
   background-color: var(--ag-button-background-color-active);
 }
 .btn-back-to-top .svg-icon {
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
 }
 .btn-back-to-top .svg-icon svg {
   height: 100%;
@@ -2964,6 +2964,25 @@ tfoot {
 table.xdebug-error {
   background: #fff !important;
   color: #000 !important;
+}
+
+.project-snapshot__table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--ag-spacer);
+  background-color: var(--ag-dark-purple-xtra-dark);
+}
+
+.project-snapshot__table th {
+  text-align: left;
+  padding-right: 1rem;
+  font-weight: 600;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.project-snapshot__table td {
+  padding-bottom: 0.5rem;
 }
 
 /* Social Icons ------------------------------ */
